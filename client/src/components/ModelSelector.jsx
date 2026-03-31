@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion as Motion, AnimatePresence } from 'framer-motion';
 import { AGENTS } from '../utils/agentConfig';
 import useAuthStore from '../store/authStore';
 import { ChevronDown, Cpu } from 'lucide-react';
@@ -35,7 +35,7 @@ const ModelSelector = ({ agentId, value, onChange }) => {
               className="fixed inset-0 z-40"
               onClick={() => setOpen(false)}
             />
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, y: -8, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -8, scale: 0.95 }}
@@ -67,7 +67,7 @@ const ModelSelector = ({ agentId, value, onChange }) => {
                   )}
                 </button>
               ))}
-            </motion.div>
+            </Motion.div>
           </>
         )}
       </AnimatePresence>

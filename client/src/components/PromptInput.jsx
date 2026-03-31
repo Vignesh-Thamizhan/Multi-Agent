@@ -1,5 +1,5 @@
 import { useState, useRef, useCallback } from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { Send, Paperclip, X, FileText, Image, Code, Loader2 } from 'lucide-react';
 import { ACCEPTED_FILE_TYPES, MAX_FILE_SIZE, getAllAcceptedExtensions } from '../utils/agentConfig';
 
@@ -138,7 +138,7 @@ const PromptInput = ({ onSubmit, onFileUpload, isLoading }) => {
           />
 
           {/* Submit button */}
-          <motion.button
+          <Motion.button
             type="submit"
             disabled={isLoading || (!prompt.trim() && !file)}
             whileHover={{ scale: 1.05 }}
@@ -154,7 +154,7 @@ const PromptInput = ({ onSubmit, onFileUpload, isLoading }) => {
             ) : (
               <Send size={18} />
             )}
-          </motion.button>
+          </Motion.button>
         </div>
       </form>
     </div>

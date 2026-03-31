@@ -1,9 +1,17 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import AuthPage from './pages/AuthPage';
 import ChatPage from './pages/ChatPage';
+import LandingPage from './pages/LandingPage';
 import ProtectedRoute from './components/ProtectedRoute';
 import useAuthStore from './store/authStore';
+
+const AuthRoute = () => {
+  const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
+  const location = useLocation();
+  if (isAuthenticated) return <Navigate to="/chat" replace />;
+  return <AuthPage key={location.search} />;
+};
 
 function App() {
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
@@ -33,8 +41,12 @@ function App() {
         <Route
           path="/"
           element={
-            isAuthenticated ? <Navigate to="/chat" replace /> : <AuthPage />
+            isAuthenticated ? <Navigate to="/chat" replace /> : <LandingPage />
           }
+        />
+        <Route
+          path="/auth"
+          element={<AuthRoute />}
         />
         <Route
           path="/chat"
