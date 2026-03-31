@@ -1,10 +1,11 @@
-import { useEffect, useRef, useCallback } from 'react';
+import { useEffect, useRef, useCallback, useState } from 'react';
 import { io } from 'socket.io-client';
 import useAuthStore from '../store/authStore';
 import usePipelineStore from '../store/pipelineStore';
 
 const useSocket = () => {
   const socketRef = useRef(null);
+  const [isConnected, setIsConnected] = useState(false);
   const token = useAuthStore((s) => s.token);
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
 
@@ -30,10 +31,12 @@ const useSocket = () => {
 
     socket.on('connect', () => {
       console.log('[Socket] Connected:', socket.id);
+      setIsConnected(true);
     });
 
     socket.on('disconnect', (reason) => {
       console.log('[Socket] Disconnected:', reason);
+      setIsConnected(false);
     });
 
     socket.on('connect_error', (err) => {
@@ -66,7 +69,7 @@ const useSocket = () => {
       onPipelineComplete(sessionId);
     });
 
-    socket.on('pipeline:error', ({ error, partialResults }) => {
+    socket.on('pipeline:error', ({ error }) => {
       onPipelineError(error);
     });
 
@@ -78,6 +81,7 @@ const useSocket = () => {
       socketRef.current.disconnect();
       socketRef.current = null;
     }
+    setIsConnected(false);
   }, []);
 
   useEffect(() => {
@@ -88,8 +92,7 @@ const useSocket = () => {
   }, [isAuthenticated, token, connect, disconnect]);
 
   return {
-    socket: socketRef.current,
-    isConnected: socketRef.current?.connected || false,
+    isConnected,
   };
 };
 

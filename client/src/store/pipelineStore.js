@@ -93,7 +93,7 @@ const usePipelineStore = create((set, get) => ({
     }));
   },
 
-  onAgentRetry: (agent, attempt, waitMs) => {
+  onAgentRetry: (agent, attempt) => {
     set((state) => ({
       agents: {
         ...state.agents,
@@ -113,7 +113,7 @@ const usePipelineStore = create((set, get) => ({
     });
   },
 
-  onPipelineError: (error) => {
+  onPipelineError: () => {
     set({
       pipelineStatus: PIPELINE_STATUSES.ERROR,
     });

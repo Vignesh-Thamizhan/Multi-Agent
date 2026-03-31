@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion as Motion, AnimatePresence } from 'framer-motion';
 import { AGENTS, AGENT_STATUSES } from '../utils/agentConfig';
 import MarkdownRenderer from './MarkdownRenderer';
 import { Loader2, CheckCircle2, XCircle, RotateCw } from 'lucide-react';
@@ -27,7 +27,7 @@ const AgentCard = ({ agentId, agentState }) => {
   const hasContent = content && content.length > 0;
 
   return (
-    <motion.div
+    <Motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: 'easeOut' }}
@@ -79,25 +79,25 @@ const AgentCard = ({ agentId, agentState }) => {
         {/* Content */}
         <AnimatePresence mode="wait">
           {hasContent && (
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               className="px-4 py-3 max-h-[600px] overflow-y-auto custom-scrollbar"
             >
               <MarkdownRenderer content={content} />
               {isActive && (
-                <motion.span
+                <Motion.span
                   className="inline-block w-2 h-4 ml-1 rounded-sm"
                   style={{ backgroundColor: config.color }}
                   animate={{ opacity: [1, 0] }}
                   transition={{ duration: 0.8, repeat: Infinity }}
                 />
               )}
-            </motion.div>
+            </Motion.div>
           )}
 
           {status === AGENT_STATUSES.ERROR && error && (
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="px-4 py-3"
@@ -106,11 +106,11 @@ const AgentCard = ({ agentId, agentState }) => {
                 <XCircle size={16} className="text-red-400 mt-0.5 flex-shrink-0" />
                 <p className="text-sm text-red-300">{error}</p>
               </div>
-            </motion.div>
+            </Motion.div>
           )}
         </AnimatePresence>
       </div>
-    </motion.div>
+    </Motion.div>
   );
 };
 

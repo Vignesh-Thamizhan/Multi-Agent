@@ -1,13 +1,13 @@
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import useAuthStore from '../store/authStore';
 import usePipelineStore from '../store/pipelineStore';
 import { ModelSelectorBar } from './ModelSelector';
 import { PIPELINE_STATUSES, AGENTS, PIPELINE_ORDER } from '../utils/agentConfig';
 import {
-  LogOut, Wifi, WifiOff, Zap, CheckCircle2, AlertCircle, Loader2
+  LogOut, Wifi, WifiOff, Zap, CheckCircle2, AlertCircle, Loader2, Menu, X
 } from 'lucide-react';
 
-const TopBar = ({ socketConnected }) => {
+const TopBar = ({ socketConnected, onToggleSidebar, isSidebarOpen }) => {
   const user = useAuthStore((s) => s.user);
   const logout = useAuthStore((s) => s.logout);
   const pipelineStatus = usePipelineStore((s) => s.pipelineStatus);
@@ -52,6 +52,16 @@ const TopBar = ({ socketConnected }) => {
     <header className="flex items-center justify-between px-4 py-2.5 border-b border-white/5 bg-[#0a0a14]/80 backdrop-blur-xl z-20">
       {/* Left: logo + status */}
       <div className="flex items-center gap-4">
+        {/* Mobile: sidebar toggle */}
+        <button
+          type="button"
+          onClick={onToggleSidebar}
+          className="md:hidden p-2 -ml-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-colors cursor-pointer"
+          aria-label={isSidebarOpen ? 'Close sidebar' : 'Open sidebar'}
+        >
+          {isSidebarOpen ? <X size={18} /> : <Menu size={18} />}
+        </button>
+
         <div className="flex items-center gap-2">
           <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-violet-600 to-cyan-500 flex items-center justify-center">
             <Zap size={14} className="text-white" />
@@ -62,7 +72,7 @@ const TopBar = ({ socketConnected }) => {
         </div>
 
         {/* Pipeline status badge */}
-        <motion.div
+        <Motion.div
           key={pipelineStatus}
           initial={{ opacity: 0, x: -10 }}
           animate={{ opacity: 1, x: 0 }}
@@ -70,7 +80,7 @@ const TopBar = ({ socketConnected }) => {
         >
           {status.icon}
           <span className="hidden sm:inline">{status.label}</span>
-        </motion.div>
+        </Motion.div>
       </div>
 
       {/* Center: model selectors */}

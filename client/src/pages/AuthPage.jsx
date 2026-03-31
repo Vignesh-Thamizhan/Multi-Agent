@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useMemo, useState } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
+import { motion as Motion, AnimatePresence } from 'framer-motion';
 import useAuthStore from '../store/authStore';
 import toast from 'react-hot-toast';
 import {
@@ -8,7 +8,9 @@ import {
 } from 'lucide-react';
 
 const AuthPage = () => {
-  const [isLogin, setIsLogin] = useState(true);
+  const [searchParams] = useSearchParams();
+  const initialIsLogin = useMemo(() => searchParams.get('mode') !== 'register', [searchParams]);
+  const [isLogin, setIsLogin] = useState(initialIsLogin);
   const [showPassword, setShowPassword] = useState(false);
   const [form, setForm] = useState({ username: '', email: '', password: '' });
 
@@ -61,7 +63,7 @@ const AuthPage = () => {
         }}
       />
 
-      <motion.div
+      <Motion.div
         initial={{ opacity: 0, y: 30, scale: 0.95 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.5 }}
@@ -69,7 +71,7 @@ const AuthPage = () => {
       >
         {/* Logo */}
         <div className="text-center mb-8">
-          <motion.div
+          <Motion.div
             className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-600/20 to-cyan-600/20 border border-violet-500/20 mb-4"
             animate={{
               boxShadow: [
@@ -81,7 +83,7 @@ const AuthPage = () => {
             transition={{ duration: 3, repeat: Infinity }}
           >
             <Zap size={28} className="text-violet-400" />
-          </motion.div>
+          </Motion.div>
           <h1 className="text-2xl font-bold text-white tracking-tight">
             Neural<span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400">Forge</span>
           </h1>
@@ -114,7 +116,7 @@ const AuthPage = () => {
           <form onSubmit={handleSubmit} className="space-y-4">
             <AnimatePresence mode="wait">
               {!isLogin && (
-                <motion.div
+                <Motion.div
                   key="username"
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: 'auto' }}
@@ -137,7 +139,7 @@ const AuthPage = () => {
                       id="auth-username"
                     />
                   </div>
-                </motion.div>
+                </Motion.div>
               )}
             </AnimatePresence>
 
@@ -186,16 +188,16 @@ const AuthPage = () => {
             </div>
 
             {error && (
-              <motion.p
+              <Motion.p
                 initial={{ opacity: 0, y: -5 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="text-xs text-red-400 bg-red-500/10 px-3 py-2 rounded-lg"
               >
                 {error}
-              </motion.p>
+              </Motion.p>
             )}
 
-            <motion.button
+            <Motion.button
               type="submit"
               disabled={loading}
               whileHover={{ scale: 1.01 }}
@@ -210,7 +212,7 @@ const AuthPage = () => {
                   <ArrowRight size={16} />
                 </>
               )}
-            </motion.button>
+            </Motion.button>
           </form>
 
           <p className="text-center text-xs text-gray-600 mt-5">
@@ -225,7 +227,7 @@ const AuthPage = () => {
         </div>
 
         {/* Agent pipeline preview */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
@@ -237,8 +239,8 @@ const AuthPage = () => {
               <span className="text-xs text-gray-600">{step}</span>
             </div>
           ))}
-        </motion.div>
-      </motion.div>
+        </Motion.div>
+      </Motion.div>
     </div>
   );
 };

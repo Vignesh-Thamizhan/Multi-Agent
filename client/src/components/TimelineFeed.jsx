@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import AgentCard from './AgentCard';
 import MarkdownRenderer from './MarkdownRenderer';
 import usePipelineStore from '../store/pipelineStore';
@@ -39,7 +39,7 @@ const TimelineFeed = () => {
       <div className="max-w-4xl mx-auto px-4 py-6 space-y-4">
         {/* Empty state */}
         {isIdle && (
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -49,7 +49,7 @@ const TimelineFeed = () => {
               <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-violet-600/20 to-cyan-600/20 border border-violet-500/20 flex items-center justify-center">
                 <span className="text-4xl">🧠</span>
               </div>
-              <motion.div
+              <Motion.div
                 className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-gradient-to-tr from-cyan-400 to-violet-400"
                 animate={{ scale: [1, 1.2, 1], opacity: [0.6, 1, 0.6] }}
                 transition={{ duration: 2, repeat: Infinity }}
@@ -86,14 +86,14 @@ const TimelineFeed = () => {
                 );
               })}
             </div>
-          </motion.div>
+          </Motion.div>
         )}
 
         {/* Session history messages */}
         {hasHistory && (
           <div className="space-y-3 mb-6">
             {sessionMessages.map((msg, i) => (
-              <motion.div
+              <Motion.div
                 key={msg._id || i}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -133,7 +133,7 @@ const TimelineFeed = () => {
                     </div>
                   </div>
                 )}
-              </motion.div>
+              </Motion.div>
             ))}
           </div>
         )}
@@ -149,7 +149,7 @@ const TimelineFeed = () => {
 
         {/* Pipeline complete indicator */}
         {pipelineStatus === PIPELINE_STATUSES.COMPLETE && hasActiveAgents && (
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             className="flex items-center justify-center gap-2 py-4 text-emerald-400"
@@ -157,7 +157,7 @@ const TimelineFeed = () => {
             <div className="h-px w-12 bg-gradient-to-r from-transparent to-emerald-500/30" />
             <span className="text-xs font-medium">Pipeline complete</span>
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-emerald-500/30" />
-          </motion.div>
+          </Motion.div>
         )}
       </div>
     </div>

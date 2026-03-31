@@ -1,4 +1,5 @@
-import { useState, useCallback } from 'react';
+import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
+import gsap from 'gsap';
 import TopBar from '../components/TopBar';
 import SessionSidebar from '../components/SessionSidebar';
 import TimelineFeed from '../components/TimelineFeed';
@@ -10,14 +11,51 @@ import { generateAPI, uploadAPI } from '../services/api';
 import toast from 'react-hot-toast';
 
 const ChatPage = () => {
-  const { socket, isConnected } = useSocket();
+  const { isConnected } = useSocket();
   const [currentSessionId, setCurrentSessionId] = useState(null);
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+  const sidebarPanelRef = useRef(null);
+  const sidebarBackdropRef = useRef(null);
 
   const startPipeline = usePipelineStore((s) => s.startPipeline);
   const setSessionMessages = usePipelineStore((s) => s.setSessionMessages);
   const resetPipeline = usePipelineStore((s) => s.resetPipeline);
   const isRunning = usePipelineStore((s) => s.isRunning);
   const user = useAuthStore((s) => s.user);
+
+  const prefersReducedMotion = useMemo(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return false;
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }, []);
+
+  useEffect(() => {
+    const panel = sidebarPanelRef.current;
+    const backdrop = sidebarBackdropRef.current;
+    if (!panel || !backdrop) return;
+
+    if (prefersReducedMotion) {
+      gsap.set(panel, { x: mobileSidebarOpen ? 0 : -320 });
+      gsap.set(backdrop, {
+        opacity: mobileSidebarOpen ? 1 : 0,
+        pointerEvents: mobileSidebarOpen ? 'auto' : 'none',
+      });
+      return;
+    }
+
+    if (mobileSidebarOpen) {
+      gsap.set(backdrop, { pointerEvents: 'auto' });
+      gsap.to(backdrop, { opacity: 1, duration: 0.18, ease: 'power1.out' });
+      gsap.to(panel, { x: 0, duration: 0.28, ease: 'power3.out' });
+    } else {
+      gsap.to(backdrop, {
+        opacity: 0,
+        duration: 0.18,
+        ease: 'power1.in',
+        onComplete: () => gsap.set(backdrop, { pointerEvents: 'none' }),
+      });
+      gsap.to(panel, { x: -320, duration: 0.22, ease: 'power2.in' });
+    }
+  }, [mobileSidebarOpen, prefersReducedMotion]);
 
   const handleSubmit = useCallback(async (prompt) => {
     try {
@@ -56,23 +94,51 @@ const ChatPage = () => {
       // New session
       resetPipeline();
       setCurrentSessionId(null);
+      setMobileSidebarOpen(false);
       return;
     }
 
     resetPipeline();
     setCurrentSessionId(session._id);
     setSessionMessages(session.messages || []);
+    setMobileSidebarOpen(false);
   }, [resetPipeline, setSessionMessages]);
 
   return (
-    <div className="h-screen flex flex-col bg-[#0a0a14] text-white overflow-hidden">
-      <TopBar socketConnected={isConnected} />
+    <div className="min-h-dvh flex flex-col bg-[#0a0a14] text-white overflow-hidden">
+      <TopBar
+        socketConnected={isConnected}
+        onToggleSidebar={() => setMobileSidebarOpen((v) => !v)}
+        isSidebarOpen={mobileSidebarOpen}
+      />
 
       <div className="flex flex-1 overflow-hidden">
-        <SessionSidebar
-          onLoadSession={handleLoadSession}
-          currentSessionId={currentSessionId}
-        />
+        {/* Mobile drawer sidebar */}
+        <div className="md:hidden">
+          <div
+            ref={sidebarBackdropRef}
+            className="fixed inset-0 z-30 bg-black/50 opacity-0 pointer-events-none"
+            onClick={() => setMobileSidebarOpen(false)}
+            aria-hidden={!mobileSidebarOpen}
+          />
+          <div
+            ref={sidebarPanelRef}
+            className="fixed left-0 top-[52px] bottom-0 z-40 w-[280px] max-w-[85vw] -translate-x-[320px]"
+          >
+            <SessionSidebar
+              onLoadSession={handleLoadSession}
+              currentSessionId={currentSessionId}
+            />
+          </div>
+        </div>
+
+        {/* Desktop docked sidebar */}
+        <div className="hidden md:flex">
+          <SessionSidebar
+            onLoadSession={handleLoadSession}
+            currentSessionId={currentSessionId}
+          />
+        </div>
 
         <main className="flex-1 flex flex-col overflow-hidden">
           <TimelineFeed />

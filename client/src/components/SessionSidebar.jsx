@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion as Motion, AnimatePresence } from 'framer-motion';
 import { generateAPI } from '../services/api';
 import usePipelineStore from '../store/pipelineStore';
 import {
@@ -71,7 +71,7 @@ const SessionSidebar = ({ onLoadSession, currentSessionId }) => {
   };
 
   return (
-    <motion.aside
+    <Motion.aside
       animate={{ width: collapsed ? 56 : 280 }}
       transition={{ duration: 0.3, ease: 'easeInOut' }}
       className="flex flex-col h-full bg-[#0d0d1a]/80 border-r border-white/5 overflow-hidden flex-shrink-0"
@@ -79,17 +79,17 @@ const SessionSidebar = ({ onLoadSession, currentSessionId }) => {
       {/* Header */}
       <div className="flex items-center justify-between p-3 border-b border-white/5 min-h-[56px]">
         {!collapsed && (
-          <motion.span
+          <Motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-sm font-semibold text-gray-300"
           >
             Sessions
-          </motion.span>
+          </Motion.span>
         )}
         <button
           onClick={() => setCollapsed(!collapsed)}
-          className="p-1.5 rounded-lg text-gray-500 hover:text-gray-300 hover:bg-white/5 transition-colors cursor-pointer"
+          className="hidden md:inline-flex p-1.5 rounded-lg text-gray-500 hover:text-gray-300 hover:bg-white/5 transition-colors cursor-pointer"
         >
           {collapsed ? <ChevronRight size={16} /> : <ChevronLeft size={16} />}
         </button>
@@ -139,7 +139,7 @@ const SessionSidebar = ({ onLoadSession, currentSessionId }) => {
             ) : (
               <AnimatePresence>
                 {filteredSessions.map((session) => (
-                  <motion.button
+                  <Motion.button
                     key={session._id}
                     layout
                     initial={{ opacity: 0, x: -20 }}
@@ -178,7 +178,7 @@ const SessionSidebar = ({ onLoadSession, currentSessionId }) => {
                         {session.status}
                       </span>
                     </div>
-                  </motion.button>
+                  </Motion.button>
                 ))}
               </AnimatePresence>
             )}
@@ -205,7 +205,7 @@ const SessionSidebar = ({ onLoadSession, currentSessionId }) => {
           </button>
         </div>
       )}
-    </motion.aside>
+    </Motion.aside>
   );
 };
 
