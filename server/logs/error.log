@@ -1,0 +1,8 @@
+2026-04-03 11:14:31 [ERROR]: 500 — next is not a function
+TypeError: next is not a function
+    at model.<anonymous> (/home/igris0410/multiagent/server/models/User.js:42:3)
+    at async Kareem.execPre (/home/igris0410/multiagent/server/node_modules/kareem/index.js:70:24)
+    at async model.$__save (/home/igris0410/multiagent/server/node_modules/mongoose/lib/model.js:394:5)
+    at async model.save (/home/igris0410/multiagent/server/node_modules/mongoose/lib/model.js:664:5)
+    at async model.create (/home/igris0410/multiagent/server/node_modules/mongoose/lib/model.js:2751:5)
+    at async register (/home/igris0410/multiagent/server/controllers/authController.js:38:18)
