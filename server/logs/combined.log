@@ -1,0 +1,29 @@
+2026-04-03 11:13:41 [INFO]: Socket.io initialized with JWT auth middleware
+2026-04-03 11:13:43 [INFO]: MongoDB connected: ac-oouwtss-shard-00-02.hgqzfrs.mongodb.net
+2026-04-03 11:13:43 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-03 11:13:43 [INFO]: 📡 Environment: development
+2026-04-03 11:13:43 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-03 11:14:31 [ERROR]: 500 — next is not a function
+TypeError: next is not a function
+    at model.<anonymous> (/home/igris0410/multiagent/server/models/User.js:42:3)
+    at async Kareem.execPre (/home/igris0410/multiagent/server/node_modules/kareem/index.js:70:24)
+    at async model.$__save (/home/igris0410/multiagent/server/node_modules/mongoose/lib/model.js:394:5)
+    at async model.save (/home/igris0410/multiagent/server/node_modules/mongoose/lib/model.js:664:5)
+    at async model.create (/home/igris0410/multiagent/server/node_modules/mongoose/lib/model.js:2751:5)
+    at async register (/home/igris0410/multiagent/server/controllers/authController.js:38:18)
+2026-04-03 11:15:56 [INFO]: Socket.io initialized with JWT auth middleware
+2026-04-03 11:15:57 [INFO]: MongoDB connected: ac-oouwtss-shard-00-00.hgqzfrs.mongodb.net
+2026-04-03 11:15:57 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-03 11:15:57 [INFO]: 📡 Environment: development
+2026-04-03 11:15:57 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-03 11:15:59 [INFO]: Socket.io initialized with JWT auth middleware
+2026-04-03 11:15:59 [INFO]: MongoDB connected: ac-oouwtss-shard-00-01.hgqzfrs.mongodb.net
+2026-04-03 11:15:59 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-03 11:15:59 [INFO]: 📡 Environment: development
+2026-04-03 11:15:59 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-03 11:16:05 [INFO]: User registered: vaish (69cf541c495e7bd4f75a3507)
+2026-04-03 11:16:05 [INFO]: Socket connected: sBbbgnWoMbQmzFvQAAAC | User: 69cf541c495e7bd4f75a3507
+2026-04-03 11:16:31 [INFO]: Socket disconnected: sBbbgnWoMbQmzFvQAAAC | Reason: client namespace disconnect
+2026-04-03 11:16:42 [INFO]: User logged in: vaish (69cf541c495e7bd4f75a3507)
+2026-04-03 11:16:42 [INFO]: Socket connected: 1MK8ueDQ5bBy0-2wAAAE | User: 69cf541c495e7bd4f75a3507
+2026-04-03 11:16:48 [INFO]: Socket disconnected: 1MK8ueDQ5bBy0-2wAAAE | Reason: client namespace disconnect
