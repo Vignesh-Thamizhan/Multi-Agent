@@ -1,5 +1,6 @@
 const { Server } = require('socket.io');
 const jwt = require('jsonwebtoken');
+const cookie = require('cookie');
 const logger = require('../utils/logger');
 
 let io;
@@ -15,9 +16,12 @@ const initializeSocket = (httpServer) => {
     pingInterval: 25000,
   });
 
-  // JWT auth middleware for Socket.io handshake
+  // JWT auth middleware for Socket.io handshake using httpOnly cookie
   io.use((socket, next) => {
-    const token = socket.handshake.auth?.token;
+    const rawCookie = socket.handshake.headers.cookie || '';
+    const parsed = cookie.parse(rawCookie || '');
+    const token = parsed.token;
+
     if (!token) {
       return next(new Error('Authentication required'));
     }
@@ -47,7 +51,7 @@ const initializeSocket = (httpServer) => {
     });
   });
 
-  logger.info('Socket.io initialized with JWT auth middleware');
+  logger.info('Socket.io initialized with cookie-based JWT auth middleware');
   return io;
 };
 

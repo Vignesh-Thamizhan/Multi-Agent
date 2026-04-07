@@ -6,7 +6,6 @@ import usePipelineStore from '../store/pipelineStore';
 const useSocket = () => {
   const socketRef = useRef(null);
   const [isConnected, setIsConnected] = useState(false);
-  const token = useAuthStore((s) => s.token);
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
 
   const onAgentStart = usePipelineStore((s) => s.onAgentStart);
@@ -18,15 +17,15 @@ const useSocket = () => {
   const onPipelineError = usePipelineStore((s) => s.onPipelineError);
 
   const connect = useCallback(() => {
-    if (!token || socketRef.current?.connected) return;
+    if (!isAuthenticated || socketRef.current?.connected) return;
 
     const socket = io(window.location.origin, {
-      auth: { token },
       transports: ['websocket', 'polling'],
       reconnection: true,
       reconnectionAttempts: 10,
       reconnectionDelay: 1000,
       reconnectionDelayMax: 5000,
+      withCredentials: true,
     });
 
     socket.on('connect', () => {
@@ -85,11 +84,11 @@ const useSocket = () => {
   }, []);
 
   useEffect(() => {
-    if (isAuthenticated && token) {
+    if (isAuthenticated) {
       connect();
     }
     return () => disconnect();
-  }, [isAuthenticated, token, connect, disconnect]);
+  }, [isAuthenticated, connect, disconnect]);
 
   return {
     isConnected,

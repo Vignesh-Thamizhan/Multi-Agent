@@ -15,8 +15,8 @@ export const AGENTS = {
     models: [
       { id: 'llama-3.3-70b-versatile', label: 'Llama 3.3 70B' },
       { id: 'llama-3.1-8b-instant', label: 'Llama 3.1 8B' },
-      { id: 'mixtral-8x7b-32768', label: 'Mixtral 8x7B' },
-      { id: 'gemma2-9b-it', label: 'Gemma 2 9B' },
+      { id: 'openai/gpt-oss-120b', label: 'GPT-OSS 120B' },
+      { id: 'qwen/qwen3-32b', label: 'Qwen 3 32B' },
     ],
     defaultModel: 'llama-3.3-70b-versatile',
   },
@@ -34,8 +34,8 @@ export const AGENTS = {
     models: [
       { id: 'llama-3.3-70b-versatile', label: 'Llama 3.3 70B' },
       { id: 'llama-3.1-8b-instant', label: 'Llama 3.1 8B' },
-      { id: 'mixtral-8x7b-32768', label: 'Mixtral 8x7B' },
-      { id: 'gemma2-9b-it', label: 'Gemma 2 9B' },
+      { id: 'openai/gpt-oss-120b', label: 'GPT-OSS 120B' },
+      { id: 'qwen/qwen3-32b', label: 'Qwen 3 32B' },
     ],
     defaultModel: 'llama-3.3-70b-versatile',
   },
@@ -51,13 +51,13 @@ export const AGENTS = {
     gradientTo: '#d97706',
     provider: 'OpenRouter',
     models: [
-      { id: 'anthropic/claude-3.5-haiku', label: 'Claude 3.5 Haiku' },
-      { id: 'anthropic/claude-3.5-sonnet', label: 'Claude 3.5 Sonnet' },
-      { id: 'openai/gpt-4o-mini', label: 'GPT-4o Mini' },
-      { id: 'openai/gpt-4o', label: 'GPT-4o' },
-      { id: 'google/gemini-flash-1.5', label: 'Gemini 1.5 Flash' },
+      { id: 'anthropic/claude-4-haiku', label: 'Claude 4 Haiku' },
+      { id: 'anthropic/claude-4-sonnet', label: 'Claude 4 Sonnet' },
+      { id: 'openai/gpt-5-mini', label: 'GPT-5 Mini' },
+      { id: 'openai/o3-mini', label: 'o3 Mini' },
+      { id: 'google/gemini-2.5-flash', label: 'Gemini 2.5 Flash' },
     ],
-    defaultModel: 'anthropic/claude-3.5-haiku',
+    defaultModel: 'anthropic/claude-4-haiku',
   },
   multimodal: {
     id: 'multimodal',
@@ -70,8 +70,8 @@ export const AGENTS = {
     gradientFrom: '#10b981',
     gradientTo: '#059669',
     provider: 'Gemini',
-    models: [{ id: 'gemini-1.5-flash', label: 'Gemini 1.5 Flash' }],
-    defaultModel: 'gemini-1.5-flash',
+    models: [{ id: 'gemini-2.5-flash', label: 'Gemini 2.5 Flash' }],
+    defaultModel: 'gemini-2.5-flash',
   },
 };
 

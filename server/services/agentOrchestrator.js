@@ -118,7 +118,7 @@ const runPipeline = async ({ userId, sessionId, prompt, models }) => {
     });
 
     // ── REVIEWER AGENT ─────────────────────────────────────────
-    const reviewerModel = models.reviewer || 'anthropic/claude-3.5-haiku';
+    const reviewerModel = models.reviewer || 'anthropic/claude-4-haiku';
     io.to(room).emit('agent:start', {
       agent: 'reviewer',
       model: reviewerModel,

@@ -5,7 +5,7 @@ const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions';
 /**
  * Stream chat completions from OpenRouter via SSE
  * @param {Object} options
- * @param {string} options.model - Model name (e.g., 'anthropic/claude-3.5-haiku')
+ * @param {string} options.model - Model name (e.g., 'anthropic/claude-4-haiku')
  * @param {Array} options.messages - Chat messages array
  * @param {Function} options.onChunk - Callback for each text chunk
  * @param {number} options.temperature - Temperature (default: 0.7)
@@ -13,7 +13,7 @@ const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions';
  * @returns {Promise<string>} Full accumulated response text
  */
 const streamCompletion = async ({
-  model = 'anthropic/claude-3.5-haiku',
+  model = 'anthropic/claude-4-haiku',
   messages,
   onChunk,
   temperature = 0.7,

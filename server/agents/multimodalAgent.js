@@ -43,7 +43,7 @@ const run = async ({ prompt, file, onChunk }) => {
     prompt: fullPrompt,
     file,
     onChunk,
-    model: 'gemini-1.5-flash',
+    model: 'gemini-2.5-flash',
   });
 
   logger.info(`MultimodalAgent complete: ${result.length} chars`);
