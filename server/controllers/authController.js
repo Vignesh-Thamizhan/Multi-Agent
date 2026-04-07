@@ -8,6 +8,13 @@ const generateToken = (id) => {
   });
 };
 
+const buildAuthCookieOptions = () => ({
+  httpOnly: true,
+  secure: process.env.NODE_ENV === 'production',
+  sameSite: 'strict',
+  maxAge: 7 * 24 * 60 * 60 * 1000,
+});
+
 /**
  * @route   POST /api/auth/register
  * @desc    Register a new user
@@ -41,13 +48,15 @@ const register = async (req, res, next) => {
 
     logger.info(`User registered: ${user.username} (${user._id})`);
 
-    res.status(201).json({
-      _id: user._id,
-      username: user.username,
-      email: user.email,
-      modelPreferences: user.modelPreferences,
-      token,
-    });
+    res
+      .cookie('token', token, buildAuthCookieOptions())
+      .status(201)
+      .json({
+        _id: user._id,
+        username: user.username,
+        email: user.email,
+        modelPreferences: user.modelPreferences,
+      });
   } catch (error) {
     next(error);
   }
@@ -77,13 +86,14 @@ const login = async (req, res, next) => {
 
     logger.info(`User logged in: ${user.username} (${user._id})`);
 
-    res.json({
-      _id: user._id,
-      username: user.username,
-      email: user.email,
-      modelPreferences: user.modelPreferences,
-      token,
-    });
+    res
+      .cookie('token', token, buildAuthCookieOptions())
+      .json({
+        _id: user._id,
+        username: user.username,
+        email: user.email,
+        modelPreferences: user.modelPreferences,
+      });
   } catch (error) {
     next(error);
   }

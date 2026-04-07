@@ -16,14 +16,14 @@ const getGenAI = () => {
  * @param {string} options.prompt - Text prompt
  * @param {Object} options.file - File object { buffer, mimeType, originalname }
  * @param {Function} options.onChunk - Callback for each text chunk
- * @param {string} options.model - Model name (default: 'gemini-1.5-flash')
+ * @param {string} options.model - Model name (default: 'gemini-2.5-flash')
  * @returns {Promise<string>} Full accumulated response text
  */
 const streamMultimodal = async ({
   prompt,
   file,
   onChunk,
-  model = 'gemini-1.5-flash',
+  model = 'gemini-2.5-flash',
 }) => {
   logger.info(`Gemini streaming: model=${model}, file=${file?.originalname || 'none'}`);
 

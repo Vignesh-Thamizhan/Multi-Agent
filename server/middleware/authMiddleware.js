@@ -2,15 +2,13 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const logger = require('../utils/logger');
 
-const protect = async (req, res, next) => {
-  let token;
+const extractTokenFromCookies = (req) => {
+  if (!req.cookies) return null;
+  return req.cookies.token || null;
+};
 
-  if (
-    req.headers.authorization &&
-    req.headers.authorization.startsWith('Bearer')
-  ) {
-    token = req.headers.authorization.split(' ')[1];
-  }
+const protect = async (req, res, next) => {
+  const token = extractTokenFromCookies(req);
 
   if (!token) {
     return res.status(401).json({ error: 'Not authorized, no token' });

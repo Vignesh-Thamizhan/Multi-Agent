@@ -1,10 +1,17 @@
 import { create } from 'zustand';
 import { authAPI } from '../services/api';
 
+const getInitialUser = () => {
+  try {
+    return JSON.parse(localStorage.getItem('nf_user') || 'null');
+  } catch {
+    return null;
+  }
+};
+
 const useAuthStore = create((set, get) => ({
-  user: JSON.parse(localStorage.getItem('nf_user') || 'null'),
-  token: localStorage.getItem('nf_token') || null,
-  isAuthenticated: !!localStorage.getItem('nf_token'),
+  user: getInitialUser(),
+  isAuthenticated: !!getInitialUser(),
   loading: false,
   error: null,
 
@@ -12,11 +19,9 @@ const useAuthStore = create((set, get) => ({
     set({ loading: true, error: null });
     try {
       const { data } = await authAPI.register({ username, email, password });
-      localStorage.setItem('nf_token', data.token);
       localStorage.setItem('nf_user', JSON.stringify(data));
       set({
         user: data,
-        token: data.token,
         isAuthenticated: true,
         loading: false,
       });
@@ -32,11 +37,9 @@ const useAuthStore = create((set, get) => ({
     set({ loading: true, error: null });
     try {
       const { data } = await authAPI.login({ email, password });
-      localStorage.setItem('nf_token', data.token);
       localStorage.setItem('nf_user', JSON.stringify(data));
       set({
         user: data,
-        token: data.token,
         isAuthenticated: true,
         loading: false,
       });
@@ -49,11 +52,9 @@ const useAuthStore = create((set, get) => ({
   },
 
   logout: () => {
-    localStorage.removeItem('nf_token');
     localStorage.removeItem('nf_user');
     set({
       user: null,
-      token: null,
       isAuthenticated: false,
       error: null,
     });
