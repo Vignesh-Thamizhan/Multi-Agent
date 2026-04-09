@@ -80,10 +80,10 @@ const LandingPage = () => {
               Sign in
             </Link>
             <Link
-              to="/auth?mode=register"
+              to="/auth?mode=signup"
               className="px-3 py-2 rounded-xl text-sm font-medium bg-white/5 hover:bg-white/10 border border-white/10 transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
             >
-              Create account
+              Sign up
             </Link>
           </div>
         </header>
@@ -133,7 +133,7 @@ const LandingPage = () => {
                   className="mt-7 flex flex-col sm:flex-row gap-3"
                 >
                   <Link
-                    to="/auth?mode=register"
+                    to="/auth?mode=signup"
                     className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-medium text-sm bg-gradient-to-r from-violet-600 to-cyan-600 text-white shadow-lg shadow-violet-500/20 hover:shadow-violet-500/30 transition-shadow cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
                   >
                     Get started

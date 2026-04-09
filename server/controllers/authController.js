@@ -1,6 +1,9 @@
 const jwt = require('jsonwebtoken');
+const { OAuth2Client } = require('google-auth-library');
 const User = require('../models/User');
 const logger = require('../utils/logger');
+
+const googleClient = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
@@ -55,6 +58,7 @@ const register = async (req, res, next) => {
         _id: user._id,
         username: user.username,
         email: user.email,
+        avatar: user.avatar,
         modelPreferences: user.modelPreferences,
       });
   } catch (error) {
@@ -92,9 +96,97 @@ const login = async (req, res, next) => {
         _id: user._id,
         username: user.username,
         email: user.email,
+        avatar: user.avatar,
         modelPreferences: user.modelPreferences,
       });
   } catch (error) {
+    next(error);
+  }
+};
+
+/**
+ * @route   POST /api/auth/google
+ * @desc    Authenticate or register user via Google OAuth
+ */
+const googleAuth = async (req, res, next) => {
+  try {
+    const { credential } = req.body;
+
+    if (!credential) {
+      res.status(400);
+      throw new Error('Google credential is required');
+    }
+
+    // Verify the Google ID token
+    const ticket = await googleClient.verifyIdToken({
+      idToken: credential,
+      audience: process.env.GOOGLE_CLIENT_ID,
+    });
+
+    const payload = ticket.getPayload();
+    const { sub: googleId, email, name, picture } = payload;
+
+    if (!email) {
+      res.status(400);
+      throw new Error('Google account must have an email address');
+    }
+
+    // Try to find existing user by googleId or email
+    let user = await User.findOne({
+      $or: [{ googleId }, { email }],
+    });
+
+    if (user) {
+      // Link Google account if user exists by email but hasn't linked yet
+      if (!user.googleId) {
+        user.googleId = googleId;
+        if (picture && !user.avatar) user.avatar = picture;
+        await user.save();
+        logger.info(`Linked Google account for user: ${user.username} (${user._id})`);
+      }
+    } else {
+      // Create a new user from Google profile
+      // Generate a unique username from the Google name
+      let baseUsername = (name || email.split('@')[0])
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, '')
+        .slice(0, 20);
+
+      if (baseUsername.length < 3) baseUsername = 'user';
+
+      let username = baseUsername;
+      let counter = 1;
+      while (await User.findOne({ username })) {
+        username = `${baseUsername}${counter}`;
+        counter++;
+      }
+
+      user = await User.create({
+        username,
+        email,
+        googleId,
+        avatar: picture || null,
+      });
+
+      logger.info(`User registered via Google: ${user.username} (${user._id})`);
+    }
+
+    const token = generateToken(user._id);
+
+    res
+      .cookie('token', token, buildAuthCookieOptions())
+      .json({
+        _id: user._id,
+        username: user.username,
+        email: user.email,
+        avatar: user.avatar,
+        modelPreferences: user.modelPreferences,
+      });
+  } catch (error) {
+    if (error.message?.includes('Token used too late') || error.message?.includes('Invalid token')) {
+      res.status(401);
+      error.message = 'Google authentication failed. Please try again.';
+    }
     next(error);
   }
 };
@@ -110,6 +202,7 @@ const getProfile = async (req, res, next) => {
       _id: user._id,
       username: user.username,
       email: user.email,
+      avatar: user.avatar,
       modelPreferences: user.modelPreferences,
     });
   } catch (error) {
@@ -138,6 +231,7 @@ const updateModelPreferences = async (req, res, next) => {
       _id: user._id,
       username: user.username,
       email: user.email,
+      avatar: user.avatar,
       modelPreferences: user.modelPreferences,
     });
   } catch (error) {
@@ -145,4 +239,5 @@ const updateModelPreferences = async (req, res, next) => {
   }
 };
 
-module.exports = { register, login, getProfile, updateModelPreferences };
+module.exports = { register, login, googleAuth, getProfile, updateModelPreferences };
+
