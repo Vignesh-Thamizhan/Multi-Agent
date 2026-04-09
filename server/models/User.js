@@ -21,9 +21,17 @@ const userSchema = new mongoose.Schema(
     },
     password: {
       type: String,
-      required: [true, 'Password is required'],
       minlength: [6, 'Password must be at least 6 characters'],
       select: false,
+    },
+    googleId: {
+      type: String,
+      sparse: true,
+      unique: true,
+    },
+    avatar: {
+      type: String,
+      default: null,
     },
     modelPreferences: {
       planner: { type: String, default: 'llama-3.3-70b-versatile' },
@@ -34,16 +42,26 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+// Ensure at least one auth method exists
+userSchema.pre('validate', function (next) {
+  if (!this.password && !this.googleId) {
+    this.invalidate('password', 'Either password or Google account is required');
+  }
+  next();
+});
+
 // Hash password before save
 userSchema.pre('save', async function () {
-  if (!this.isModified('password')) return;
+  if (!this.isModified('password') || !this.password) return;
   const salt = await bcrypt.genSalt(12);
   this.password = await bcrypt.hash(this.password, salt);
 });
 
 // Compare password instance method
 userSchema.methods.matchPassword = async function (enteredPassword) {
+  if (!this.password) return false;
   return bcrypt.compare(enteredPassword, this.password);
 };
 
 module.exports = mongoose.model('User', userSchema);
+

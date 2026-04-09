@@ -51,6 +51,24 @@ const useAuthStore = create((set, get) => ({
     }
   },
 
+  googleAuth: async (credential) => {
+    set({ loading: true, error: null });
+    try {
+      const { data } = await authAPI.googleAuth({ credential });
+      localStorage.setItem('nf_user', JSON.stringify(data));
+      set({
+        user: data,
+        isAuthenticated: true,
+        loading: false,
+      });
+      return data;
+    } catch (err) {
+      const msg = err.response?.data?.message || err.message;
+      set({ loading: false, error: msg });
+      throw new Error(msg);
+    }
+  },
+
   logout: () => {
     localStorage.removeItem('nf_user');
     set({
@@ -75,3 +93,4 @@ const useAuthStore = create((set, get) => ({
 }));
 
 export default useAuthStore;
+
