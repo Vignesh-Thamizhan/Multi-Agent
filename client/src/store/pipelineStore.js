@@ -1,6 +1,14 @@
 import { create } from 'zustand';
 import { PIPELINE_STATUSES, AGENT_STATUSES, PIPELINE_ORDER } from '../utils/agentConfig';
 
+const getSavedPipelineMode = () => {
+  try {
+    return localStorage.getItem('nf_pipeline_mode') || 'sequential';
+  } catch {
+    return 'sequential';
+  }
+};
+
 const createInitialAgentState = () => ({
   status: AGENT_STATUSES.IDLE,
   content: '',
@@ -13,12 +21,14 @@ const usePipelineStore = create((set, get) => ({
   // Pipeline-level state
   pipelineStatus: PIPELINE_STATUSES.IDLE,
   currentSessionId: null,
+  pipelineMode: getSavedPipelineMode(),
 
   // Per-agent state
   agents: {
     planner: createInitialAgentState(),
     coder: createInitialAgentState(),
     reviewer: createInitialAgentState(),
+    debugger: createInitialAgentState(),
     multimodal: createInitialAgentState(),
   },
 
@@ -35,6 +45,7 @@ const usePipelineStore = create((set, get) => ({
         planner: createInitialAgentState(),
         coder: createInitialAgentState(),
         reviewer: createInitialAgentState(),
+        debugger: createInitialAgentState(),
         multimodal: createInitialAgentState(),
       },
     });
@@ -123,6 +134,12 @@ const usePipelineStore = create((set, get) => ({
     set({ sessionMessages: messages });
   },
 
+  setPipelineMode: (mode) => {
+    const resolved = mode === 'parallel' ? 'parallel' : 'sequential';
+    try { localStorage.setItem('nf_pipeline_mode', resolved); } catch {}
+    set({ pipelineMode: resolved });
+  },
+
   resetPipeline: () => {
     set({
       pipelineStatus: PIPELINE_STATUSES.IDLE,
@@ -131,6 +148,7 @@ const usePipelineStore = create((set, get) => ({
         planner: createInitialAgentState(),
         coder: createInitialAgentState(),
         reviewer: createInitialAgentState(),
+        debugger: createInitialAgentState(),
         multimodal: createInitialAgentState(),
       },
       sessionMessages: [],

@@ -2,6 +2,7 @@ import { useEffect, useRef, useCallback, useState } from 'react';
 import { io } from 'socket.io-client';
 import useAuthStore from '../store/authStore';
 import usePipelineStore from '../store/pipelineStore';
+import useWorkspaceStore from '../store/workspaceStore';
 
 const useSocket = () => {
   const socketRef = useRef(null);
@@ -15,6 +16,8 @@ const useSocket = () => {
   const onAgentRetry = usePipelineStore((s) => s.onAgentRetry);
   const onPipelineComplete = usePipelineStore((s) => s.onPipelineComplete);
   const onPipelineError = usePipelineStore((s) => s.onPipelineError);
+  const setToolCall = useWorkspaceStore((s) => s.setToolCall);
+  const setRagContext = useWorkspaceStore((s) => s.setRagContext);
 
   const connect = useCallback(() => {
     if (!isAuthenticated || socketRef.current?.connected) return;
@@ -72,8 +75,16 @@ const useSocket = () => {
       onPipelineError(error);
     });
 
+    socket.on('tool:call', ({ agent, tool, args }) => {
+      setToolCall({ agent, tool, args, at: Date.now() });
+    });
+
+    socket.on('rag:context', ({ agent, queries, count, chunks }) => {
+      setRagContext({ agent, queries, count, chunks, at: Date.now() });
+    });
+
     socketRef.current = socket;
-  }, [token, onAgentStart, onAgentChunk, onAgentComplete, onAgentError, onAgentRetry, onPipelineComplete, onPipelineError]);
+  }, [isAuthenticated, onAgentStart, onAgentChunk, onAgentComplete, onAgentError, onAgentRetry, onPipelineComplete, onPipelineError, setToolCall, setRagContext]);
 
   const disconnect = useCallback(() => {
     if (socketRef.current) {

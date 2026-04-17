@@ -6,3 +6,33 @@ TypeError: next is not a function
     at async model.save (/home/igris0410/multiagent/server/node_modules/mongoose/lib/model.js:664:5)
     at async model.create (/home/igris0410/multiagent/server/node_modules/mongoose/lib/model.js:2751:5)
     at async register (/home/igris0410/multiagent/server/controllers/authController.js:38:18)
+2026-04-17 12:02:17 [ERROR]: 500 — next is not a function
+TypeError: next is not a function
+    at model.<anonymous> (/home/igris0410/multiagent/server/models/User.js:50:3)
+    at Kareem.execPre (/home/igris0410/multiagent/server/node_modules/kareem/index.js:68:39)
+    at model._execDocumentPreHooks (/home/igris0410/multiagent/server/node_modules/mongoose/lib/document.js:3198:29)
+    at model.validate (/home/igris0410/multiagent/server/node_modules/mongoose/lib/document.js:2702:30)
+    at model.$__save (/home/igris0410/multiagent/server/node_modules/mongoose/lib/model.js:390:18)
+    at model.save (/home/igris0410/multiagent/server/node_modules/mongoose/lib/model.js:664:16)
+    at model.create (/home/igris0410/multiagent/server/node_modules/mongoose/lib/model.js:2751:18)
+    at register (/home/igris0410/multiagent/server/controllers/authController.js:48:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-17 12:04:47 [ERROR]: 500 — next is not a function
+TypeError: next is not a function
+    at model.<anonymous> (/home/igris0410/multiagent/server/models/User.js:50:3)
+    at Kareem.execPre (/home/igris0410/multiagent/server/node_modules/kareem/index.js:68:39)
+    at model._execDocumentPreHooks (/home/igris0410/multiagent/server/node_modules/mongoose/lib/document.js:3198:29)
+    at model.validate (/home/igris0410/multiagent/server/node_modules/mongoose/lib/document.js:2702:30)
+    at model.$__save (/home/igris0410/multiagent/server/node_modules/mongoose/lib/model.js:390:18)
+    at model.save (/home/igris0410/multiagent/server/node_modules/mongoose/lib/model.js:664:16)
+    at model.create (/home/igris0410/multiagent/server/node_modules/mongoose/lib/model.js:2751:18)
+    at register (/home/igris0410/multiagent/server/controllers/authController.js:48:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-17 12:17:44 [ERROR]: 400 — Username already taken
+Error: Username already taken
+    at register (/home/igris0410/multiagent/server/controllers/authController.js:41:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-17 12:18:38 [ERROR]: 400 — Username already taken
+Error: Username already taken
+    at register (/home/igris0410/multiagent/server/controllers/authController.js:41:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)

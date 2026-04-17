@@ -47,4 +47,11 @@ export const uploadAPI = {
     }),
 };
 
+export const workspaceAPI = {
+  listFiles: (sessionId) => api.get(`/workspace/${sessionId}/files`),
+  readFile: (sessionId, filePath) =>
+    api.get(`/workspace/${sessionId}/file`, { params: { path: filePath } }),
+  download: (sessionId) => api.get(`/workspace/${sessionId}/download`),
+};
+
 export default api;

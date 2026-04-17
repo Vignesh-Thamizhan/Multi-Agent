@@ -83,6 +83,7 @@ export const ModelSelectorBar = () => {
     planner: user?.modelPreferences?.planner || AGENTS.planner.defaultModel,
     coder: user?.modelPreferences?.coder || AGENTS.coder.defaultModel,
     reviewer: user?.modelPreferences?.reviewer || AGENTS.reviewer.defaultModel,
+    debugger: user?.modelPreferences?.debugger || AGENTS.debugger.defaultModel,
   });
 
   const handleChange = (agentId, modelId) => {
@@ -93,7 +94,7 @@ export const ModelSelectorBar = () => {
 
   return (
     <div className="flex items-center gap-2 flex-wrap">
-      {['planner', 'coder', 'reviewer'].map((id) => (
+      {['planner', 'coder', 'reviewer', 'debugger'].map((id) => (
         <ModelSelector
           key={id}
           agentId={id}

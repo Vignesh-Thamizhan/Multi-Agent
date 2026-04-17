@@ -59,6 +59,23 @@ export const AGENTS = {
     ],
     defaultModel: 'anthropic/claude-4-haiku',
   },
+  debugger: {
+    id: 'debugger',
+    label: 'Debugger',
+    description: 'RAG-powered debugging and fixes',
+    icon: '🛠️',
+    color: '#ef4444',
+    bgColor: 'rgba(239, 68, 68, 0.1)',
+    borderColor: 'rgba(239, 68, 68, 0.3)',
+    gradientFrom: '#ef4444',
+    gradientTo: '#b91c1c',
+    provider: 'Groq',
+    models: [
+      { id: 'llama-3.3-70b-versatile', label: 'Llama 3.3 70B' },
+      { id: 'llama-3.1-8b-instant', label: 'Llama 3.1 8B' },
+    ],
+    defaultModel: 'llama-3.3-70b-versatile',
+  },
   multimodal: {
     id: 'multimodal',
     label: 'Vision',
@@ -75,7 +92,7 @@ export const AGENTS = {
   },
 };
 
-export const PIPELINE_ORDER = ['planner', 'coder', 'reviewer'];
+export const PIPELINE_ORDER = ['planner', 'coder', 'reviewer', 'debugger'];
 
 export const PIPELINE_STATUSES = {
   IDLE: 'idle',

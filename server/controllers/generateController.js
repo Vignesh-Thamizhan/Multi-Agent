@@ -1,5 +1,6 @@
 const sessionManager = require('../utils/sessionManager');
 const { runPipeline } = require('../services/agentOrchestrator');
+const Session = require('../models/Session');
 const logger = require('../utils/logger');
 
 /**
@@ -8,7 +9,7 @@ const logger = require('../utils/logger');
  */
 const generate = async (req, res, next) => {
   try {
-    const { prompt, sessionId, models } = req.body;
+    const { prompt, sessionId, models, pipelineMode } = req.body;
 
     if (!prompt || !prompt.trim()) {
       res.status(400);
@@ -27,6 +28,9 @@ const generate = async (req, res, next) => {
       session = await sessionManager.createSession(userId, title);
     }
 
+    const resolvedMode = pipelineMode === 'parallel' ? 'parallel' : 'sequential';
+    await Session.findByIdAndUpdate(session._id, { pipelineMode: resolvedMode });
+
     // Return 202 immediately — pipeline runs async
     res.status(202).json({
       message: 'Pipeline started',
@@ -40,6 +44,7 @@ const generate = async (req, res, next) => {
         sessionId: session._id.toString(),
         prompt: prompt.trim(),
         models: models || req.user.modelPreferences || {},
+        pipelineMode: resolvedMode,
       }).catch((err) => {
         logger.error(`Pipeline failed for session ${session._id}: ${err.message}`);
       });

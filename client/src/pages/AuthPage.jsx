@@ -38,7 +38,7 @@ const AuthPage = () => {
     try {
       await googleAuth(response.credential);
       toast.success('Signed in with Google!');
-      navigate('/chat');
+      navigate('/dashboard');
     } catch (err) {
       toast.error(err.message);
     }
@@ -97,7 +97,7 @@ const AuthPage = () => {
         });
       }
       toast.success(isLogin ? 'Welcome back!' : 'Account created!');
-      navigate('/chat');
+      navigate('/dashboard');
     } catch (err) {
       toast.error(err.message);
     }

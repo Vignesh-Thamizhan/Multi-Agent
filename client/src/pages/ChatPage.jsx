@@ -4,9 +4,13 @@ import TopBar from '../components/TopBar';
 import SessionSidebar from '../components/SessionSidebar';
 import TimelineFeed from '../components/TimelineFeed';
 import PromptInput from '../components/PromptInput';
+import ToolCallBadge from '../components/ToolCallBadge';
+import RagContextBadge from '../components/RagContextBadge';
+import FileExplorer from '../components/FileExplorer';
 import useSocket from '../hooks/useSocket';
 import usePipelineStore from '../store/pipelineStore';
 import useAuthStore from '../store/authStore';
+import useWorkspaceStore from '../store/workspaceStore';
 import { generateAPI, uploadAPI } from '../services/api';
 import toast from 'react-hot-toast';
 
@@ -21,7 +25,13 @@ const ChatPage = () => {
   const setSessionMessages = usePipelineStore((s) => s.setSessionMessages);
   const resetPipeline = usePipelineStore((s) => s.resetPipeline);
   const isRunning = usePipelineStore((s) => s.isRunning);
+  const pipelineStatus = usePipelineStore((s) => s.pipelineStatus);
+  const pipelineMode = usePipelineStore((s) => s.pipelineMode);
   const user = useAuthStore((s) => s.user);
+  const toolCalls = useWorkspaceStore((s) => s.toolCalls);
+  const ragContexts = useWorkspaceStore((s) => s.ragContexts);
+  const fetchFiles = useWorkspaceStore((s) => s.fetchFiles);
+  const resetWorkspaceState = useWorkspaceStore((s) => s.resetWorkspaceState);
 
   const prefersReducedMotion = useMemo(() => {
     if (typeof window === 'undefined' || !window.matchMedia) return false;
@@ -63,6 +73,7 @@ const ChatPage = () => {
         prompt,
         sessionId: currentSessionId,
         models: user?.modelPreferences || {},
+        pipelineMode: pipelineMode,
       });
 
       setCurrentSessionId(data.sessionId);
@@ -71,7 +82,7 @@ const ChatPage = () => {
       const msg = err.response?.data?.message || err.message;
       toast.error(msg);
     }
-  }, [currentSessionId, user, startPipeline]);
+  }, [currentSessionId, user, startPipeline, pipelineMode]);
 
   const handleFileUpload = useCallback(async (prompt, file) => {
     try {
@@ -93,16 +104,24 @@ const ChatPage = () => {
     if (!session) {
       // New session
       resetPipeline();
+      resetWorkspaceState();
       setCurrentSessionId(null);
       setMobileSidebarOpen(false);
       return;
     }
 
     resetPipeline();
+    resetWorkspaceState();
     setCurrentSessionId(session._id);
     setSessionMessages(session.messages || []);
     setMobileSidebarOpen(false);
-  }, [resetPipeline, setSessionMessages]);
+  }, [resetPipeline, setSessionMessages, resetWorkspaceState]);
+
+  useEffect(() => {
+    if (pipelineStatus === 'complete' && currentSessionId) {
+      fetchFiles(currentSessionId);
+    }
+  }, [pipelineStatus, currentSessionId, fetchFiles]);
 
   return (
     <div className="min-h-dvh flex flex-col bg-[#0a0a14] text-white overflow-hidden">
@@ -141,7 +160,23 @@ const ChatPage = () => {
         </div>
 
         <main className="flex-1 flex flex-col overflow-hidden">
+          <div className="px-4 pt-3 max-w-4xl mx-auto w-full flex flex-wrap items-center gap-2">
+            <span className="text-[10px] uppercase tracking-wider text-gray-500">
+              Mode: {pipelineMode}
+            </span>
+            {toolCalls.slice(-3).map((entry, idx) => (
+              <ToolCallBadge key={`${entry.at}-${idx}`} tool={entry.tool} agent={entry.agent} />
+            ))}
+            {ragContexts.length > 0 && <RagContextBadge count={ragContexts[ragContexts.length - 1].count} />}
+          </div>
           <TimelineFeed />
+          {currentSessionId && (
+            <div className="px-4 pb-3">
+              <div className="max-w-4xl mx-auto">
+                <FileExplorer sessionId={currentSessionId} />
+              </div>
+            </div>
+          )}
           <PromptInput
             onSubmit={handleSubmit}
             onFileUpload={handleFileUpload}

@@ -9,7 +9,7 @@ const messageSchema = new mongoose.Schema(
     },
     agent: {
       type: String,
-      enum: ['planner', 'coder', 'reviewer', 'multimodal', null],
+      enum: ['planner', 'coder', 'reviewer', 'debugger', 'multimodal', null],
       default: null,
     },
     content: {
@@ -46,6 +46,11 @@ const sessionSchema = new mongoose.Schema(
       type: String,
       enum: ['active', 'completed', 'error'],
       default: 'active',
+    },
+    pipelineMode: {
+      type: String,
+      enum: ['sequential', 'parallel'],
+      default: 'sequential',
     },
   },
   { timestamps: true }

@@ -27,7 +27,7 @@ const useAuthStore = create((set, get) => ({
       });
       return data;
     } catch (err) {
-      const msg = err.response?.data?.message || err.message;
+      const msg = err.response?.data?.error || err.message;
       set({ loading: false, error: msg });
       throw new Error(msg);
     }
@@ -45,7 +45,7 @@ const useAuthStore = create((set, get) => ({
       });
       return data;
     } catch (err) {
-      const msg = err.response?.data?.message || err.message;
+      const msg = err.response?.data?.error || err.message;
       set({ loading: false, error: msg });
       throw new Error(msg);
     }
@@ -63,7 +63,7 @@ const useAuthStore = create((set, get) => ({
       });
       return data;
     } catch (err) {
-      const msg = err.response?.data?.message || err.message;
+      const msg = err.response?.data?.error || err.message;
       set({ loading: false, error: msg });
       throw new Error(msg);
     }

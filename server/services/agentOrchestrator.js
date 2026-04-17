@@ -2,8 +2,17 @@ const { getIO } = require('../config/socket');
 const plannerAgent = require('../agents/plannerAgent');
 const coderAgent = require('../agents/coderAgent');
 const reviewerAgent = require('../agents/reviewerAgent');
-const { retryWithBackoff } = require('../utils/retryHelper');
+const debuggerAgent = require('../agents/debuggerAgent');
 const sessionManager = require('../utils/sessionManager');
+const {
+  createFile,
+  readFile,
+  writeFile,
+  listFiles,
+  ensureSessionRoot,
+} = require('./mcpFileService');
+const { runParallelCoreAgents } = require('./parallelOrchestrator');
+const { asyncIndexAgentOutput } = require('./ragService');
 const logger = require('../utils/logger');
 
 /**
@@ -16,10 +25,30 @@ const logger = require('../utils/logger');
  * @param {string} options.prompt - User's prompt
  * @param {Object} options.models - { planner, coder, reviewer } model names
  */
-const runPipeline = async ({ userId, sessionId, prompt, models }) => {
+const runPipeline = async ({ userId, sessionId, prompt, models, pipelineMode = 'sequential' }) => {
   const io = getIO();
   const room = `user:${userId}`;
   const results = {};
+  await ensureSessionRoot({ userId, sessionId });
+
+  const emitStart = (agent, model) => io.to(room).emit('agent:start', { agent, model });
+  const emitChunk = (agent, chunk) => io.to(room).emit('agent:chunk', { agent, chunk });
+  const emitComplete = (agent, content) => io.to(room).emit('agent:complete', { agent, content });
+
+  const executeTool = async (toolName, args = {}) => {
+    switch (toolName) {
+      case 'create_file':
+        return createFile({ userId, sessionId, filePath: args.filePath, content: args.content, agent: 'debugger' });
+      case 'read_file':
+        return readFile({ userId, sessionId, filePath: args.filePath, agent: 'debugger' });
+      case 'write_file':
+        return writeFile({ userId, sessionId, filePath: args.filePath, content: args.content, agent: 'debugger' });
+      case 'list_files':
+        return listFiles({ userId, sessionId });
+      default:
+        throw new Error(`Unknown MCP tool: ${toolName}`);
+    }
+  };
 
   try {
     // Save the user prompt to session
@@ -32,135 +61,91 @@ const runPipeline = async ({ userId, sessionId, prompt, models }) => {
     // Get context window
     const context = await sessionManager.getContextWindow(sessionId);
 
-    // ── PLANNER AGENT ──────────────────────────────────────────
-    const plannerModel = models.planner || 'llama-3.3-70b-versatile';
-    io.to(room).emit('agent:start', { agent: 'planner', model: plannerModel });
+    if (pipelineMode === 'parallel') {
+      const parallelOutputs = await runParallelCoreAgents({
+        prompt,
+        context,
+        models,
+        emitStart,
+        emitChunk,
+        emitComplete,
+      });
+      Object.assign(results, Object.fromEntries(Object.entries(parallelOutputs).map(([k, v]) => [k, v.content])));
+    } else {
+      const plannerModel = models.planner || 'llama-3.3-70b-versatile';
+      emitStart('planner', plannerModel);
+      results.planner = await plannerAgent.run({ prompt, context, model: plannerModel, onChunk: (chunk) => emitChunk('planner', chunk) });
+      emitComplete('planner', results.planner);
 
-    results.planner = await retryWithBackoff(
-      () =>
-        plannerAgent.run({
-          prompt,
-          context,
-          model: plannerModel,
-          onChunk: (chunk) => {
-            io.to(room).emit('agent:chunk', { agent: 'planner', chunk });
-          },
-        }),
-      {
-        maxRetries: 2,
-        baseDelay: 2000,
-        label: 'PlannerAgent',
-        onRetry: (attempt, waitMs) => {
-          io.to(room).emit('agent:retry', {
-            agent: 'planner',
-            attempt,
-            waitMs,
-          });
-        },
-      }
-    );
+      const coderModel = models.coder || 'llama-3.3-70b-versatile';
+      emitStart('coder', coderModel);
+      const coderResult = await coderAgent.runWithTools({
+        prompt,
+        plan: results.planner,
+        context,
+        model: coderModel,
+        executeTool,
+        onToolCall: ({ toolName, args }) => io.to(room).emit('tool:call', { agent: 'coder', tool: toolName, args }),
+        onChunk: (chunk) => emitChunk('coder', chunk),
+      });
+      results.coder = coderResult.content;
+      emitComplete('coder', results.coder);
 
-    io.to(room).emit('agent:complete', {
-      agent: 'planner',
-      content: results.planner,
+      const reviewerModel = models.reviewer || 'anthropic/claude-4-haiku';
+      emitStart('reviewer', reviewerModel);
+      results.reviewer = await reviewerAgent.run({
+        prompt,
+        plan: results.planner,
+        code: results.coder,
+        context,
+        model: reviewerModel,
+        onChunk: (chunk) => emitChunk('reviewer', chunk),
+      });
+      emitComplete('reviewer', results.reviewer);
+    }
+
+    for (const agent of ['planner', 'coder', 'reviewer']) {
+      if (!results[agent]) continue;
+      await sessionManager.addMessage(sessionId, {
+        role: 'assistant',
+        agent,
+        content: results[agent],
+        model: models[agent] || null,
+        timestamp: new Date(),
+      });
+      await asyncIndexAgentOutput({
+        userId,
+        sessionId,
+        file: `session/${agent}.md`,
+        content: results[agent],
+        agent,
+      });
+    }
+
+    const debuggerModel = models.debugger || 'llama-3.3-70b-versatile';
+    emitStart('debugger', debuggerModel);
+    const debugResult = await debuggerAgent.run({
+      userId,
+      sessionId,
+      prompt,
+      plannerOutput: results.planner,
+      coderOutput: results.coder,
+      reviewerOutput: results.reviewer,
+      model: debuggerModel,
+      executeTool,
+      onChunk: (chunk) => emitChunk('debugger', chunk),
+      onToolCall: ({ toolName, args }) => io.to(room).emit('tool:call', { agent: 'debugger', tool: toolName, args }),
+      onRagContext: ({ queries, count, chunks }) =>
+        io.to(room).emit('rag:context', { agent: 'debugger', queries, count, chunks }),
     });
+    results.debugger = debugResult.content;
+    emitComplete('debugger', results.debugger);
 
-    // Save planner output
     await sessionManager.addMessage(sessionId, {
       role: 'assistant',
-      agent: 'planner',
-      content: results.planner,
-      model: plannerModel,
-      timestamp: new Date(),
-    });
-
-    // ── CODER AGENT ────────────────────────────────────────────
-    const coderModel = models.coder || 'llama-3.3-70b-versatile';
-    io.to(room).emit('agent:start', { agent: 'coder', model: coderModel });
-
-    results.coder = await retryWithBackoff(
-      () =>
-        coderAgent.run({
-          prompt,
-          plan: results.planner,
-          context,
-          model: coderModel,
-          onChunk: (chunk) => {
-            io.to(room).emit('agent:chunk', { agent: 'coder', chunk });
-          },
-        }),
-      {
-        maxRetries: 2,
-        baseDelay: 2000,
-        label: 'CoderAgent',
-        onRetry: (attempt, waitMs) => {
-          io.to(room).emit('agent:retry', {
-            agent: 'coder',
-            attempt,
-            waitMs,
-          });
-        },
-      }
-    );
-
-    io.to(room).emit('agent:complete', {
-      agent: 'coder',
-      content: results.coder,
-    });
-
-    // Save coder output
-    await sessionManager.addMessage(sessionId, {
-      role: 'assistant',
-      agent: 'coder',
-      content: results.coder,
-      model: coderModel,
-      timestamp: new Date(),
-    });
-
-    // ── REVIEWER AGENT ─────────────────────────────────────────
-    const reviewerModel = models.reviewer || 'anthropic/claude-4-haiku';
-    io.to(room).emit('agent:start', {
-      agent: 'reviewer',
-      model: reviewerModel,
-    });
-
-    results.reviewer = await retryWithBackoff(
-      () =>
-        reviewerAgent.run({
-          prompt,
-          plan: results.planner,
-          code: results.coder,
-          context,
-          model: reviewerModel,
-          onChunk: (chunk) => {
-            io.to(room).emit('agent:chunk', { agent: 'reviewer', chunk });
-          },
-        }),
-      {
-        maxRetries: 2,
-        baseDelay: 2000,
-        label: 'ReviewerAgent',
-        onRetry: (attempt, waitMs) => {
-          io.to(room).emit('agent:retry', {
-            agent: 'reviewer',
-            attempt,
-            waitMs,
-          });
-        },
-      }
-    );
-
-    io.to(room).emit('agent:complete', {
-      agent: 'reviewer',
-      content: results.reviewer,
-    });
-
-    // Save reviewer output
-    await sessionManager.addMessage(sessionId, {
-      role: 'assistant',
-      agent: 'reviewer',
-      content: results.reviewer,
-      model: reviewerModel,
+      agent: 'debugger',
+      content: results.debugger,
+      model: debuggerModel,
       timestamp: new Date(),
     });
 
@@ -181,7 +166,9 @@ const runPipeline = async ({ userId, sessionId, prompt, models }) => {
       ? 'planner'
       : !results.coder
         ? 'coder'
-        : 'reviewer';
+        : !results.reviewer
+          ? 'reviewer'
+          : 'debugger';
 
     io.to(room).emit('agent:error', {
       agent: failedAgent,

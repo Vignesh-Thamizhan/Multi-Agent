@@ -65,4 +65,33 @@ const run = async ({ prompt, plan, context = [], model, onChunk }) => {
   return result;
 };
 
-module.exports = { run, name: 'coder' };
+const runWithTools = async ({
+  prompt,
+  plan,
+  context = [],
+  model,
+  onChunk,
+  executeTool,
+  onToolCall,
+}) => {
+  const messages = [
+    { role: 'system', content: SYSTEM_PROMPT },
+    ...context.map((msg) => ({ role: msg.role, content: msg.content })),
+    {
+      role: 'user',
+      content: `## Original Request:\n${prompt}\n\n## Implementation Plan (from Planner Agent):\n${plan}\n\nImplement files directly using MCP tools when needed.`,
+    },
+  ];
+
+  const result = await groqService.streamGroqWithTools({
+    model,
+    messages,
+    executeTool,
+    onToolCall,
+    onChunk,
+  });
+
+  return result;
+};
+
+module.exports = { run, runWithTools, name: 'coder' };

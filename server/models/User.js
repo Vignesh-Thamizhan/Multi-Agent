@@ -43,11 +43,10 @@ const userSchema = new mongoose.Schema(
 );
 
 // Ensure at least one auth method exists
-userSchema.pre('validate', function (next) {
+userSchema.pre('validate', function () {
   if (!this.password && !this.googleId) {
     this.invalidate('password', 'Either password or Google account is required');
   }
-  next();
 });
 
 // Hash password before save

@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom';
 import { motion as Motion } from 'framer-motion';
 import useAuthStore from '../store/authStore';
 import usePipelineStore from '../store/pipelineStore';
 import { ModelSelectorBar } from './ModelSelector';
 import { PIPELINE_STATUSES, AGENTS, PIPELINE_ORDER } from '../utils/agentConfig';
 import {
-  LogOut, Wifi, WifiOff, Zap, CheckCircle2, AlertCircle, Loader2, Menu, X
+  LogOut, Wifi, WifiOff, Zap, CheckCircle2, AlertCircle, Loader2, Menu, X, LayoutDashboard
 } from 'lucide-react';
 
 const TopBar = ({ socketConnected, onToggleSidebar, isSidebarOpen }) => {
@@ -12,6 +13,7 @@ const TopBar = ({ socketConnected, onToggleSidebar, isSidebarOpen }) => {
   const logout = useAuthStore((s) => s.logout);
   const pipelineStatus = usePipelineStore((s) => s.pipelineStatus);
   const agents = usePipelineStore((s) => s.agents);
+  const pipelineMode = usePipelineStore((s) => s.pipelineMode);
 
   const getActiveAgent = () => {
     return PIPELINE_ORDER.find((id) => agents[id].status === 'streaming') || null;
@@ -120,6 +122,13 @@ const TopBar = ({ socketConnected, onToggleSidebar, isSidebarOpen }) => {
           >
             <LogOut size={14} />
           </button>
+          <Link
+            to="/dashboard"
+            className="p-1.5 rounded-lg text-gray-500 hover:text-violet-400 hover:bg-violet-500/10 transition-colors"
+            title="Dashboard"
+          >
+            <LayoutDashboard size={14} />
+          </Link>
         </div>
       </div>
     </header>

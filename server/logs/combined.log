@@ -27,3 +27,144 @@ TypeError: next is not a function
 2026-04-03 11:16:42 [INFO]: User logged in: vaish (69cf541c495e7bd4f75a3507)
 2026-04-03 11:16:42 [INFO]: Socket connected: 1MK8ueDQ5bBy0-2wAAAE | User: 69cf541c495e7bd4f75a3507
 2026-04-03 11:16:48 [INFO]: Socket disconnected: 1MK8ueDQ5bBy0-2wAAAE | Reason: client namespace disconnect
+2026-04-17 11:34:47 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-17 11:34:52 [INFO]: MongoDB connected: ac-q0wguht-shard-00-02.u3vimlv.mongodb.net
+2026-04-17 11:34:52 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-17 11:34:52 [INFO]: 📡 Environment: development
+2026-04-17 11:34:52 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-17 11:44:14 [WARN]: MongoDB disconnected. Attempting reconnect...
+2026-04-17 11:53:28 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-17 11:53:32 [INFO]: MongoDB connected: ac-5gtwmzf-shard-00-02.jd5rh1o.mongodb.net
+2026-04-17 11:53:32 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-17 11:53:32 [INFO]: 📡 Environment: development
+2026-04-17 11:53:32 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-17 11:53:39 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-17 11:53:40 [INFO]: MongoDB connected: ac-5gtwmzf-shard-00-00.jd5rh1o.mongodb.net
+2026-04-17 11:53:40 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-17 11:53:40 [INFO]: 📡 Environment: development
+2026-04-17 11:53:40 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-17 11:53:45 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-17 11:53:46 [INFO]: MongoDB connected: ac-5gtwmzf-shard-00-02.jd5rh1o.mongodb.net
+2026-04-17 11:53:46 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-17 11:53:46 [INFO]: 📡 Environment: development
+2026-04-17 11:53:46 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-17 11:53:53 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-17 11:53:54 [INFO]: MongoDB connected: ac-5gtwmzf-shard-00-00.jd5rh1o.mongodb.net
+2026-04-17 11:53:54 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-17 11:53:54 [INFO]: 📡 Environment: development
+2026-04-17 11:53:54 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-17 11:54:02 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-17 11:54:04 [INFO]: MongoDB connected: ac-5gtwmzf-shard-00-01.jd5rh1o.mongodb.net
+2026-04-17 11:54:04 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-17 11:54:04 [INFO]: 📡 Environment: development
+2026-04-17 11:54:04 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-17 11:54:15 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-17 11:54:16 [INFO]: MongoDB connected: ac-5gtwmzf-shard-00-00.jd5rh1o.mongodb.net
+2026-04-17 11:54:16 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-17 11:54:16 [INFO]: 📡 Environment: development
+2026-04-17 11:54:16 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-17 11:54:24 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-17 11:54:25 [INFO]: MongoDB connected: ac-5gtwmzf-shard-00-02.jd5rh1o.mongodb.net
+2026-04-17 11:54:25 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-17 11:54:25 [INFO]: 📡 Environment: development
+2026-04-17 11:54:25 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-17 11:54:36 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-17 11:54:36 [INFO]: MongoDB connected: ac-5gtwmzf-shard-00-02.jd5rh1o.mongodb.net
+2026-04-17 11:54:36 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-17 11:54:36 [INFO]: 📡 Environment: development
+2026-04-17 11:54:36 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-17 11:54:43 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-17 11:54:44 [INFO]: MongoDB connected: ac-5gtwmzf-shard-00-02.jd5rh1o.mongodb.net
+2026-04-17 11:54:44 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-17 11:54:44 [INFO]: 📡 Environment: development
+2026-04-17 11:54:44 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-17 11:54:49 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-17 11:54:49 [INFO]: MongoDB connected: ac-5gtwmzf-shard-00-01.jd5rh1o.mongodb.net
+2026-04-17 11:54:49 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-17 11:54:49 [INFO]: 📡 Environment: development
+2026-04-17 11:54:49 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-17 11:55:00 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-17 11:55:00 [INFO]: MongoDB connected: ac-5gtwmzf-shard-00-02.jd5rh1o.mongodb.net
+2026-04-17 11:55:00 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-17 11:55:00 [INFO]: 📡 Environment: development
+2026-04-17 11:55:00 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-17 11:55:27 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-17 11:55:28 [INFO]: MongoDB connected: ac-5gtwmzf-shard-00-02.jd5rh1o.mongodb.net
+2026-04-17 11:55:28 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-17 11:55:28 [INFO]: 📡 Environment: development
+2026-04-17 11:55:28 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-17 11:55:40 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-17 11:55:41 [INFO]: MongoDB connected: ac-5gtwmzf-shard-00-02.jd5rh1o.mongodb.net
+2026-04-17 11:55:41 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-17 11:55:41 [INFO]: 📡 Environment: development
+2026-04-17 11:55:41 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-17 11:55:43 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-17 11:55:43 [INFO]: MongoDB connected: ac-5gtwmzf-shard-00-01.jd5rh1o.mongodb.net
+2026-04-17 11:55:43 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-17 11:55:43 [INFO]: 📡 Environment: development
+2026-04-17 11:55:43 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-17 11:55:47 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-17 11:55:47 [INFO]: MongoDB connected: ac-5gtwmzf-shard-00-01.jd5rh1o.mongodb.net
+2026-04-17 11:55:47 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-17 11:55:47 [INFO]: 📡 Environment: development
+2026-04-17 11:55:47 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-17 12:00:16 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-17 12:00:18 [INFO]: MongoDB connected: ac-5gtwmzf-shard-00-01.jd5rh1o.mongodb.net
+2026-04-17 12:00:18 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-17 12:00:18 [INFO]: 📡 Environment: development
+2026-04-17 12:00:18 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-17 12:02:17 [ERROR]: 500 — next is not a function
+TypeError: next is not a function
+    at model.<anonymous> (/home/igris0410/multiagent/server/models/User.js:50:3)
+    at Kareem.execPre (/home/igris0410/multiagent/server/node_modules/kareem/index.js:68:39)
+    at model._execDocumentPreHooks (/home/igris0410/multiagent/server/node_modules/mongoose/lib/document.js:3198:29)
+    at model.validate (/home/igris0410/multiagent/server/node_modules/mongoose/lib/document.js:2702:30)
+    at model.$__save (/home/igris0410/multiagent/server/node_modules/mongoose/lib/model.js:390:18)
+    at model.save (/home/igris0410/multiagent/server/node_modules/mongoose/lib/model.js:664:16)
+    at model.create (/home/igris0410/multiagent/server/node_modules/mongoose/lib/model.js:2751:18)
+    at register (/home/igris0410/multiagent/server/controllers/authController.js:48:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-17 12:04:12 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-17 12:04:14 [INFO]: MongoDB connected: ac-5gtwmzf-shard-00-01.jd5rh1o.mongodb.net
+2026-04-17 12:04:14 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-17 12:04:14 [INFO]: 📡 Environment: development
+2026-04-17 12:04:14 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-17 12:04:47 [ERROR]: 500 — next is not a function
+TypeError: next is not a function
+    at model.<anonymous> (/home/igris0410/multiagent/server/models/User.js:50:3)
+    at Kareem.execPre (/home/igris0410/multiagent/server/node_modules/kareem/index.js:68:39)
+    at model._execDocumentPreHooks (/home/igris0410/multiagent/server/node_modules/mongoose/lib/document.js:3198:29)
+    at model.validate (/home/igris0410/multiagent/server/node_modules/mongoose/lib/document.js:2702:30)
+    at model.$__save (/home/igris0410/multiagent/server/node_modules/mongoose/lib/model.js:390:18)
+    at model.save (/home/igris0410/multiagent/server/node_modules/mongoose/lib/model.js:664:16)
+    at model.create (/home/igris0410/multiagent/server/node_modules/mongoose/lib/model.js:2751:18)
+    at register (/home/igris0410/multiagent/server/controllers/authController.js:48:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-17 12:05:52 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-17 12:05:53 [INFO]: MongoDB connected: ac-5gtwmzf-shard-00-00.jd5rh1o.mongodb.net
+2026-04-17 12:05:53 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-17 12:05:53 [INFO]: 📡 Environment: development
+2026-04-17 12:05:53 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-17 12:07:09 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-17 12:07:11 [INFO]: MongoDB connected: ac-5gtwmzf-shard-00-00.jd5rh1o.mongodb.net
+2026-04-17 12:07:11 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-17 12:07:11 [INFO]: 📡 Environment: development
+2026-04-17 12:07:11 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-17 12:07:32 [INFO]: User registered: vaish (69e1d52bbd5c62317332e7cb)
+2026-04-17 12:07:32 [INFO]: Socket connected: 6DTGNBqpxf8hRWiOAAAC | User: 69e1d52bbd5c62317332e7cb
+2026-04-17 12:11:33 [INFO]: Socket disconnected: 6DTGNBqpxf8hRWiOAAAC | Reason: client namespace disconnect
+2026-04-17 12:11:33 [INFO]: Socket connected: zDSwxe-4U6w94YyGAAAE | User: 69e1d52bbd5c62317332e7cb
+2026-04-17 12:12:07 [INFO]: Socket disconnected: zDSwxe-4U6w94YyGAAAE | Reason: client namespace disconnect
+2026-04-17 12:17:44 [ERROR]: 400 — Username already taken
+Error: Username already taken
+    at register (/home/igris0410/multiagent/server/controllers/authController.js:41:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-17 12:18:38 [ERROR]: 400 — Username already taken
+Error: Username already taken
+    at register (/home/igris0410/multiagent/server/controllers/authController.js:41:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-17 12:19:36 [INFO]: User logged in: vaish (69e1d52bbd5c62317332e7cb)
+2026-04-17 12:25:45 [INFO]: Socket connected: Pgu_pmxTxUfcYEWBAAAH | User: 69e1d52bbd5c62317332e7cb
+2026-04-17 12:25:52 [INFO]: Socket disconnected: Pgu_pmxTxUfcYEWBAAAH | Reason: client namespace disconnect
+2026-04-17 12:25:56 [INFO]: Socket connected: fv2pmA0QfVf2oL9oAAAK | User: 69e1d52bbd5c62317332e7cb
+2026-04-17 12:26:00 [INFO]: Socket disconnected: fv2pmA0QfVf2oL9oAAAK | Reason: client namespace disconnect

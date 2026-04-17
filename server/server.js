@@ -4,6 +4,8 @@ const express = require('express');
 const http = require('http');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
+const fs = require('fs/promises');
+const path = require('path');
 const connectDB = require('./config/db');
 const { initializeSocket } = require('./config/socket');
 const { generalLimiter } = require('./middleware/rateLimitMiddleware');
@@ -14,6 +16,7 @@ const logger = require('./utils/logger');
 const authRoutes = require('./routes/authRoutes');
 const generateRoutes = require('./routes/generateRoutes');
 const uploadRoutes = require('./routes/uploadRoutes');
+const workspaceRoutes = require('./routes/workspaceRoutes');
 
 const app = express();
 const server = http.createServer(app);
@@ -44,6 +47,7 @@ app.get('/api/health', (req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/generate', generateRoutes);
 app.use('/api/upload', uploadRoutes);
+app.use('/api/workspace', workspaceRoutes);
 
 // Error handling
 app.use(notFound);
@@ -55,6 +59,7 @@ const PORT = process.env.PORT || 5000;
 const startServer = async () => {
   try {
     await connectDB();
+    await fs.mkdir(path.join(process.cwd(), 'workspace'), { recursive: true });
 
     server.listen(PORT, () => {
       logger.info(`🚀 NeuralForge server running on port ${PORT}`);
