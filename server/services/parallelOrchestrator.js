@@ -29,14 +29,14 @@ const runParallelCoreAgents = async ({ prompt, context, models, emitStart, emitC
     },
     {
       id: 'reviewer',
-      model: models.reviewer || 'anthropic/claude-4-haiku',
+      model: models.reviewer || 'anthropic/claude-3.5-haiku',
       run: () =>
         reviewerAgent.run({
           prompt,
           plan: 'Parallel mode: planner output may arrive after this review.',
           code: 'Parallel mode: coder output may be partial.',
           context,
-          model: models.reviewer || 'anthropic/claude-4-haiku',
+          model: models.reviewer || 'anthropic/claude-3.5-haiku',
           onChunk: (chunk) => emitChunk('reviewer', chunk),
         }),
     },

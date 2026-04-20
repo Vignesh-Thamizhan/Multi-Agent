@@ -50,7 +50,7 @@ const upload = async (req, res, next) => {
 
         io.to(room).emit('agent:start', {
           agent: 'multimodal',
-          model: 'gemini-1.5-flash',
+          model: 'gemini-2.5-flash',
         });
 
         const result = await retryWithBackoff(
@@ -93,7 +93,7 @@ const upload = async (req, res, next) => {
           role: 'assistant',
           agent: 'multimodal',
           content: result,
-          model: 'gemini-1.5-flash',
+          model: 'gemini-2.5-flash',
           timestamp: new Date(),
         });
 

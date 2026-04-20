@@ -91,7 +91,7 @@ const runPipeline = async ({ userId, sessionId, prompt, models, pipelineMode = '
       results.coder = coderResult.content;
       emitComplete('coder', results.coder);
 
-      const reviewerModel = models.reviewer || 'anthropic/claude-4-haiku';
+      const reviewerModel = models.reviewer || 'anthropic/claude-3.5-haiku';
       emitStart('reviewer', reviewerModel);
       results.reviewer = await reviewerAgent.run({
         prompt,

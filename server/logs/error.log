@@ -36,3 +36,13 @@ Error: Username already taken
 Error: Username already taken
     at register (/home/igris0410/multiagent/server/controllers/authController.js:41:13)
     at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-20 18:47:33 [ERROR]: Pipeline error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+2026-04-20 18:50:39 [ERROR]: Pipeline error: 413 {"error":{"message":"Request too large for model `qwen/qwen3-32b` in organization `org_01kngnekd6fa382mgj6mrambm2` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 7559, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+2026-04-20 18:52:58 [ERROR]: Pipeline error: 413 {"error":{"message":"Request too large for model `qwen/qwen3-32b` in organization `org_01kngnekd6fa382mgj6mrambm2` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 8327, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+2026-04-20 18:53:42 [ERROR]: Pipeline error: 413 {"error":{"message":"Request too large for model `qwen/qwen3-32b` in organization `org_01kngnekd6fa382mgj6mrambm2` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 7919, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+2026-04-20 18:56:24 [ERROR]: Pipeline error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:embedContent: [404 Not Found] models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-20 18:59:24 [ERROR]: 500 — Session not found
+Error: Session not found
+    at Object.deleteSession (/home/igris0410/multiagent/server/utils/sessionManager.js:78:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async deleteSession (/home/igris0410/multiagent/server/controllers/generateController.js:92:5)

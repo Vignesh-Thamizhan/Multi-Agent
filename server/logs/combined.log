@@ -168,3 +168,97 @@ Error: Username already taken
 2026-04-17 12:25:52 [INFO]: Socket disconnected: Pgu_pmxTxUfcYEWBAAAH | Reason: client namespace disconnect
 2026-04-17 12:25:56 [INFO]: Socket connected: fv2pmA0QfVf2oL9oAAAK | User: 69e1d52bbd5c62317332e7cb
 2026-04-17 12:26:00 [INFO]: Socket disconnected: fv2pmA0QfVf2oL9oAAAK | Reason: client namespace disconnect
+2026-04-20 18:25:11 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-20 18:25:15 [INFO]: MongoDB connected: ac-vzp3mmv-shard-00-02.uhrrp2n.mongodb.net
+2026-04-20 18:25:15 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-20 18:25:15 [INFO]: 📡 Environment: development
+2026-04-20 18:25:15 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-20 18:42:19 [INFO]: User registered: viash (69e626331f5091ca8367bb11)
+2026-04-20 18:45:07 [INFO]: Socket connected: MLdaIC5JRSxuQ95bAAAC | User: 69e626331f5091ca8367bb11
+2026-04-20 18:47:32 [INFO]: Session created: 69e6276c1f5091ca8367bb1e for user: 69e626331f5091ca8367bb11
+2026-04-20 18:47:33 [INFO]: PlannerAgent starting with model: llama-3.3-70b-versatile
+2026-04-20 18:47:33 [INFO]: Groq streaming: model=llama-3.3-70b-versatile, messages=3
+2026-04-20 18:47:33 [ERROR]: Pipeline error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+2026-04-20 18:49:12 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-20 18:49:13 [INFO]: MongoDB connected: ac-vzp3mmv-shard-00-00.uhrrp2n.mongodb.net
+2026-04-20 18:49:13 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-20 18:49:13 [INFO]: 📡 Environment: development
+2026-04-20 18:49:13 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-20 18:49:14 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-20 18:49:15 [INFO]: MongoDB connected: ac-vzp3mmv-shard-00-00.uhrrp2n.mongodb.net
+2026-04-20 18:49:15 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-20 18:49:15 [INFO]: 📡 Environment: development
+2026-04-20 18:49:15 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-20 18:49:16 [INFO]: Socket connected: s6TmeALOgXb-hoI0AAAB | User: 69e626331f5091ca8367bb11
+2026-04-20 18:49:32 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-20 18:49:34 [INFO]: MongoDB connected: ac-vzp3mmv-shard-00-02.uhrrp2n.mongodb.net
+2026-04-20 18:49:34 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-20 18:49:34 [INFO]: 📡 Environment: development
+2026-04-20 18:49:34 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-20 18:49:34 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-20 18:49:35 [INFO]: MongoDB connected: ac-vzp3mmv-shard-00-02.uhrrp2n.mongodb.net
+2026-04-20 18:49:35 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-20 18:49:35 [INFO]: 📡 Environment: development
+2026-04-20 18:49:35 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-20 18:49:35 [INFO]: Socket connected: MXwkX42EijdVshuMAAAB | User: 69e626331f5091ca8367bb11
+2026-04-20 18:49:41 [INFO]: Socket disconnected: MXwkX42EijdVshuMAAAB | Reason: transport close
+2026-04-20 18:49:43 [INFO]: Socket connected: AaSEc-vA7759ID_3AAAE | User: 69e626331f5091ca8367bb11
+2026-04-20 18:49:49 [INFO]: Session deleted: 69e6276c1f5091ca8367bb1e
+2026-04-20 18:50:06 [INFO]: Socket disconnected: AaSEc-vA7759ID_3AAAE | Reason: transport close
+2026-04-20 18:50:07 [INFO]: Socket connected: KoYxLzGovfb1ZMdmAAAH | User: 69e626331f5091ca8367bb11
+2026-04-20 18:50:35 [INFO]: Session created: 69e628232820ca21bd249c4f for user: 69e626331f5091ca8367bb11
+2026-04-20 18:50:35 [INFO]: PlannerAgent starting with model: llama-3.3-70b-versatile
+2026-04-20 18:50:35 [INFO]: Groq streaming: model=llama-3.3-70b-versatile, messages=3
+2026-04-20 18:50:39 [INFO]: Groq complete: 5798 chars
+2026-04-20 18:50:39 [INFO]: PlannerAgent complete: 5798 chars
+2026-04-20 18:50:39 [ERROR]: Pipeline error: 413 {"error":{"message":"Request too large for model `qwen/qwen3-32b` in organization `org_01kngnekd6fa382mgj6mrambm2` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 7559, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+2026-04-20 18:52:00 [INFO]: Socket disconnected: KoYxLzGovfb1ZMdmAAAH | Reason: client namespace disconnect
+2026-04-20 18:52:00 [INFO]: Socket connected: Wb70rJHhfo9UwCYSAAAJ | User: 69e626331f5091ca8367bb11
+2026-04-20 18:52:00 [INFO]: Socket disconnected: Wb70rJHhfo9UwCYSAAAJ | Reason: client namespace disconnect
+2026-04-20 18:52:00 [INFO]: Socket connected: fdsryaWBJz8oiEmhAAAL | User: 69e626331f5091ca8367bb11
+2026-04-20 18:52:03 [INFO]: Socket disconnected: fdsryaWBJz8oiEmhAAAL | Reason: client namespace disconnect
+2026-04-20 18:52:03 [INFO]: Socket connected: s80CntEw9nCmFBQHAAAN | User: 69e626331f5091ca8367bb11
+2026-04-20 18:52:31 [INFO]: Socket disconnected: s80CntEw9nCmFBQHAAAN | Reason: transport close
+2026-04-20 18:52:32 [INFO]: Socket connected: eVXc5b8mQlyoGrd0AAAQ | User: 69e626331f5091ca8367bb11
+2026-04-20 18:52:34 [INFO]: Session deleted: 69e628232820ca21bd249c4f
+2026-04-20 18:52:53 [INFO]: Session created: 69e628ad2820ca21bd249c6e for user: 69e626331f5091ca8367bb11
+2026-04-20 18:52:53 [INFO]: PlannerAgent starting with model: llama-3.3-70b-versatile
+2026-04-20 18:52:53 [INFO]: Groq streaming: model=llama-3.3-70b-versatile, messages=3
+2026-04-20 18:52:58 [INFO]: Groq complete: 8968 chars
+2026-04-20 18:52:58 [INFO]: PlannerAgent complete: 8968 chars
+2026-04-20 18:52:58 [ERROR]: Pipeline error: 413 {"error":{"message":"Request too large for model `qwen/qwen3-32b` in organization `org_01kngnekd6fa382mgj6mrambm2` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 8327, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+2026-04-20 18:53:13 [INFO]: Socket disconnected: eVXc5b8mQlyoGrd0AAAQ | Reason: transport close
+2026-04-20 18:53:15 [INFO]: Socket connected: SDeRzFAur90WnAAnAAAT | User: 69e626331f5091ca8367bb11
+2026-04-20 18:53:31 [INFO]: Session deleted: 69e628ad2820ca21bd249c6e
+2026-04-20 18:53:34 [INFO]: Session created: 69e628d62820ca21bd249c84 for user: 69e626331f5091ca8367bb11
+2026-04-20 18:53:36 [INFO]: PlannerAgent starting with model: llama-3.3-70b-versatile
+2026-04-20 18:53:36 [INFO]: Groq streaming: model=llama-3.3-70b-versatile, messages=3
+2026-04-20 18:53:42 [INFO]: Groq complete: 8967 chars
+2026-04-20 18:53:42 [INFO]: PlannerAgent complete: 8967 chars
+2026-04-20 18:53:42 [ERROR]: Pipeline error: 413 {"error":{"message":"Request too large for model `qwen/qwen3-32b` in organization `org_01kngnekd6fa382mgj6mrambm2` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 7919, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+2026-04-20 18:55:19 [INFO]: Socket disconnected: SDeRzFAur90WnAAnAAAT | Reason: client namespace disconnect
+2026-04-20 18:55:39 [INFO]: Socket connected: M8zYoOScYbuD-B9pAAAW | User: 69e626331f5091ca8367bb11
+2026-04-20 18:55:43 [INFO]: Session deleted: 69e628d62820ca21bd249c84
+2026-04-20 18:55:47 [INFO]: Socket disconnected: M8zYoOScYbuD-B9pAAAW | Reason: client namespace disconnect
+2026-04-20 18:55:52 [INFO]: Socket connected: KJ2WPE8Gy54Iy_ZFAAAY | User: 69e626331f5091ca8367bb11
+2026-04-20 18:55:55 [INFO]: Session created: 69e629622820ca21bd249c9f for user: 69e626331f5091ca8367bb11
+2026-04-20 18:55:55 [INFO]: PlannerAgent starting with model: llama-3.3-70b-versatile
+2026-04-20 18:55:55 [INFO]: Groq streaming: model=llama-3.3-70b-versatile, messages=3
+2026-04-20 18:55:55 [INFO]: CoderAgent starting with model: qwen/qwen3-32b
+2026-04-20 18:55:55 [INFO]: Groq streaming: model=qwen/qwen3-32b, messages=3
+2026-04-20 18:55:55 [INFO]: ReviewerAgent starting with model: anthropic/claude-3.5-haiku
+2026-04-20 18:55:55 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-haiku, messages=3
+2026-04-20 18:56:01 [INFO]: Groq complete: 6243 chars
+2026-04-20 18:56:01 [INFO]: PlannerAgent complete: 6243 chars
+2026-04-20 18:56:23 [INFO]: OpenRouter complete: 6373 chars
+2026-04-20 18:56:23 [INFO]: ReviewerAgent complete: 6373 chars
+2026-04-20 18:56:24 [ERROR]: Pipeline error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:embedContent: [404 Not Found] models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-20 18:59:19 [INFO]: Socket disconnected: KJ2WPE8Gy54Iy_ZFAAAY | Reason: transport close
+2026-04-20 18:59:21 [INFO]: Socket connected: UiOaNnrH7zezDdECAAAb | User: 69e626331f5091ca8367bb11
+2026-04-20 18:59:24 [ERROR]: 500 — Session not found
+Error: Session not found
+    at Object.deleteSession (/home/igris0410/multiagent/server/utils/sessionManager.js:78:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async deleteSession (/home/igris0410/multiagent/server/controllers/generateController.js:92:5)
+2026-04-20 18:59:25 [INFO]: Session deleted: 69e629622820ca21bd249c9f
+2026-04-20 18:59:32 [INFO]: Socket disconnected: UiOaNnrH7zezDdECAAAb | Reason: client namespace disconnect
