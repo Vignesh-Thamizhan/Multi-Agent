@@ -1,5 +1,6 @@
 const sessionManager = require('../utils/sessionManager');
 const { runPipeline } = require('../services/agentOrchestrator');
+const { sanitizeModelConfig } = require('../utils/modelValidator');
 const Session = require('../models/Session');
 const logger = require('../utils/logger');
 
@@ -31,6 +32,9 @@ const generate = async (req, res, next) => {
     const resolvedMode = pipelineMode === 'parallel' ? 'parallel' : 'sequential';
     await Session.findByIdAndUpdate(session._id, { pipelineMode: resolvedMode });
 
+    // Defense-in-depth: Sanitize models on server to prevent stale/invalid values
+    const sanitizedModels = sanitizeModelConfig(models || req.user.modelPreferences || {});
+
     // Return 202 immediately — pipeline runs async
     res.status(202).json({
       message: 'Pipeline started',
@@ -43,7 +47,7 @@ const generate = async (req, res, next) => {
         userId,
         sessionId: session._id.toString(),
         prompt: prompt.trim(),
-        models: models || req.user.modelPreferences || {},
+        models: sanitizedModels,
         pipelineMode: resolvedMode,
       }).catch((err) => {
         logger.error(`Pipeline failed for session ${session._id}: ${err.message}`);

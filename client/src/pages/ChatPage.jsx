@@ -12,6 +12,7 @@ import usePipelineStore from '../store/pipelineStore';
 import useAuthStore from '../store/authStore';
 import useWorkspaceStore from '../store/workspaceStore';
 import { generateAPI, uploadAPI } from '../services/api';
+import { sanitizeModelConfig } from '../utils/modelValidator';
 import toast from 'react-hot-toast';
 
 const ChatPage = () => {
@@ -69,10 +70,11 @@ const ChatPage = () => {
 
   const handleSubmit = useCallback(async (prompt) => {
     try {
+      const sanitizedModels = sanitizeModelConfig(user?.modelPreferences || {});
       const { data } = await generateAPI.trigger({
         prompt,
         sessionId: currentSessionId,
-        models: user?.modelPreferences || {},
+        models: sanitizedModels,
         pipelineMode: pipelineMode,
       });
 

@@ -56,8 +56,9 @@ const MCP_TOOL_DEFINITIONS = [
       description: 'Create a file in the workspace',
       parameters: {
         type: 'object',
-        properties: { filePath: { type: 'string' }, content: { type: 'string' } },
+        properties: { filePath: { type: 'string', description: 'Path to the file to create' }, content: { type: 'string', description: 'File content' } },
         required: ['filePath', 'content'],
+        additionalProperties: false,
       },
     },
   },
@@ -68,8 +69,9 @@ const MCP_TOOL_DEFINITIONS = [
       description: 'Read a file from workspace',
       parameters: {
         type: 'object',
-        properties: { filePath: { type: 'string' } },
+        properties: { filePath: { type: 'string', description: 'Path to the file to read' } },
         required: ['filePath'],
+        additionalProperties: false,
       },
     },
   },
@@ -80,8 +82,9 @@ const MCP_TOOL_DEFINITIONS = [
       description: 'Write file content in workspace',
       parameters: {
         type: 'object',
-        properties: { filePath: { type: 'string' }, content: { type: 'string' } },
+        properties: { filePath: { type: 'string', description: 'Path to the file to write' }, content: { type: 'string', description: 'File content' } },
         required: ['filePath', 'content'],
+        additionalProperties: false,
       },
     },
   },
@@ -107,38 +110,47 @@ const streamGroqWithTools = async ({
   const toolTrace = [];
 
   for (let i = 0; i < maxIterations; i += 1) {
-    const response = await groq.chat.completions.create({
-      model,
-      messages: workingMessages,
-      tools: MCP_TOOL_DEFINITIONS,
-      tool_choice: 'auto',
-      temperature: 0.3,
-      max_tokens: 4096,
-      stream: false,
-    });
-
-    const message = response.choices?.[0]?.message;
-    if (!message) break;
-
-    const assistantMessage = { role: 'assistant', content: message.content || '' };
-    if (message.tool_calls?.length) {
-      assistantMessage.tool_calls = message.tool_calls;
-    }
-    workingMessages.push(assistantMessage);
-
-    if (!message.tool_calls?.length) break;
-
-    for (const toolCall of message.tool_calls) {
-      const toolName = toolCall.function?.name;
-      const args = JSON.parse(toolCall.function?.arguments || '{}');
-      onToolCall?.({ toolName, args });
-      const result = await executeTool(toolName, args);
-      toolTrace.push({ toolName, args, result });
-      workingMessages.push({
-        role: 'tool',
-        tool_call_id: toolCall.id,
-        content: JSON.stringify(result),
+    try {
+      const response = await groq.chat.completions.create({
+        model,
+        messages: workingMessages,
+        tools: MCP_TOOL_DEFINITIONS,
+        tool_choice: 'auto',
+        temperature: 0.3,
+        max_tokens: 4096,
+        stream: false,
       });
+
+      const message = response.choices?.[0]?.message;
+      if (!message) break;
+
+      const assistantMessage = { role: 'assistant', content: message.content || '' };
+      if (message.tool_calls?.length) {
+        assistantMessage.tool_calls = message.tool_calls;
+      }
+      workingMessages.push(assistantMessage);
+
+      if (!message.tool_calls?.length) break;
+
+      for (const toolCall of message.tool_calls) {
+        const toolName = toolCall.function?.name;
+        const args = JSON.parse(toolCall.function?.arguments || '{}');
+        onToolCall?.({ toolName, args });
+        const result = await executeTool(toolName, args);
+        toolTrace.push({ toolName, args, result });
+        workingMessages.push({
+          role: 'tool',
+          tool_call_id: toolCall.id,
+          content: JSON.stringify(result),
+        });
+      }
+    } catch (error) {
+      logger.error(`Error in streamGroqWithTools iteration ${i}: ${error.message}`);
+      if (error.status === 400 && error.code === 'tool_use_failed') {
+        logger.error('Tool validation failed. Check tool definitions and function arguments.');
+        throw new Error(`Groq tool call failed: ${error.message}`);
+      }
+      throw error;
     }
   }
 
