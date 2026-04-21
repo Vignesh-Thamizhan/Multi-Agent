@@ -46,3 +46,103 @@ Error: Session not found
     at Object.deleteSession (/home/igris0410/multiagent/server/utils/sessionManager.js:78:24)
     at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
     at async deleteSession (/home/igris0410/multiagent/server/controllers/generateController.js:92:5)
+2026-04-21 09:23:39 [ERROR]: Pipeline error: 400 {"error":{"message":"Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.","type":"invalid_request_error","code":"tool_use_failed","failed_generation":"<function=create_file {\"filePath\": \"fibonacci.py\", \"content\": \"def fibonacci(n):\\n    fib_series = [0, 1]\\n    while len(fib_series) < n:\\n        fib_series.append(fib_series[-1] + fib_series[-2])\\n    return fib_series\\n\\ndef main():\\n    n = 1\\n    while True:\\n        fib_series = fibonacci(n)\\n        if fib_series[-1] > 100:\\n            break\\n        n += 1\\n    print(fibonacci(n))\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\"}></function>"}}
+2026-04-21 09:31:14 [ERROR]: Error in streamGroqWithTools iteration 1: Connection error.
+2026-04-21 09:31:14 [ERROR]: Pipeline error: Connection error.
+2026-04-21 09:40:44 [ERROR]: Pipeline error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:embedContent: [404 Not Found] models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-21 09:44:29 [ERROR]: Pipeline error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/embedding-001:embedContent: [404 Not Found] models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-21 09:52:09 [ERROR]: Pipeline error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/embedding-001:embedContent: [404 Not Found] models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-21 09:54:13 [ERROR]: Pipeline error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:embedContent: [404 Not Found] models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-21 09:59:45 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-21 09:59:45 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-21 09:59:45 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-21 09:59:45 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-21 09:59:45 [ERROR]: Pipeline error: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-21 09:59:45 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-21 09:59:45 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-21 09:59:45 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-21 09:59:45 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-21 09:59:45 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-21 09:59:45 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-21 10:01:29 [ERROR]: Pipeline error: 429 {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kngnekd6fa382mgj6mrambm2` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 96494, Requested 7632. Please try again in 59m24.864s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+2026-04-21 10:01:59 [ERROR]: Error in streamGroqWithTools iteration 0: 413 {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01kngnekd6fa382mgj6mrambm2` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 7314, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+2026-04-21 10:01:59 [ERROR]: Pipeline error: 413 {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01kngnekd6fa382mgj6mrambm2` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 7314, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+2026-04-21 10:03:03 [ERROR]: Pipeline error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+2026-04-21 10:03:28 [ERROR]: Pipeline error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}

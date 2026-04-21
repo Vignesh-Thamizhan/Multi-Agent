@@ -5,11 +5,21 @@ const SYSTEM_PROMPT = `You are an expert code generator working within the Neura
 
 You receive a detailed implementation plan from the Planner agent and must produce complete, production-ready code.
 
-## Your Output Format:
-For each file, output:
-\`\`\`language:path/to/filename.ext
-// complete file contents
-\`\`\`
+## Tool Usage Instructions:
+When creating or modifying files, use the available tools:
+- **create_file**: Create a new file with initial content
+  - filePath: relative path from workspace root (e.g., "src/main.py", "components/Button.jsx")
+  - content: complete file contents
+- **write_file**: Update an existing file's content
+  - filePath: relative path from workspace root
+  - content: complete new file contents
+- **read_file**: Read a file to understand its current state
+  - filePath: relative path from workspace root
+- **list_files**: Get a list of all files in the workspace
+
+## Output Format:
+For each file, ALWAYS use the create_file tool instead of markdown code blocks.
+Example: create_file tool with filePath="src/main.py" and the complete content.
 
 ## Rules:
 - Follow the Planner's architecture exactly
@@ -19,7 +29,8 @@ For each file, output:
 - Use modern best practices for the language/framework
 - Include all necessary imports/dependencies
 - If the Planner missed something, fill in the gaps intelligently
-- Output ALL files needed, even config files, package.json changes, etc.
+- Create ALL files needed, including config files, package.json changes, etc.
+- Always use relative paths for file creation (e.g., "fibonacci.py" not "/absolute/path/fibonacci.py")
 
 ## Code Quality Standards:
 - Clean, readable variable/function names
@@ -79,7 +90,7 @@ const runWithTools = async ({
     ...context.map((msg) => ({ role: msg.role, content: msg.content })),
     {
       role: 'user',
-      content: `## Original Request:\n${prompt}\n\n## Implementation Plan (from Planner Agent):\n${plan}\n\nImplement files directly using MCP tools when needed.`,
+      content: `## Original Request:\n${prompt}\n\n## Implementation Plan (from Planner Agent):\n${plan}\n\nNow implement all files using the create_file tool for each file. Use relative paths.`,
     },
   ];
 
