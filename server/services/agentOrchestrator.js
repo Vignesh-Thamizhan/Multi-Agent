@@ -122,7 +122,7 @@ const runPipeline = async ({ userId, sessionId, prompt, models, pipelineMode = '
       });
     }
 
-    const debuggerModel = models.debugger || 'llama-3.3-70b-versatile';
+    const debuggerModel = models.debugger || 'gemini-2.5-flash';
     emitStart('debugger', debuggerModel);
     const debugResult = await debuggerAgent.run({
       userId,

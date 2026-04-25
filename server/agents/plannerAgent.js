@@ -1,4 +1,4 @@
-const groqService = require('../services/groqService');
+const { getProvider, inferProviderFromModel } = require('../services/llmProviderFactory');
 const logger = require('../utils/logger');
 
 const SYSTEM_PROMPT = `You are an expert software architect and technical planner working within the NeuralForge multi-agent system.
@@ -30,7 +30,10 @@ Your role is to analyze the user's request and create a detailed, actionable imp
  * @returns {Promise<string>} Full plan text
  */
 const run = async ({ prompt, context = [], model, onChunk }) => {
-  logger.info(`PlannerAgent starting with model: ${model}`);
+  const providerName = inferProviderFromModel(model);
+  const provider = getProvider(providerName);
+
+  logger.info(`PlannerAgent starting | model=${model} | provider=${providerName}`);
 
   const messages = [
     { role: 'system', content: SYSTEM_PROMPT },
@@ -41,7 +44,7 @@ const run = async ({ prompt, context = [], model, onChunk }) => {
     { role: 'user', content: prompt },
   ];
 
-  const result = await groqService.streamCompletion({
+  const result = await provider.streamCompletion({
     model,
     messages,
     onChunk,

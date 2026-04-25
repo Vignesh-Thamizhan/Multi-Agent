@@ -135,7 +135,8 @@ const usePipelineStore = create((set, get) => ({
   },
 
   setPipelineMode: (mode) => {
-    const resolved = mode === 'parallel' ? 'parallel' : 'sequential';
+    const valid = ['sequential', 'parallel', 'local'];
+    const resolved = valid.includes(mode) ? mode : 'sequential';
     try { localStorage.setItem('nf_pipeline_mode', resolved); } catch {}
     set({ pipelineMode: resolved });
   },

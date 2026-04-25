@@ -586,3 +586,296 @@ Error: Session not found
 2026-04-21 10:03:27 [INFO]: PlannerAgent starting with model: llama-3.3-70b-versatile
 2026-04-21 10:03:27 [INFO]: Groq streaming: model=llama-3.3-70b-versatile, messages=7
 2026-04-21 10:03:28 [ERROR]: Pipeline error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+2026-04-21 10:45:46 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-21 10:46:01 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-21 10:46:01 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-21 10:46:01 [INFO]: 📡 Environment: development
+2026-04-21 10:46:01 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-21 10:46:39 [INFO]: User logged in: vaish (69e6f45bc9d846406dbe07d9)
+2026-04-21 10:52:26 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-21 10:52:28 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-21 10:52:28 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-21 10:52:28 [INFO]: 📡 Environment: development
+2026-04-21 10:52:28 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-21 10:53:15 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-21 10:53:19 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-21 10:53:19 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-21 10:53:19 [INFO]: 📡 Environment: development
+2026-04-21 10:53:19 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-21 10:53:29 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-21 10:53:30 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-21 10:53:30 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-21 10:53:30 [INFO]: 📡 Environment: development
+2026-04-21 10:53:30 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-21 10:53:40 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-21 10:53:42 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-21 10:53:42 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-21 10:53:42 [INFO]: 📡 Environment: development
+2026-04-21 10:53:42 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-21 10:54:19 [INFO]: Socket connected: lP4qQ2ywfYWcNKXqAAAC | User: 69e6f45bc9d846406dbe07d9
+2026-04-21 10:54:29 [INFO]: PlannerAgent starting with model: llama-3.3-70b-versatile
+2026-04-21 10:54:29 [INFO]: Groq streaming: model=llama-3.3-70b-versatile, messages=7
+2026-04-21 10:54:31 [INFO]: Groq complete: 788 chars
+2026-04-21 10:54:31 [INFO]: PlannerAgent complete: 788 chars
+2026-04-21 10:55:32 [ERROR]: Error in streamGroqWithTools iteration 2: 413 {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01kngnekd6fa382mgj6mrambm2` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6075, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+2026-04-21 10:55:32 [ERROR]: Pipeline error: 413 {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01kngnekd6fa382mgj6mrambm2` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6075, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+2026-04-21 10:56:20 [INFO]: Session deleted: 69e6fd206533ef8296928a29
+2026-04-21 10:56:57 [INFO]: Session created: 69e70aa1aba6de8978449ca1 for user: 69e6f45bc9d846406dbe07d9
+2026-04-21 10:56:58 [INFO]: PlannerAgent starting with model: llama-3.3-70b-versatile
+2026-04-21 10:56:58 [INFO]: Groq streaming: model=llama-3.3-70b-versatile, messages=3
+2026-04-21 10:56:59 [ERROR]: Pipeline error: 429 {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kngnekd6fa382mgj6mrambm2` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99829, Requested 4394. Please try again in 1h0m48.671999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+2026-04-21 10:58:02 [INFO]: PlannerAgent starting with model: llama-3.3-70b-versatile
+2026-04-21 10:58:02 [INFO]: Groq streaming: model=llama-3.3-70b-versatile, messages=4
+2026-04-21 10:58:08 [ERROR]: Pipeline error: 429 {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kngnekd6fa382mgj6mrambm2` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99749, Requested 460. Please try again in 3m0.576s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+2026-04-21 10:58:10 [INFO]: Socket disconnected: lP4qQ2ywfYWcNKXqAAAC | Reason: client namespace disconnect
+2026-04-21 10:58:54 [INFO]: Socket connected: wNOJIYyTek0kLCAyAAAF | User: 69e6f45bc9d846406dbe07d9
+2026-04-21 10:59:25 [INFO]: Socket disconnected: wNOJIYyTek0kLCAyAAAF | Reason: transport close
+2026-04-21 10:59:26 [INFO]: Socket connected: nLeCnhYVIBfyoeP3AAAI | User: 69e6f45bc9d846406dbe07d9
+2026-04-21 10:59:38 [INFO]: Socket disconnected: nLeCnhYVIBfyoeP3AAAI | Reason: client namespace disconnect
+2026-04-21 10:59:38 [INFO]: Socket connected: NVFUz2AA0lAc4hKjAAAK | User: 69e6f45bc9d846406dbe07d9
+2026-04-21 10:59:40 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-21 10:59:42 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-21 10:59:42 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-21 10:59:42 [INFO]: 📡 Environment: development
+2026-04-21 10:59:42 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-21 10:59:46 [INFO]: Socket connected: Pho_yGZcQt-bCOKtAAAB | User: 69e6f45bc9d846406dbe07d9
+2026-04-21 11:00:18 [INFO]: Socket disconnected: Pho_yGZcQt-bCOKtAAAB | Reason: transport close
+2026-04-21 11:00:19 [INFO]: Socket connected: hKUXCwcjeSWOFawrAAAE | User: 69e6f45bc9d846406dbe07d9
+2026-04-21 11:00:36 [INFO]: PlannerAgent starting with model: mixtral-8x7b-32768
+2026-04-21 11:00:36 [INFO]: Groq streaming: model=mixtral-8x7b-32768, messages=5
+2026-04-21 11:00:43 [ERROR]: Pipeline error: 400 {"error":{"message":"The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.","type":"invalid_request_error","code":"model_decommissioned"}}
+2026-04-21 11:01:40 [INFO]: Socket disconnected: hKUXCwcjeSWOFawrAAAE | Reason: transport close
+2026-04-21 11:01:42 [INFO]: Socket connected: MvWWjdabsld0XOKmAAAH | User: 69e6f45bc9d846406dbe07d9
+2026-04-21 11:01:45 [INFO]: Session deleted: 69e70aa1aba6de8978449ca1
+2026-04-21 11:02:12 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-21 11:02:15 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-21 11:02:15 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-21 11:02:15 [INFO]: 📡 Environment: development
+2026-04-21 11:02:15 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-21 11:02:18 [INFO]: Socket connected: lDzV6iHFyBri8oH7AAAB | User: 69e6f45bc9d846406dbe07d9
+2026-04-21 11:02:30 [INFO]: Socket disconnected: lDzV6iHFyBri8oH7AAAB | Reason: client namespace disconnect
+2026-04-21 11:02:30 [INFO]: Socket connected: rBOv0I1fgYx5EUIFAAAD | User: 69e6f45bc9d846406dbe07d9
+2026-04-21 11:02:53 [INFO]: Socket disconnected: rBOv0I1fgYx5EUIFAAAD | Reason: client namespace disconnect
+2026-04-21 11:02:53 [INFO]: Socket connected: A7O25wDoyd13mbHMAAAF | User: 69e6f45bc9d846406dbe07d9
+2026-04-21 11:03:33 [INFO]: Session created: 69e70c2d5dd72545f371d013 for user: 69e6f45bc9d846406dbe07d9
+2026-04-21 11:03:34 [INFO]: PlannerAgent starting with model: deepseek-r1-distill-llama-70b
+2026-04-21 11:03:34 [INFO]: Groq streaming: model=deepseek-r1-distill-llama-70b, messages=3
+2026-04-21 11:03:35 [ERROR]: Pipeline error: 400 {"error":{"message":"The model `deepseek-r1-distill-llama-70b` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.","type":"invalid_request_error","code":"model_decommissioned"}}
+2026-04-21 11:04:54 [INFO]: Socket disconnected: A7O25wDoyd13mbHMAAAF | Reason: client namespace disconnect
+2026-04-21 11:04:54 [INFO]: Socket connected: byDG15HZ57lNGjV7AAAH | User: 69e6f45bc9d846406dbe07d9
+2026-04-21 11:04:56 [INFO]: Socket disconnected: byDG15HZ57lNGjV7AAAH | Reason: client namespace disconnect
+2026-04-21 11:04:56 [INFO]: Socket connected: HDxLfEXSFUlRfmvSAAAJ | User: 69e6f45bc9d846406dbe07d9
+2026-04-21 11:04:58 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-21 11:05:14 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-21 11:05:14 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-21 11:05:14 [INFO]: 📡 Environment: development
+2026-04-21 11:05:14 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-21 11:05:14 [INFO]: Socket connected: hdw_YZU7C8x0G7k6AAAB | User: 69e6f45bc9d846406dbe07d9
+2026-04-21 11:06:00 [INFO]: Socket disconnected: hdw_YZU7C8x0G7k6AAAB | Reason: transport close
+2026-04-21 11:06:01 [INFO]: Socket connected: FfVumuEsPXbaVg2oAAAE | User: 69e6f45bc9d846406dbe07d9
+2026-04-21 11:06:09 [INFO]: Session deleted: 69e70c2d5dd72545f371d013
+2026-04-21 11:06:09 [ERROR]: 500 — Session not found
+Error: Session not found
+    at Object.deleteSession (/home/igris0410/multiagent/server/utils/sessionManager.js:78:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async deleteSession (/home/igris0410/multiagent/server/controllers/generateController.js:96:5)
+2026-04-21 11:22:09 [INFO]: Socket disconnected: FfVumuEsPXbaVg2oAAAE | Reason: client namespace disconnect
+2026-04-21 11:49:02 [INFO]: Socket connected: 9-bePG55GjClT7xnAAAH | User: 69e6f45bc9d846406dbe07d9
+2026-04-21 11:49:25 [INFO]: Socket disconnected: 9-bePG55GjClT7xnAAAH | Reason: client namespace disconnect
+2026-04-21 11:49:30 [INFO]: Socket connected: 1gv1y-jJUwm4wFKsAAAK | User: 69e6f45bc9d846406dbe07d9
+2026-04-21 13:55:58 [WARN]: MongoDB disconnected. Attempting reconnect...
+2026-04-21 13:56:14 [INFO]: MongoDB reconnected
+2026-04-21 13:56:34 [INFO]: Socket disconnected: 1gv1y-jJUwm4wFKsAAAK | Reason: client namespace disconnect
+2026-04-21 14:53:58 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-21 14:54:00 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-21 14:54:00 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-21 14:54:00 [INFO]: 📡 Environment: development
+2026-04-21 14:54:00 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-21 14:54:37 [ERROR]: 400 — Username already taken
+Error: Username already taken
+    at register (/home/igris0410/multiagent/server/controllers/authController.js:41:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-21 14:54:45 [INFO]: User logged in: vaish (69e6f45bc9d846406dbe07d9)
+2026-04-21 14:55:34 [INFO]: Socket connected: fQ72dGGswjcRcxSrAAAC | User: 69e6f45bc9d846406dbe07d9
+2026-04-21 14:59:31 [INFO]: Session created: 69e7437b40bad2aa084c6a91 for user: 69e6f45bc9d846406dbe07d9
+2026-04-21 14:59:33 [INFO]: PlannerAgent starting with model: llama-3.3-70b-versatile
+2026-04-21 14:59:33 [INFO]: Groq streaming: model=llama-3.3-70b-versatile, messages=3
+2026-04-21 14:59:35 [INFO]: Groq complete: 2823 chars
+2026-04-21 14:59:35 [INFO]: PlannerAgent complete: 2823 chars
+2026-04-21 14:59:59 [INFO]: Groq streaming: model=llama-3.3-70b-versatile, messages=6
+2026-04-21 14:59:59 [ERROR]: Pipeline error: 429 {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kngnekd6fa382mgj6mrambm2` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 95787, Requested 5627. Please try again in 20m21.696s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+2026-04-21 15:00:24 [INFO]: Socket disconnected: fQ72dGGswjcRcxSrAAAC | Reason: transport close
+2026-04-21 15:00:25 [INFO]: Socket connected: eGikFRleGJCLYxTRAAAF | User: 69e6f45bc9d846406dbe07d9
+2026-04-21 15:00:28 [INFO]: Session deleted: 69e7437b40bad2aa084c6a91
+2026-04-21 15:03:23 [INFO]: Socket disconnected: eGikFRleGJCLYxTRAAAF | Reason: client namespace disconnect
+2026-04-25 10:50:29 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-25 10:50:32 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-25 10:50:32 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-25 10:50:32 [INFO]: 📡 Environment: development
+2026-04-25 10:50:32 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-25 10:55:39 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-04-25 10:55:58 [ERROR]: 400 — Username already taken
+Error: Username already taken
+    at register (/home/igris0410/multiagent/server/controllers/authController.js:41:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-25 10:56:03 [INFO]: User logged in: vaish (69e6f45bc9d846406dbe07d9)
+2026-04-25 10:57:55 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-25 10:58:04 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-25 10:58:05 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-25 10:58:05 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-25 10:58:05 [INFO]: 📡 Environment: development
+2026-04-25 10:58:05 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-25 10:58:06 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-25 10:58:07 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-25 10:58:07 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-25 10:58:07 [INFO]: 📡 Environment: development
+2026-04-25 10:58:07 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-25 10:58:35 [INFO]: Socket connected: OIco7dfYeB__MoglAAAC | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 10:58:37 [INFO]: Socket disconnected: OIco7dfYeB__MoglAAAC | Reason: client namespace disconnect
+2026-04-25 10:58:43 [INFO]: Socket connected: u_ElObcfOIdnWz_vAAAE | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 10:58:45 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-25 10:58:46 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-25 10:58:46 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-25 10:58:46 [INFO]: 📡 Environment: development
+2026-04-25 10:58:46 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-25 10:58:48 [INFO]: Socket connected: CC8rz15NLAFT4iH1AAAB | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 10:58:59 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-25 10:58:59 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-25 10:58:59 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-25 10:58:59 [INFO]: 📡 Environment: development
+2026-04-25 10:58:59 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-25 10:59:00 [INFO]: Socket connected: UK1PFl3W-IUqJKL8AAAB | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 10:59:14 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-25 10:59:15 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-25 10:59:15 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-25 10:59:15 [INFO]: 📡 Environment: development
+2026-04-25 10:59:15 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-25 10:59:16 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-25 10:59:17 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-25 10:59:17 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-25 10:59:17 [INFO]: 📡 Environment: development
+2026-04-25 10:59:17 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-25 10:59:17 [INFO]: Socket connected: -SXFFDE3zFXHDtrhAAAB | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 10:59:32 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-25 10:59:33 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-25 10:59:33 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-25 10:59:33 [INFO]: 📡 Environment: development
+2026-04-25 10:59:33 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-25 10:59:36 [INFO]: Socket connected: J7DnoabnOil3syk5AAAB | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 10:59:52 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-25 10:59:53 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-25 10:59:53 [INFO]: [Providers] Groq ✓ (API key set)
+2026-04-25 10:59:53 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-25 10:59:53 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-25 10:59:53 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-25 10:59:53 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-25 10:59:53 [INFO]: 📡 Environment: development
+2026-04-25 10:59:53 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-25 10:59:53 [INFO]: Socket connected: OPtG6s6A4HPQ_jdZAAAB | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 10:59:54 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-25 10:59:55 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-25 10:59:55 [INFO]: [Providers] Groq ✓ (API key set)
+2026-04-25 10:59:55 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-25 10:59:55 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-25 10:59:55 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-25 10:59:55 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-25 10:59:55 [INFO]: 📡 Environment: development
+2026-04-25 10:59:55 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-25 10:59:56 [INFO]: Socket connected: L7NixD9lAdj-jxqfAAAB | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:00:20 [INFO]: Socket disconnected: L7NixD9lAdj-jxqfAAAB | Reason: client namespace disconnect
+2026-04-25 11:00:21 [INFO]: Socket connected: 2t_xgtRniniXUGdTAAAD | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:01:31 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-25 11:01:32 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-25 11:01:32 [INFO]: [Providers] Groq ✓ (API key set)
+2026-04-25 11:01:32 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-25 11:01:32 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-25 11:01:32 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-25 11:01:55 [INFO]: Socket disconnected: 2t_xgtRniniXUGdTAAAD | Reason: client namespace disconnect
+2026-04-25 11:02:06 [INFO]: Socket connected: AY2_-O9ymQ04O7AIAAAG | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:02:11 [INFO]: Socket disconnected: AY2_-O9ymQ04O7AIAAAG | Reason: client namespace disconnect
+2026-04-25 11:05:29 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-25 11:05:31 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-25 11:05:31 [INFO]: [Providers] Groq ✓ (API key set)
+2026-04-25 11:05:31 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-25 11:05:31 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-25 11:05:31 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-25 11:05:31 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-25 11:05:31 [INFO]: 📡 Environment: development
+2026-04-25 11:05:31 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-25 11:05:39 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-25 11:05:41 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-25 11:05:41 [INFO]: [Providers] Groq ✓ (API key set)
+2026-04-25 11:05:41 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-25 11:05:41 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-25 11:05:41 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-25 11:05:41 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-25 11:05:41 [INFO]: 📡 Environment: development
+2026-04-25 11:05:41 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-25 11:11:38 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-25 11:11:39 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-25 11:11:39 [INFO]: [Providers] Groq ✓ (API key set)
+2026-04-25 11:11:39 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-25 11:11:39 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-25 11:11:39 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-25 11:11:39 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-25 11:11:39 [INFO]: 📡 Environment: development
+2026-04-25 11:11:39 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-25 11:14:58 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-25 11:15:00 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-25 11:15:00 [INFO]: [Providers] Groq ✓ (API key set)
+2026-04-25 11:15:00 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-25 11:15:00 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-25 11:15:00 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-25 11:15:00 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-25 11:15:00 [INFO]: 📡 Environment: development
+2026-04-25 11:15:00 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-25 11:15:16 [INFO]: Socket connected: _Nozumsy9ZgBRwOZAAAC | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:16:57 [INFO]: Socket disconnected: _Nozumsy9ZgBRwOZAAAC | Reason: transport close
+2026-04-25 11:16:58 [INFO]: Socket connected: rpxRU6JvczhRrPGjAAAF | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:18:43 [INFO]: Socket disconnected: rpxRU6JvczhRrPGjAAAF | Reason: client namespace disconnect
+2026-04-25 11:18:50 [INFO]: Socket connected: KVmEC6Gn4u5Gp5dMAAAI | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:19:14 [INFO]: Socket disconnected: KVmEC6Gn4u5Gp5dMAAAI | Reason: transport close
+2026-04-25 11:19:15 [INFO]: Socket connected: p3BJczml4ZAP8m5mAAAL | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:19:19 [INFO]: Socket disconnected: p3BJczml4ZAP8m5mAAAL | Reason: client namespace disconnect
+2026-04-25 11:19:33 [INFO]: Socket connected: KjjAzOqhcEolKrFWAAAO | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:20:44 [INFO]: Socket disconnected: KjjAzOqhcEolKrFWAAAO | Reason: client namespace disconnect
+2026-04-25 11:20:44 [INFO]: Socket connected: WXOxZCmV4vYqEcQyAAAQ | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:20:49 [INFO]: Socket disconnected: WXOxZCmV4vYqEcQyAAAQ | Reason: client namespace disconnect
+2026-04-25 11:20:49 [INFO]: Socket connected: 5IExWKk84dCQM7rnAAAS | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:20:52 [INFO]: Socket disconnected: 5IExWKk84dCQM7rnAAAS | Reason: client namespace disconnect
+2026-04-25 11:22:09 [INFO]: Socket connected: YTEdn7ozmL2QKJyGAAAV | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:22:30 [INFO]: Session created: 69ec569e20dd022e525a4656 for user: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:22:31 [INFO]: PlannerAgent starting | model=qwen3.5:4b | provider=ollama
+2026-04-25 11:22:31 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=3
+2026-04-25 11:24:12 [INFO]: Socket disconnected: YTEdn7ozmL2QKJyGAAAV | Reason: client namespace disconnect
+2026-04-25 11:24:26 [INFO]: Socket connected: WmBq5RlDIKOYSnFmAAAY | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:24:41 [INFO]: Session deleted: 69ec569e20dd022e525a4656
+2026-04-25 11:25:08 [INFO]: Session created: 69ec573b20dd022e525a466c for user: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:25:08 [INFO]: PlannerAgent starting | model=qwen3.5:4b | provider=ollama
+2026-04-25 11:25:08 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=3
+2026-04-25 11:26:57 [INFO]: Socket disconnected: WmBq5RlDIKOYSnFmAAAY | Reason: transport close
+2026-04-25 11:26:58 [INFO]: Socket connected: yqXPHlGTU-oD1sDzAAAb | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:27:02 [INFO]: Session deleted: 69ec573b20dd022e525a466c
+2026-04-25 11:27:46 [INFO]: Socket disconnected: yqXPHlGTU-oD1sDzAAAb | Reason: client namespace disconnect
+2026-04-25 11:27:50 [INFO]: Socket connected: 8BKhN5ycax7eJpPWAAAe | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:28:46 [INFO]: Session created: 69ec581620dd022e525a468a for user: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:28:47 [INFO]: PlannerAgent starting | model=anthropic/claude-3.5-sonnet | provider=openrouter
+2026-04-25 11:28:47 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-sonnet, messages=3
+2026-04-25 11:28:47 [ERROR]: Pipeline error: OpenRouter API error (404): {"error":{"message":"No endpoints found for anthropic/claude-3.5-sonnet.","code":404},"user_id":"user_3CQHKywiRed3dTGwcvRmi5TvFOe"}
+2026-04-25 11:30:08 [ERROR]: Pipeline error: fetch failed
+2026-04-25 11:30:16 [INFO]: Socket disconnected: 8BKhN5ycax7eJpPWAAAe | Reason: client namespace disconnect
+2026-04-25 11:30:16 [INFO]: Socket connected: 4qkw9CNba9jndbxsAAAg | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:30:19 [INFO]: Socket disconnected: 4qkw9CNba9jndbxsAAAg | Reason: client namespace disconnect
+2026-04-25 11:30:19 [INFO]: Socket connected: fzYiK0LNgULPw0iWAAAi | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:30:22 [INFO]: Socket disconnected: fzYiK0LNgULPw0iWAAAi | Reason: client namespace disconnect
+2026-04-25 11:30:22 [INFO]: Socket connected: Bwgc57o1ZskCGwRaAAAk | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:30:29 [INFO]: Socket disconnected: Bwgc57o1ZskCGwRaAAAk | Reason: client namespace disconnect
+2026-04-25 11:30:29 [INFO]: Socket connected: yA8J9RvIUQ5i_kLKAAAm | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:30:30 [INFO]: Socket disconnected: yA8J9RvIUQ5i_kLKAAAm | Reason: client namespace disconnect
+2026-04-25 11:30:30 [INFO]: Socket connected: aYS9OfJQX1StwDJBAAAo | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:30:31 [INFO]: Socket disconnected: aYS9OfJQX1StwDJBAAAo | Reason: client namespace disconnect
+2026-04-25 11:30:32 [INFO]: Socket connected: YtoDKqUdZnXTu19_AAAq | User: 69e6f45bc9d846406dbe07d9
+2026-04-25 11:30:34 [INFO]: Socket disconnected: YtoDKqUdZnXTu19_AAAq | Reason: transport close
+2026-04-25 11:30:35 [INFO]: Socket connected: C5bTk77OacA5hpSAAAAt | User: 69e6f45bc9d846406dbe07d9

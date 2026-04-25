@@ -7,7 +7,7 @@ import { AGENTS } from '../utils/agentConfig';
 import toast from 'react-hot-toast';
 import {
   Zap, LogOut, ArrowRight, Cpu, ChevronDown, CheckCircle2,
-  GitBranch, Layers, Wifi, WifiOff, Settings, Sparkles,
+  GitBranch, Layers, Wifi, WifiOff, Settings, Sparkles, Monitor,
 } from 'lucide-react';
 
 /* ── Pipeline flow visualizations ────────────────────────────── */
@@ -111,6 +111,62 @@ const ParallelFlow = ({ isActive }) => {
         </div>
         <span className="text-[9px] sm:text-[10px] text-gray-500 font-medium">Debugger</span>
       </Motion.div>
+    </div>
+  );
+};
+
+const LocalFlow = ({ isActive }) => {
+  const agents = ['planner', 'coder', 'reviewer', 'debugger'];
+  return (
+    <div className="flex flex-col items-center gap-3 py-4">
+      {/* Ollama hub */}
+      <Motion.div
+        className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10"
+        animate={isActive ? { boxShadow: ['0 0 10px rgba(16,185,129,0.1)', '0 0 20px rgba(16,185,129,0.25)', '0 0 10px rgba(16,185,129,0.1)'] } : {}}
+        transition={{ duration: 2, repeat: Infinity }}
+      >
+        <Monitor size={14} className="text-emerald-400" />
+        <span className="text-[10px] font-mono text-emerald-300 font-semibold">qwen3.5:4b</span>
+      </Motion.div>
+
+      {/* Fanning lines */}
+      <div className="flex items-center gap-1">
+        <div className="w-8 h-px bg-gradient-to-r from-transparent to-emerald-500/30" />
+        <Motion.div
+          animate={isActive ? { opacity: [0.3, 1, 0.3] } : {}}
+          transition={{ duration: 1.5, repeat: Infinity }}
+        >
+          <ArrowRight size={12} className="text-emerald-500/40 rotate-90" />
+        </Motion.div>
+        <div className="w-8 h-px bg-gradient-to-l from-transparent to-emerald-500/30" />
+      </div>
+
+      {/* All four agents */}
+      <div className="flex items-center gap-2 sm:gap-3 flex-wrap justify-center">
+        {agents.map((id, i) => {
+          const cfg = AGENTS[id];
+          return (
+            <Motion.div
+              key={id}
+              className="flex flex-col items-center gap-1"
+              whileHover={{ scale: 1.1 }}
+              animate={isActive ? { y: [0, -2, 0] } : {}}
+              transition={{ duration: 1.8, repeat: Infinity, delay: i * 0.15 }}
+            >
+              <div
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center text-sm"
+                style={{
+                  background: `linear-gradient(135deg, ${cfg.gradientFrom}30, ${cfg.gradientTo}30)`,
+                  border: `1px solid ${cfg.borderColor}`,
+                }}
+              >
+                {cfg.icon}
+              </div>
+              <span className="text-[8px] sm:text-[9px] text-gray-500 font-medium">{cfg.label}</span>
+            </Motion.div>
+          );
+        })}
+      </div>
     </div>
   );
 };
@@ -344,9 +400,16 @@ const DashboardPage = () => {
           <div className="flex gap-4 sm:gap-6 mt-2 sm:mt-0">
             <div className="text-center">
               <p className="text-lg font-bold text-white">
-                {pipelineMode === 'parallel' ? '⚡' : '🔄'}
+                {pipelineMode === 'local' ? '🖥' : pipelineMode === 'parallel' ? '⚡' : '🔄'}
               </p>
-              <p className="text-[10px] text-gray-500 uppercase tracking-wider mt-1">Mode</p>
+              <p className="text-[10px] text-gray-500 uppercase tracking-wider mt-1">
+                MODE: <span className="font-bold text-white">
+                  {pipelineMode === 'local' ? 'LOCAL' : pipelineMode === 'parallel' ? 'PARALLEL' : 'SEQUENTIAL'}
+                </span>
+              </p>
+              {pipelineMode === 'local' && (
+                <p className="text-[9px] text-emerald-400 font-mono mt-1">qwen3.5:4b</p>
+              )}
             </div>
             <div className="text-center">
               <p className="text-lg font-bold text-white">4</p>
@@ -366,7 +429,7 @@ const DashboardPage = () => {
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider">Pipeline Mode</h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Sequential Card */}
             <Motion.button
               onClick={() => handleModeSelect('sequential')}
@@ -460,10 +523,61 @@ const DashboardPage = () => {
                 <ParallelFlow isActive={pipelineMode === 'parallel'} />
               </div>
             </Motion.button>
+
+            {/* Local (Ollama) Card */}
+            <Motion.button
+              onClick={() => handleModeSelect('local')}
+              whileHover={{ scale: 1.01 }}
+              whileTap={{ scale: 0.99 }}
+              className={`relative rounded-2xl border p-5 text-left transition-all duration-300 cursor-pointer overflow-hidden ${
+                pipelineMode === 'local'
+                  ? 'border-emerald-500/40 bg-emerald-500/[0.06]'
+                  : 'border-white/8 bg-white/[0.02] hover:border-white/15 hover:bg-white/[0.04]'
+              }`}
+            >
+              {pipelineMode === 'local' && (
+                <Motion.div
+                  className="absolute inset-0 rounded-2xl"
+                  animate={{
+                    boxShadow: [
+                      'inset 0 0 30px rgba(16,185,129,0.05)',
+                      'inset 0 0 50px rgba(16,185,129,0.1)',
+                      'inset 0 0 30px rgba(16,185,129,0.05)',
+                    ],
+                  }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                />
+              )}
+              <div className="relative z-10">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-2">
+                    <Monitor size={16} className="text-emerald-400" />
+                    <h4 className="text-sm font-semibold text-white">Local (Ollama)</h4>
+                  </div>
+                  {pipelineMode === 'local' && (
+                    <Motion.div
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      className="w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center"
+                    >
+                      <CheckCircle2 size={12} className="text-white" />
+                    </Motion.div>
+                  )}
+                </div>
+                <p className="text-xs text-gray-500 leading-relaxed mb-1">
+                  Fully local, private inference via Ollama. All agents use <span className="text-emerald-400 font-mono">qwen3.5:4b</span>. No API keys needed.
+                </p>
+                <p className="text-[10px] text-amber-400/70 mb-2">
+                  ⚠ Debugger runs in text-only mode (no file tools)
+                </p>
+                <LocalFlow isActive={pipelineMode === 'local'} />
+              </div>
+            </Motion.button>
           </div>
         </Motion.section>
 
-        {/* ── Agent Configuration ─────────────────────────── */}
+        {/* ── Agent Configuration (hidden in local mode — models auto-set) ── */}
+        {pipelineMode !== 'local' && (
         <Motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -491,6 +605,7 @@ const DashboardPage = () => {
             ))}
           </div>
         </Motion.section>
+        )}
 
         {/* ── Start Building CTA ──────────────────────────── */}
         <Motion.div

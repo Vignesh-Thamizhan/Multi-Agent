@@ -1,5 +1,6 @@
 import { motion as Motion, AnimatePresence } from 'framer-motion';
 import { AGENTS, AGENT_STATUSES } from '../utils/agentConfig';
+import usePipelineStore from '../store/pipelineStore';
 import MarkdownRenderer from './MarkdownRenderer';
 import { Loader2, CheckCircle2, XCircle, RotateCw } from 'lucide-react';
 
@@ -20,11 +21,15 @@ const StatusIndicator = ({ status }) => {
 
 const AgentCard = ({ agentId, agentState }) => {
   const config = AGENTS[agentId];
+  const pipelineMode = usePipelineStore((s) => s.pipelineMode);
   if (!config) return null;
 
   const { status, content, model, error, retryAttempt } = agentState;
   const isActive = status === AGENT_STATUSES.STREAMING;
   const hasContent = content && content.length > 0;
+  
+  // In local mode, show Ollama provider; otherwise show the agent's default provider
+  const displayProvider = pipelineMode === 'local' ? 'Ollama' : config.provider;
 
   return (
     <Motion.div
@@ -72,7 +77,7 @@ const AgentCard = ({ agentId, agentState }) => {
               background: config.bgColor,
             }}
           >
-            {config.provider}
+            {displayProvider}
           </span>
         </div>
 

@@ -76,4 +76,118 @@ const streamMultimodal = async ({
   return fullContent;
 };
 
-module.exports = { streamMultimodal };
+const MCP_TOOL_DEFINITIONS = [
+  {
+    name: 'create_file',
+    description: 'Create a file in the workspace',
+    parameters: {
+      type: 'OBJECT',
+      properties: { filePath: { type: 'STRING', description: 'Path to the file to create' }, content: { type: 'STRING', description: 'File content' } },
+      required: ['filePath', 'content'],
+    },
+  },
+  {
+    name: 'read_file',
+    description: 'Read a file from workspace',
+    parameters: {
+      type: 'OBJECT',
+      properties: { filePath: { type: 'STRING', description: 'Path to the file to read' } },
+      required: ['filePath'],
+    },
+  },
+  {
+    name: 'write_file',
+    description: 'Write file content in workspace',
+    parameters: {
+      type: 'OBJECT',
+      properties: { filePath: { type: 'STRING', description: 'Path to the file to write' }, content: { type: 'STRING', description: 'File content' } },
+      required: ['filePath', 'content'],
+    },
+  },
+  {
+    name: 'list_files',
+    description: 'List workspace files',
+    parameters: { type: 'OBJECT', properties: {} },
+  },
+];
+
+const streamGeminiWithTools = async ({
+  model = 'gemini-2.5-flash',
+  messages,
+  executeTool,
+  onToolCall,
+  onChunk,
+  maxIterations = 8,
+}) => {
+  logger.info(`Gemini tools streaming: model=${model}`);
+  const ai = getGenAI();
+  const geminiModel = ai.getGenerativeModel({
+    model,
+    tools: [{ functionDeclarations: MCP_TOOL_DEFINITIONS }],
+  });
+
+  const systemMessage = messages.find((m) => m.role === 'system')?.content || '';
+  const userMessage = messages.find((m) => m.role === 'user')?.content || '';
+
+  const chat = geminiModel.startChat({
+    systemInstruction: { parts: [{ text: systemMessage }] },
+    history: [],
+  });
+
+  let currentMessage = [{ text: userMessage }];
+  let toolTrace = [];
+  let finalContent = '';
+
+  for (let i = 0; i < maxIterations; i += 1) {
+    try {
+      const response = await chat.sendMessageStream(currentMessage);
+      
+      let textContent = '';
+      let hasToolCall = false;
+
+      for await (const chunk of response.stream) {
+        let text = '';
+        try { text = chunk.text(); } catch (e) { /* ignore if no text */ }
+        
+        if (text) {
+          textContent += text;
+          if (onChunk) onChunk(text);
+        }
+
+        const calls = chunk.functionCalls();
+        if (calls && calls.length > 0) {
+          hasToolCall = true;
+          const functionResponses = [];
+          
+          for (const call of calls) {
+            const toolName = call.name;
+            const args = call.args;
+            onToolCall?.({ toolName, args });
+            const result = await executeTool(toolName, args);
+            toolTrace.push({ toolName, args, result });
+            
+            functionResponses.push({
+              functionResponse: {
+                name: toolName,
+                response: { result: JSON.stringify(result) }
+              }
+            });
+          }
+          currentMessage = functionResponses;
+          break; // Stop streaming this iteration, start next with tool responses
+        }
+      }
+      
+      finalContent += textContent;
+      if (!hasToolCall) break;
+      
+    } catch (error) {
+      logger.error(`Error in streamGeminiWithTools iteration ${i}: ${error.message}`);
+      throw error;
+    }
+  }
+
+  return { content: finalContent, toolTrace };
+};
+
+module.exports = { streamMultimodal, streamGeminiWithTools };

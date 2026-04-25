@@ -10,6 +10,7 @@ const connectDB = require('./config/db');
 const { initializeSocket } = require('./config/socket');
 const { generalLimiter } = require('./middleware/rateLimitMiddleware');
 const { errorHandler, notFound } = require('./middleware/errorMiddleware');
+const { validateProviders } = require('./config/providers');
 const logger = require('./utils/logger');
 
 // Route imports
@@ -59,6 +60,7 @@ const PORT = process.env.PORT || 5000;
 const startServer = async () => {
   try {
     await connectDB();
+    await validateProviders();
     await fs.mkdir(path.join(process.cwd(), 'workspace'), { recursive: true });
 
     server.listen(PORT, () => {
