@@ -1,4 +1,4 @@
-const groqService = require('../services/groqService');
+const { getProvider, inferProviderFromModel } = require('../services/llmProviderFactory');
 const logger = require('../utils/logger');
 
 const SYSTEM_PROMPT = `You are an expert code generator working within the NeuralForge multi-agent system.
@@ -40,7 +40,7 @@ Example: create_file tool with filePath="src/main.py" and the complete content.
 - Proper TypeScript types if using TypeScript`;
 
 /**
- * Run the Coder Agent
+ * Run the Coder Agent (text-only streaming, no tools)
  * @param {Object} options
  * @param {string} options.prompt - User's original prompt
  * @param {string} options.plan - Planner agent's output
@@ -50,7 +50,10 @@ Example: create_file tool with filePath="src/main.py" and the complete content.
  * @returns {Promise<string>} Full code output
  */
 const run = async ({ prompt, plan, context = [], model, onChunk }) => {
-  logger.info(`CoderAgent starting with model: ${model}`);
+  const providerName = inferProviderFromModel(model);
+  const provider = getProvider(providerName);
+
+  logger.info(`CoderAgent starting | model=${model} | provider=${providerName}`);
 
   const messages = [
     { role: 'system', content: SYSTEM_PROMPT },
@@ -64,7 +67,7 @@ const run = async ({ prompt, plan, context = [], model, onChunk }) => {
     },
   ];
 
-  const result = await groqService.streamCompletion({
+  const result = await provider.streamCompletion({
     model,
     messages,
     onChunk,
@@ -76,6 +79,10 @@ const run = async ({ prompt, plan, context = [], model, onChunk }) => {
   return result;
 };
 
+/**
+ * Run the Coder Agent with MCP tool support.
+ * Falls back to text-only mode for providers that don't support tools (e.g. Ollama).
+ */
 const runWithTools = async ({
   prompt,
   plan,
@@ -85,6 +92,19 @@ const runWithTools = async ({
   executeTool,
   onToolCall,
 }) => {
+  const providerName = inferProviderFromModel(model);
+  const provider = getProvider(providerName);
+
+  // If the provider doesn't support tools, fall back to text-only code generation
+  if (!provider.supportsTools || !provider.streamWithTools) {
+    logger.warn(
+      `[CoderAgent] Provider "${providerName}" does not support tools. ` +
+      `Falling back to text-only code generation.`
+    );
+    const content = await run({ prompt, plan, context, model, onChunk });
+    return { content, toolTrace: [] };
+  }
+
   const messages = [
     { role: 'system', content: SYSTEM_PROMPT },
     ...context.map((msg) => ({ role: msg.role, content: msg.content })),
@@ -94,7 +114,7 @@ const runWithTools = async ({
     },
   ];
 
-  const result = await groqService.streamGroqWithTools({
+  const result = await provider.streamWithTools({
     model,
     messages,
     executeTool,

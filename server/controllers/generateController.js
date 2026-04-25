@@ -29,11 +29,23 @@ const generate = async (req, res, next) => {
       session = await sessionManager.createSession(userId, title);
     }
 
-    const resolvedMode = pipelineMode === 'parallel' ? 'parallel' : 'sequential';
+    const validModes = ['sequential', 'parallel', 'local'];
+    const resolvedMode = validModes.includes(pipelineMode) ? pipelineMode : 'sequential';
     await Session.findByIdAndUpdate(session._id, { pipelineMode: resolvedMode });
 
     // Defense-in-depth: Sanitize models on server to prevent stale/invalid values
-    const sanitizedModels = sanitizeModelConfig(models || req.user.modelPreferences || {});
+    let sanitizedModels = sanitizeModelConfig(models || req.user.modelPreferences || {});
+
+    // In local mode, override ALL agent models to the configured Ollama model
+    if (resolvedMode === 'local') {
+      const ollamaModel = process.env.OLLAMA_MODEL || 'qwen3.5:4b';
+      sanitizedModels = {
+        planner: ollamaModel,
+        coder: ollamaModel,
+        reviewer: ollamaModel,
+        debugger: ollamaModel,
+      };
+    }
 
     // Return 202 immediately — pipeline runs async
     res.status(202).json({

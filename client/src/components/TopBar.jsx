@@ -85,10 +85,12 @@ const TopBar = ({ socketConnected, onToggleSidebar, isSidebarOpen }) => {
         </Motion.div>
       </div>
 
-      {/* Center: model selectors */}
-      <div className="hidden md:flex">
-        <ModelSelectorBar />
-      </div>
+      {/* Center: model selectors - hidden in local mode */}
+      {pipelineMode !== 'local' && (
+        <div className="hidden md:flex">
+          <ModelSelectorBar />
+        </div>
+      )}
 
       {/* Right: connection + user */}
       <div className="flex items-center gap-3">

@@ -5,21 +5,21 @@ const logger = require('./logger');
  * Maps agent name to list of valid model IDs
  */
 const VALID_MODELS = {
-  planner: ['llama-3.3-70b-versatile', 'llama-3.1-8b-instant'],
-  coder: ['llama-3.3-70b-versatile', 'llama-3.1-8b-instant'],
-  reviewer: ['anthropic/claude-3.5-haiku', 'anthropic/claude-3.5-sonnet'],
-  debugger: ['llama-3.3-70b-versatile', 'llama-3.1-8b-instant'],
-  multimodal: ['gemini-2.5-flash'],
+  planner: ['anthropic/claude-3-sonnet', 'anthropic/claude-3-opus', 'openai/gpt-4-turbo', 'meta-llama/llama-2-70b-chat'],
+  coder: ['meta-llama/llama-2-70b-chat', 'anthropic/claude-3-sonnet', 'anthropic/claude-3-opus', 'openai/gpt-4-turbo'],
+  reviewer: ['anthropic/claude-3-haiku', 'anthropic/claude-3-sonnet', 'openai/gpt-4-turbo', 'meta-llama/llama-2-70b-chat'],
+  debugger: ['gemini-2.5-flash', 'gemini-2.5-pro', 'gemini-1.5-flash'],
+  multimodal: ['gemini-2.5-flash', 'gemini-2.5-pro', 'gemini-1.5-flash'],
 };
 
 /**
- * Default model for each agent
+ * Default models per agent (fallback if user doesn't have preference set)
  */
 const DEFAULT_MODELS = {
-  planner: 'llama-3.3-70b-versatile',
-  coder: 'llama-3.3-70b-versatile',
-  reviewer: 'anthropic/claude-3.5-haiku',
-  debugger: 'llama-3.3-70b-versatile',
+  planner: 'anthropic/claude-3-sonnet',
+  coder: 'meta-llama/llama-2-70b-chat',
+  reviewer: 'anthropic/claude-3-haiku',
+  debugger: 'gemini-2.5-flash',
   multimodal: 'gemini-2.5-flash',
 };
 

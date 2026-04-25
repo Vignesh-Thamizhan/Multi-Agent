@@ -1,4 +1,4 @@
-const openrouterService = require('../services/openrouterService');
+const { getProvider, inferProviderFromModel } = require('../services/llmProviderFactory');
 const logger = require('../utils/logger');
 
 const SYSTEM_PROMPT = `You are a senior code reviewer working within the NeuralForge multi-agent system.
@@ -56,7 +56,10 @@ Ordered by priority, with specific code changes where helpful.
  * @returns {Promise<string>} Full review text
  */
 const run = async ({ prompt, plan, code, context = [], model, onChunk }) => {
-  logger.info(`ReviewerAgent starting with model: ${model}`);
+  const providerName = inferProviderFromModel(model);
+  const provider = getProvider(providerName);
+
+  logger.info(`ReviewerAgent starting | model=${model} | provider=${providerName}`);
 
   const messages = [
     { role: 'system', content: SYSTEM_PROMPT },
@@ -70,7 +73,7 @@ const run = async ({ prompt, plan, code, context = [], model, onChunk }) => {
     },
   ];
 
-  const result = await openrouterService.streamCompletion({
+  const result = await provider.streamCompletion({
     model,
     messages,
     onChunk,

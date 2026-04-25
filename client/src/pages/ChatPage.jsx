@@ -164,7 +164,10 @@ const ChatPage = () => {
         <main className="flex-1 flex flex-col overflow-hidden">
           <div className="px-4 pt-3 max-w-4xl mx-auto w-full flex flex-wrap items-center gap-2">
             <span className="text-[10px] uppercase tracking-wider text-gray-500">
-              Mode: {pipelineMode}
+              Mode: <span className="font-bold text-white">{pipelineMode.toUpperCase()}</span>
+              {pipelineMode === 'local' && (
+                <span className="text-emerald-400 font-mono ml-2">qwen3.5:4b</span>
+              )}
             </span>
             {toolCalls.slice(-3).map((entry, idx) => (
               <ToolCallBadge key={`${entry.at}-${idx}`} tool={entry.tool} agent={entry.agent} />

@@ -146,3 +146,28 @@ Error: Session not found
 2026-04-21 10:01:59 [ERROR]: Pipeline error: 413 {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01kngnekd6fa382mgj6mrambm2` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 7314, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
 2026-04-21 10:03:03 [ERROR]: Pipeline error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
 2026-04-21 10:03:28 [ERROR]: Pipeline error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+2026-04-21 10:55:32 [ERROR]: Error in streamGroqWithTools iteration 2: 413 {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01kngnekd6fa382mgj6mrambm2` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6075, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+2026-04-21 10:55:32 [ERROR]: Pipeline error: 413 {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01kngnekd6fa382mgj6mrambm2` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6075, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+2026-04-21 10:56:59 [ERROR]: Pipeline error: 429 {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kngnekd6fa382mgj6mrambm2` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99829, Requested 4394. Please try again in 1h0m48.671999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+2026-04-21 10:58:08 [ERROR]: Pipeline error: 429 {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kngnekd6fa382mgj6mrambm2` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99749, Requested 460. Please try again in 3m0.576s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+2026-04-21 11:00:43 [ERROR]: Pipeline error: 400 {"error":{"message":"The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.","type":"invalid_request_error","code":"model_decommissioned"}}
+2026-04-21 11:03:35 [ERROR]: Pipeline error: 400 {"error":{"message":"The model `deepseek-r1-distill-llama-70b` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.","type":"invalid_request_error","code":"model_decommissioned"}}
+2026-04-21 11:06:09 [ERROR]: 500 — Session not found
+Error: Session not found
+    at Object.deleteSession (/home/igris0410/multiagent/server/utils/sessionManager.js:78:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async deleteSession (/home/igris0410/multiagent/server/controllers/generateController.js:96:5)
+2026-04-21 14:54:37 [ERROR]: 400 — Username already taken
+Error: Username already taken
+    at register (/home/igris0410/multiagent/server/controllers/authController.js:41:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-21 14:59:59 [ERROR]: Pipeline error: 429 {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kngnekd6fa382mgj6mrambm2` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 95787, Requested 5627. Please try again in 20m21.696s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+2026-04-25 10:55:39 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-04-25 10:55:58 [ERROR]: 400 — Username already taken
+Error: Username already taken
+    at register (/home/igris0410/multiagent/server/controllers/authController.js:41:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-25 11:28:47 [ERROR]: Pipeline error: OpenRouter API error (404): {"error":{"message":"No endpoints found for anthropic/claude-3.5-sonnet.","code":404},"user_id":"user_3CQHKywiRed3dTGwcvRmi5TvFOe"}
+2026-04-25 11:30:08 [ERROR]: Pipeline error: fetch failed

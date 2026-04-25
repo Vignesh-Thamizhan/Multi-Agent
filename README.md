@@ -13,11 +13,14 @@ User Prompt → [Planner Agent] → [Coder Agent] → [Reviewer Agent] → [Debu
 
 ## 🆕 What's New (Latest Features)
 
+- **Multi-Provider LLM Support**: Unified provider factory supporting Groq, OpenRouter, Google Gemini, and local Ollama
+- **Local Inference Mode**: Run the entire pipeline locally using Ollama (qwen3.5:4b) — no API keys required
+- **Provider-Aware UI**: Dashboard and model selectors dynamically reflect available providers and models
 - **Debugger Agent**: RAG-powered agent that autonomously analyzes code, finds bugs, and implements fixes using MCP file tools
-- **Parallel Pipeline Execution**: Toggle between sequential and parallel execution modes for faster iteration
+- **Parallel Pipeline Execution**: Toggle between sequential, parallel, and local execution modes for faster iteration
 - **RAG (Retrieval Augmented Generation)**: Vector embeddings + FAISS vector store for context-aware agent responses
-- **MCP File Tools**: Agents can now autonomously create, read, and write files in session workspace
-- **Workspace Dashboard**: New dashboard page to browse generated files and session artifacts
+- **MCP File Tools**: Agents can autonomously create, read, and write files in session workspace (tool support degrades gracefully for local mode)
+- **Workspace Dashboard**: Browse generated files, session artifacts, and toggle between execution modes
 - **Tool Call Tracking**: Real-time visibility of which tools agents are calling and their arguments
 - **File Explorer UI**: Browse and inspect all workspace files generated during pipeline execution
 - **Persistent Session Workspace**: All agent-generated code and artifacts stored per-session with retrieval APIs
@@ -32,9 +35,13 @@ User Prompt → [Planner Agent] → [Coder Agent] → [Reviewer Agent] → [Debu
 | Backend | Node.js, Express, Socket.io |
 | Database | MongoDB (Mongoose) |
 | Auth | JWT (bcryptjs) |
-| AI — Planner/Coder/Debugger | Groq API (Llama 3, Mixtral) |
-| AI — Reviewer | OpenRouter (Claude, GPT-4o, etc.) |
-| AI — Multimodal | Google Gemini 1.5 Flash |
+| AI — Multi-Provider Factory | Groq, OpenRouter, Google Gemini, Ollama |
+| AI — Planner | OpenRouter (Claude 3 Sonnet / Opus) |
+| AI — Coder | OpenRouter (Llama 2 70B / Claude 3 Sonnet) |
+| AI — Reviewer | OpenRouter (Claude 3 Haiku / Sonnet) |
+| AI — Debugger | Google Gemini (2.5 Flash) |
+| AI — Multimodal | Google Gemini (2.5 Flash) |
+| Local Inference | Ollama (qwen3.5:4b) |
 | RAG — Vector Store | FAISS + Node.js embeddings |
 | File Management | MCP-compatible file tools + filesystem |
 | Upload | Multer (memory storage) |
@@ -55,6 +62,7 @@ multiagent/
 │   │   └── multimodalAgent.js     # Vision/doc processing via Gemini
 │   ├── config/
 │   │   ├── db.js                  # MongoDB connection
+│   │   ├── providers.js           # Provider validation at startup (Groq, OpenRouter, Gemini, Ollama)
 │   │   └── socket.js              # Socket.io + JWT auth middleware
 │   ├── controllers/
 │   │   ├── authController.js
@@ -77,15 +85,17 @@ multiagent/
 │   │   ├── uploadRoutes.js
 │   │   └── workspaceRoutes.js     # File browser API
 │   ├── services/
-│   │   ├── agentOrchestrator.js   # Sequential/parallel pipeline
+│   │   ├── llmProviderFactory.js   # ⭐ Unified provider router (dispatches to correct service)
+│   │   ├── agentOrchestrator.js    # Sequential/parallel pipeline
 │   │   ├── parallelOrchestrator.js # Parallel agent execution
-│   │   ├── groqService.js         # Groq streaming + tool calls
-│   │   ├── openrouterService.js   # OpenRouter SSE streaming
-│   │   ├── geminiService.js       # Gemini multimodal
-│   │   ├── mcpFileService.js      # MCP file tools (create/read/write)
-│   │   ├── vectorStore.js         # FAISS vector operations
-│   │   ├── embeddingService.js    # Text → embeddings
-│   │   └── ragService.js          # RAG indexing & retrieval
+│   │   ├── groqService.js          # Groq streaming + tool calls
+│   │   ├── openrouterService.js    # OpenRouter SSE streaming
+│   │   ├── geminiService.js        # Gemini multimodal + tools
+│   │   ├── ollamaService.js        # ⭐ Ollama local inference (qwen3.5:4b)
+│   │   ├── mcpFileService.js       # MCP file tools (create/read/write)
+│   │   ├── vectorStore.js          # FAISS vector operations
+│   │   ├── embeddingService.js     # Text → embeddings
+│   │   └── ragService.js           # RAG indexing & retrieval
 │   ├── utils/
 │   │   ├── logger.js              # Winston logger
 │   │   ├── retryHelper.js         # Exponential backoff + jitter
@@ -98,14 +108,14 @@ multiagent/
 └── client/
     └── src/
         ├── components/
-        │   ├── AgentCard.jsx       # Streaming agent output card
+        │   ├── AgentCard.jsx       # ⭐ Streaming agent output + provider awareness
         │   ├── MarkdownRenderer.jsx # Code highlighting
-        │   ├── ModelSelector.jsx   # Per-agent model dropdown (now with Debugger)
+        │   ├── ModelSelector.jsx   # ⭐ Per-agent model dropdown with provider badges + local mode
         │   ├── PromptInput.jsx     # Textarea + file attach
         │   ├── ProtectedRoute.jsx
         │   ├── SessionSidebar.jsx  # Session list + history loader
         │   ├── TimelineFeed.jsx    # Sequential feed
-        │   ├── TopBar.jsx          # Pipeline status + mode selector + dashboard link
+        │   ├── TopBar.jsx          # ⭐ Pipeline status + mode selector + provider info
         │   ├── FileExplorer.jsx    # Workspace file browser
         │   ├── ToolCallBadge.jsx   # Tool call visualization
         │   └── RagContextBadge.jsx # RAG retrieval info badge
@@ -121,10 +131,11 @@ multiagent/
         │   └── api.js              # Axios + workspace API endpoints
         ├── store/
         │   ├── authStore.js        # Zustand — JWT persistence
-        │   ├── pipelineStore.js    # Zustand — agent state + pipeline mode
+        │   ├── pipelineStore.js    # ⭐ Zustand — agent state + pipeline mode (sequential/parallel/local)
         │   └── workspaceStore.js   # Zustand — tool calls & RAG context
         └── utils/
-            └── agentConfig.js      # Agent colors, models, constants (includes Debugger)
+            ├── agentConfig.js      # ⭐ Agent colors, models, providers (OpenRouter, Gemini, Ollama)
+            └── modelValidator.js   # Client-side model validation
 ```
 
 ---
