@@ -171,3 +171,1259 @@ Error: Username already taken
     at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
 2026-04-25 11:28:47 [ERROR]: Pipeline error: OpenRouter API error (404): {"error":{"message":"No endpoints found for anthropic/claude-3.5-sonnet.","code":404},"user_id":"user_3CQHKywiRed3dTGwcvRmi5TvFOe"}
 2026-04-25 11:30:08 [ERROR]: Pipeline error: fetch failed
+2026-04-27 17:53:29 [ERROR]: 400 — Username already taken
+Error: Username already taken
+    at register (/home/igris0410/multiagent/server/controllers/authController.js:41:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-27 17:53:34 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-04-27 17:53:52 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-04-27 17:54:20 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-04-27 18:00:10 [ERROR]: 400 — Username already taken
+Error: Username already taken
+    at register (/home/igris0410/multiagent/server/controllers/authController.js:41:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-27 18:00:15 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-04-27 18:04:36 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-04-27 18:05:01 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-04-27 18:05:34 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-04-27 18:06:54 [ERROR]: Pipeline error: OpenRouter API error (404): {"error":{"message":"No endpoints found for anthropic/claude-3-sonnet.","code":404},"user_id":"user_3CQHKywiRed3dTGwcvRmi5TvFOe"}
+2026-04-27 18:09:41 [ERROR]: Pipeline error: OpenRouter API error (404): {"error":{"message":"No endpoints found for anthropic/claude-3.5-sonnet.","code":404},"user_id":"user_3CQHKywiRed3dTGwcvRmi5TvFOe"}
+2026-04-27 18:30:36 [ERROR]: Pipeline error: OpenRouter API error (402): {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 2250. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account","code":402,"metadata":{"provider_name":null}},"user_id":"user_3CQHKywiRed3dTGwcvRmi5TvFOe"}
+2026-04-27 18:41:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Pipeline error: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:48:30 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-04-28 18:48:44 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-04-28 18:49:55 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:55 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Pipeline error: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Pipeline error: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Pipeline error: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Pipeline error: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Pipeline error: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Pipeline error: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Pipeline error: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:31 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:31 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:31 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:31 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:32 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:32 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:32 [ERROR]: Pipeline error: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:32 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:32 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:32 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:32 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:32 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:32 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:43:37 [ERROR]: 500 — Zip process failed
+Error: Zip process failed
+    at ChildProcess.<anonymous> (/home/igris0410/multiagent/server/controllers/workspaceController.js:53:14)
+    at ChildProcess.emit (node:events:508:28)
+    at maybeClose (node:internal/child_process:1100:16)
+    at Socket.<anonymous> (node:internal/child_process:457:11)
+    at Socket.emit (node:events:508:28)
+    at Pipe.<anonymous> (node:net:346:12)
+2026-04-29 09:51:11 [ERROR]: Pipeline error: Provider "groq" requires env var GROQ_API_KEY which is not set.
+2026-05-01 11:07:12 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-05-01 11:08:18 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-05-01 11:10:29 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-05-01 11:16:12 [ERROR]: MongoDB connection failed: querySrv ENOTFOUND _mongodb._tcp.cluster0.aibvo2c.mongodb.net
+2026-05-01 11:17:02 [ERROR]: MongoDB connection failed: querySrv ENOTFOUND _mongodb._tcp.cluster0.aibvo2c.mongodb.net
+2026-05-01 11:17:54 [ERROR]: MongoDB connection failed: querySrv ENOTFOUND _mongodb._tcp.cluster0.aibvo2c.mongodb.net
+2026-05-01 12:19:13 [ERROR]: Pipeline error: fetch failed

@@ -2,7 +2,7 @@ const plannerAgent = require('../agents/plannerAgent');
 const coderAgent = require('../agents/coderAgent');
 const reviewerAgent = require('../agents/reviewerAgent');
 
-const runParallelCoreAgents = async ({ prompt, context, models, emitStart, emitChunk, emitComplete }) => {
+const runParallelCoreAgents = async ({ prompt, context, models, emitStart, emitChunk, emitComplete, maxTokens }) => {
   const specs = [
     {
       id: 'planner',
@@ -13,6 +13,7 @@ const runParallelCoreAgents = async ({ prompt, context, models, emitStart, emitC
           context,
           model: models.planner || 'llama-3.3-70b-versatile',
           onChunk: (chunk) => emitChunk('planner', chunk),
+          maxTokens: maxTokens?.planner,
         }),
     },
     {
@@ -25,6 +26,7 @@ const runParallelCoreAgents = async ({ prompt, context, models, emitStart, emitC
           context,
           model: models.coder || 'llama-3.3-70b-versatile',
           onChunk: (chunk) => emitChunk('coder', chunk),
+          maxTokens: maxTokens?.coder,
         }),
     },
     {
@@ -38,6 +40,7 @@ const runParallelCoreAgents = async ({ prompt, context, models, emitStart, emitC
           context,
           model: models.reviewer || 'anthropic/claude-3.5-haiku',
           onChunk: (chunk) => emitChunk('reviewer', chunk),
+          maxTokens: maxTokens?.reviewer,
         }),
     },
   ];

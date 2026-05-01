@@ -1,4 +1,3 @@
-const groqService = require('./groqService');
 const openrouterService = require('./openrouterService');
 const geminiService = require('./geminiService');
 const ollamaService = require('./ollamaService');
@@ -17,15 +16,6 @@ const logger = require('../utils/logger');
  * Adding a new provider = add one entry here, nothing else changes in agents.
  */
 const PROVIDERS = {
-  groq: {
-    name: 'groq',
-    streamCompletion: (params) => groqService.streamCompletion(params),
-    streamWithTools: (params) => groqService.streamGroqWithTools(params),
-    supportsTools: true,
-    requiresApiKey: true,
-    envKey: 'GROQ_API_KEY',
-    isLocal: false,
-  },
   openrouter: {
     name: 'openrouter',
     streamCompletion: (params) => openrouterService.streamCompletion(params),
@@ -90,7 +80,7 @@ const getProvider = (providerName) => {
  *   - starts with "gemini"                                → gemini
  *   - contains ":" (ollama tags like "qwen3.5:4b")        → ollama
  *   - contains "/" (openrouter format like "anthropic/…")  → openrouter
- *   - default                                             → groq
+ *   - default                                             → openrouter
  */
 const inferProviderFromModel = (modelName = '') => {
   const m = modelName.toLowerCase();
@@ -106,12 +96,8 @@ const inferProviderFromModel = (modelName = '') => {
   }
 
   // OpenRouter models use org/model format (e.g. "anthropic/claude-3.5-haiku")
-  if (m.includes('/')) {
-    return 'openrouter';
-  }
-
-  // Default — Groq (e.g. "llama-3.3-70b-versatile")
-  return 'groq';
+  // Default is also OpenRouter
+  return 'openrouter';
 };
 
 module.exports = { getProvider, inferProviderFromModel, PROVIDERS };

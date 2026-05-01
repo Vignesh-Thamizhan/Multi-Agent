@@ -130,6 +130,12 @@ const usePipelineStore = create((set, get) => ({
     });
   },
 
+  stopPipeline: () => {
+    set({
+      pipelineStatus: PIPELINE_STATUSES.IDLE,
+    });
+  },
+
   setSessionMessages: (messages) => {
     set({ sessionMessages: messages });
   },

@@ -1,14 +1,15 @@
 const logger = require('../utils/logger');
 
-// Use text-embedding-004 which is available on v1 API
-// We bypass the SDK and use direct REST API calls to v1 endpoint
-const EMBEDDING_MODEL = 'text-embedding-004';
-const EMBEDDING_DIMENSION = 768;
+// Use gemini-embedding-001 which is the stable Google embedding model
+// Available on v1beta API endpoint for embedContent
+// gemini-embedding-001 returns 768 dimensions by default
+const EMBEDDING_MODEL = 'gemini-embedding-001';
+const EMBEDDING_DIMENSION = 768; // gemini-embedding-001 default output
 const CHUNK_SIZE = 1200;
 const OVERLAP_RATIO = 0.15;
 
 const GOOGLE_API_KEY = process.env.GEMINI_API_KEY;
-const GOOGLE_API_ENDPOINT = 'https://generativelanguage.googleapis.com/v1';
+const GOOGLE_API_ENDPOINT = 'https://generativelanguage.googleapis.com/v1beta';
 
 const chunkText = (text, chunkSize = CHUNK_SIZE, overlapRatio = OVERLAP_RATIO) => {
   if (!text || !text.trim()) return [];
@@ -39,8 +40,8 @@ const generateEmbedding = async (text) => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: `models/${EMBEDDING_MODEL}`,
         content: { parts: [{ text }] },
+        outputDimensionality: EMBEDDING_DIMENSION,
       }),
     });
 

@@ -17,7 +17,7 @@ const streamCompletion = async ({
   messages,
   onChunk,
   temperature = 0.7,
-  maxTokens = 4096,
+  maxTokens = 200,
 }) => {
   logger.info(`OpenRouter streaming: model=${model}, messages=${messages.length}`);
 

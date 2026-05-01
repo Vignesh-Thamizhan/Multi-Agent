@@ -1,9 +1,23 @@
 const Groq = require('groq-sdk');
 const logger = require('../utils/logger');
 
-const groq = new Groq({
-  apiKey: process.env.GROQ_API_KEY,
-});
+// Initialize Groq client lazily to avoid crashing at startup if API key is missing
+let groq = null;
+
+const getGroqClient = () => {
+  if (!groq) {
+    if (!process.env.GROQ_API_KEY) {
+      throw new Error(
+        'GROQ_API_KEY environment variable is not set. ' +
+        'Please configure it in your .env file or as an environment variable.'
+      );
+    }
+    groq = new Groq({
+      apiKey: process.env.GROQ_API_KEY,
+    });
+  }
+  return groq;
+};
 
 /**
  * Stream chat completions from Groq
@@ -24,7 +38,7 @@ const streamCompletion = async ({
 }) => {
   logger.info(`Groq streaming: model=${model}, messages=${messages.length}`);
 
-  const stream = await groq.chat.completions.create({
+  const stream = await getGroqClient().chat.completions.create({
     model,
     messages,
     temperature,
@@ -111,7 +125,7 @@ const streamGroqWithTools = async ({
 
   for (let i = 0; i < maxIterations; i += 1) {
     try {
-      const response = await groq.chat.completions.create({
+      const response = await getGroqClient().chat.completions.create({
         model,
         messages: workingMessages,
         tools: MCP_TOOL_DEFINITIONS,

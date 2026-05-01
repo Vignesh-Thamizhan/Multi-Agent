@@ -36,20 +36,34 @@ const streamCompletion = async ({
   };
 
   let response;
-  try {
-    response = await fetch(`${OLLAMA_BASE_URL}/v1/chat/completions`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-    });
-  } catch (err) {
-    // Ollama not running — throw a specific, actionable error
-    if (err.code === 'ECONNREFUSED' || err.cause?.code === 'ECONNREFUSED') {
-      throw new OllamaConnectionError(
-        `Ollama is not running at ${OLLAMA_BASE_URL}. Run: ollama serve`
-      );
+  const maxRetries = 2;
+  let attempt = 0;
+
+  while (attempt < maxRetries) {
+    try {
+      response = await fetch(`${OLLAMA_BASE_URL}/v1/chat/completions`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+        // Signal can be added here if we want a timeout
+      });
+      break; // Success
+    } catch (err) {
+      attempt++;
+      logger.error(`[OllamaService] Fetch attempt ${attempt} failed: ${err.message}`);
+      
+      if (attempt >= maxRetries) {
+        if (err.code === 'ECONNREFUSED' || err.cause?.code === 'ECONNREFUSED') {
+          throw new OllamaConnectionError(
+            `Ollama is not running at ${OLLAMA_BASE_URL}. Run: ollama serve`
+          );
+        }
+        throw err;
+      }
+      
+      // Wait a bit before retry
+      await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
     }
-    throw err;
   }
 
   if (!response.ok) {
