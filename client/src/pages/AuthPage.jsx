@@ -4,7 +4,7 @@ import { motion as Motion, AnimatePresence } from 'framer-motion';
 import useAuthStore from '../store/authStore';
 import toast from 'react-hot-toast';
 import {
-  Zap, Mail, Lock, User, Eye, EyeOff, ArrowRight, Loader2
+  Zap, Mail, Lock, User, Eye, EyeOff, ArrowRight, Loader2, AlertCircle, X
 } from 'lucide-react';
 
 const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID;
@@ -26,6 +26,8 @@ const AuthPage = () => {
   const [isLogin, setIsLogin] = useState(initialIsLogin);
   const [showPassword, setShowPassword] = useState(false);
   const [form, setForm] = useState({ username: '', email: '', password: '' });
+  const [showErrorModal, setShowErrorModal] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const navigate = useNavigate();
   const { login, register, googleAuth, loading, error, clearError } = useAuthStore();
@@ -99,7 +101,10 @@ const AuthPage = () => {
       toast.success(isLogin ? 'Welcome back!' : 'Account created!');
       navigate('/dashboard');
     } catch (err) {
-      toast.error(err.message);
+      const errorMsg = err.message || 'An error occurred';
+      setErrorMessage(errorMsg);
+      setShowErrorModal(true);
+      toast.error(errorMsg);
     }
   };
 
@@ -323,6 +328,70 @@ const AuthPage = () => {
           ))}
         </Motion.div>
       </Motion.div>
+
+      {/* Error Modal */}
+      <AnimatePresence>
+        {showErrorModal && (
+          <>
+            {/* Backdrop */}
+            <Motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              onClick={() => setShowErrorModal(false)}
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
+            />
+
+            {/* Modal */}
+            <Motion.div
+              initial={{ opacity: 0, scale: 0.9, y: -30 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: -30 }}
+              transition={{ duration: 0.3 }}
+              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-full max-w-sm"
+            >
+              <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl border border-red-500/30 shadow-2xl overflow-hidden">
+                {/* Header */}
+                <div className="bg-gradient-to-r from-red-600/20 to-pink-600/10 px-6 py-4 border-b border-red-500/20 flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-red-500/20 rounded-lg">
+                      <AlertCircle size={20} className="text-red-400" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white">Invalid Credentials</h3>
+                  </div>
+                  <button
+                    onClick={() => setShowErrorModal(false)}
+                    className="p-1 hover:bg-white/10 rounded-lg transition-colors text-gray-400 hover:text-white"
+                  >
+                    <X size={20} />
+                  </button>
+                </div>
+
+                {/* Content */}
+                <div className="px-6 py-5">
+                  <p className="text-red-200/90 text-sm leading-relaxed mb-1">
+                    <strong>Invalid ID and Password</strong>
+                  </p>
+                  <p className="text-gray-400 text-sm">
+                    {errorMessage || 'Please check your email and password and try again.'}
+                  </p>
+                </div>
+
+                {/* Footer */}
+                <div className="px-6 py-4 bg-slate-800/50 border-t border-white/5 flex justify-end">
+                  <button
+                    onClick={() => setShowErrorModal(false)}
+                    className="px-4 py-2 rounded-lg bg-red-600/20 hover:bg-red-600/30 text-red-400 hover:text-red-300 font-medium text-sm transition-colors cursor-pointer border border-red-500/20"
+                  >
+                    Try Again
+                  </button>
+                </div>
+              </div>
+            </Motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

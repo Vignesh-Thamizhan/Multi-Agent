@@ -6,6 +6,7 @@ import usePipelineStore from '../store/pipelineStore';
 import useAutoScroll from '../hooks/useAutoScroll';
 import { AGENTS, PIPELINE_ORDER, PIPELINE_STATUSES, AGENT_STATUSES } from '../utils/agentConfig';
 import { User, Bot } from 'lucide-react';
+import CodeSpace from './CodeSpace';
 
 const TimelineFeed = () => {
   const agents = usePipelineStore((s) => s.agents);
@@ -159,6 +160,8 @@ const TimelineFeed = () => {
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-emerald-500/30" />
           </Motion.div>
         )}
+        {/* Code Space for Ollama/Local mode */}
+        <CodeSpace />
       </div>
     </div>
   );

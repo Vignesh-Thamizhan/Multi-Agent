@@ -39,6 +39,29 @@ Example: create_file tool with filePath="src/main.py" and the complete content.
 - SOLID principles where applicable
 - Proper TypeScript types if using TypeScript`;
 
+const SYSTEM_PROMPT_TEXT_ONLY = `You are an expert code generator working within the NeuralForge multi-agent system.
+You are currently running in text-only mode (local model — no file tools available).
+
+You receive a detailed implementation plan from the Planner agent and must produce complete, production-ready code.
+
+## Output Format:
+Since you cannot use file tools, you MUST output every file using standard markdown code blocks.
+For each file, include the filename as a header before the code block.
+Example:
+### src/main.js
+\`\`\`javascript
+// code here
+\`\`\`
+
+## Rules:
+- Follow the Planner's architecture exactly
+- Write complete, runnable code — no placeholders, no "TODO", no "..."
+- Include proper error handling, input validation, and edge case coverage
+- Add clear comments for complex logic
+- Use modern best practices for the language/framework
+- Include all necessary imports/dependencies
+- Create ALL files needed, including config files, package.json changes, etc.`;
+
 /**
  * Run the Coder Agent (text-only streaming, no tools)
  * @param {Object} options
@@ -49,14 +72,14 @@ Example: create_file tool with filePath="src/main.py" and the complete content.
  * @param {Function} options.onChunk - Streaming callback
  * @returns {Promise<string>} Full code output
  */
-const run = async ({ prompt, plan, context = [], model, onChunk }) => {
+const run = async ({ prompt, plan, context = [], model, onChunk, maxTokens = 4000 }) => {
   const providerName = inferProviderFromModel(model);
   const provider = getProvider(providerName);
 
-  logger.info(`CoderAgent starting | model=${model} | provider=${providerName}`);
+  logger.info(`CoderAgent starting | model=${model} | provider=${providerName} | maxTokens=${maxTokens}`);
 
   const messages = [
-    { role: 'system', content: SYSTEM_PROMPT },
+    { role: 'system', content: provider.supportsTools ? SYSTEM_PROMPT : SYSTEM_PROMPT_TEXT_ONLY },
     ...context.map((msg) => ({
       role: msg.role,
       content: msg.content,
@@ -72,7 +95,7 @@ const run = async ({ prompt, plan, context = [], model, onChunk }) => {
     messages,
     onChunk,
     temperature: 0.4,
-    maxTokens: 8192,
+    maxTokens: maxTokens,
   });
 
   logger.info(`CoderAgent complete: ${result.length} chars`);
@@ -91,6 +114,7 @@ const runWithTools = async ({
   onChunk,
   executeTool,
   onToolCall,
+  maxTokens = 4000,
 }) => {
   const providerName = inferProviderFromModel(model);
   const provider = getProvider(providerName);
@@ -101,7 +125,7 @@ const runWithTools = async ({
       `[CoderAgent] Provider "${providerName}" does not support tools. ` +
       `Falling back to text-only code generation.`
     );
-    const content = await run({ prompt, plan, context, model, onChunk });
+    const content = await run({ prompt, plan, context, model, onChunk, maxTokens });
     return { content, toolTrace: [] };
   }
 
@@ -120,6 +144,7 @@ const runWithTools = async ({
     executeTool,
     onToolCall,
     onChunk,
+    maxTokens: maxTokens,
   });
 
   return result;

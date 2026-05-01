@@ -879,3 +879,2314 @@ Error: Username already taken
 2026-04-25 11:30:32 [INFO]: Socket connected: YtoDKqUdZnXTu19_AAAq | User: 69e6f45bc9d846406dbe07d9
 2026-04-25 11:30:34 [INFO]: Socket disconnected: YtoDKqUdZnXTu19_AAAq | Reason: transport close
 2026-04-25 11:30:35 [INFO]: Socket connected: C5bTk77OacA5hpSAAAAt | User: 69e6f45bc9d846406dbe07d9
+2026-04-27 17:53:05 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 17:53:11 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-27 17:53:11 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-27 17:53:11 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-27 17:53:11 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-27 17:53:11 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-27 17:53:11 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-27 17:53:11 [INFO]: 📡 Environment: development
+2026-04-27 17:53:11 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-27 17:53:20 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 17:53:22 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-27 17:53:22 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-27 17:53:22 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-27 17:53:22 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-27 17:53:22 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-27 17:53:22 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-27 17:53:22 [INFO]: 📡 Environment: development
+2026-04-27 17:53:22 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-27 17:53:25 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 17:53:26 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-27 17:53:26 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-27 17:53:26 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-27 17:53:26 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-27 17:53:26 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-27 17:53:26 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-27 17:53:26 [INFO]: 📡 Environment: development
+2026-04-27 17:53:26 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-27 17:53:29 [ERROR]: 400 — Username already taken
+Error: Username already taken
+    at register (/home/igris0410/multiagent/server/controllers/authController.js:41:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-27 17:53:34 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-04-27 17:53:40 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 17:53:41 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-27 17:53:41 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-27 17:53:41 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-27 17:53:41 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-27 17:53:41 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-27 17:53:41 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-27 17:53:41 [INFO]: 📡 Environment: development
+2026-04-27 17:53:41 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-27 17:53:52 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-04-27 17:54:00 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 17:54:01 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-27 17:54:01 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-27 17:54:01 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-27 17:54:01 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-27 17:54:02 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-27 17:54:20 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-04-27 17:55:28 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 17:55:29 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-27 17:55:29 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-27 17:55:29 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-27 17:55:29 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-27 17:55:29 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-27 17:55:29 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-27 17:55:29 [INFO]: 📡 Environment: development
+2026-04-27 17:55:29 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-27 17:55:46 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 17:55:48 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-27 17:55:48 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-27 17:55:48 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-27 17:55:48 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-27 17:55:48 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-27 17:55:53 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 17:55:56 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-27 17:55:56 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-27 17:55:56 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-27 17:55:56 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-27 17:55:56 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-27 17:57:33 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 17:57:35 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-27 17:57:35 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-27 17:57:35 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-27 17:57:35 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-27 17:57:35 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-27 17:57:35 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-27 17:57:35 [INFO]: 📡 Environment: development
+2026-04-27 17:57:35 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-27 17:57:37 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 17:57:38 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-27 17:57:38 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-27 17:57:38 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-27 17:57:38 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-27 17:57:38 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-27 17:58:07 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 17:58:08 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-27 17:58:08 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-27 17:58:08 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-27 17:58:08 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-27 17:58:08 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-27 17:58:08 [INFO]: 🚀 NeuralForge server running on port 5001
+2026-04-27 17:58:08 [INFO]: 📡 Environment: development
+2026-04-27 17:58:08 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-27 17:59:36 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 17:59:37 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-27 17:59:37 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-27 17:59:37 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-27 17:59:37 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-27 17:59:37 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-27 17:59:37 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-27 17:59:37 [INFO]: 📡 Environment: development
+2026-04-27 17:59:37 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-27 18:00:10 [ERROR]: 400 — Username already taken
+Error: Username already taken
+    at register (/home/igris0410/multiagent/server/controllers/authController.js:41:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-27 18:00:15 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-04-27 18:00:32 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 18:00:34 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-27 18:00:34 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-27 18:00:34 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-27 18:00:34 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-27 18:00:34 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-27 18:00:34 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-27 18:00:34 [INFO]: 📡 Environment: development
+2026-04-27 18:00:34 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-27 18:01:15 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 18:01:16 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-27 18:01:16 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-27 18:01:16 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-27 18:01:16 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-27 18:01:16 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-27 18:01:16 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-27 18:01:16 [INFO]: 📡 Environment: development
+2026-04-27 18:01:16 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-27 18:04:36 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-04-27 18:05:01 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-04-27 18:05:34 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-04-27 18:05:52 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 18:05:54 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-27 18:05:54 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-27 18:05:54 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-27 18:05:54 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-27 18:05:54 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-27 18:05:54 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-27 18:05:54 [INFO]: 📡 Environment: development
+2026-04-27 18:05:54 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-27 18:06:23 [INFO]: User registered: aabbb (69ef5846be1c8d309321135a)
+2026-04-27 18:06:33 [INFO]: Socket connected: eT6xhDzbrcwzGvIpAAAC | User: 69ef5846be1c8d309321135a
+2026-04-27 18:06:51 [INFO]: Session created: 69ef5863be1c8d3093211365 for user: 69ef5846be1c8d309321135a
+2026-04-27 18:06:52 [INFO]: PlannerAgent starting | model=anthropic/claude-3-sonnet | provider=openrouter
+2026-04-27 18:06:52 [INFO]: OpenRouter streaming: model=anthropic/claude-3-sonnet, messages=3
+2026-04-27 18:06:54 [ERROR]: Pipeline error: OpenRouter API error (404): {"error":{"message":"No endpoints found for anthropic/claude-3-sonnet.","code":404},"user_id":"user_3CQHKywiRed3dTGwcvRmi5TvFOe"}
+2026-04-27 18:08:28 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 18:08:30 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-27 18:08:30 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-27 18:08:30 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-27 18:08:30 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-27 18:08:30 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-27 18:08:30 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-27 18:08:30 [INFO]: 📡 Environment: development
+2026-04-27 18:08:30 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-27 18:08:31 [INFO]: Socket connected: ca2PJNXiSkJJ70ITAAAB | User: 69ef5846be1c8d309321135a
+2026-04-27 18:08:42 [INFO]: Socket disconnected: ca2PJNXiSkJJ70ITAAAB | Reason: client namespace disconnect
+2026-04-27 18:08:42 [INFO]: Socket connected: kerbleqlC6HsuOWNAAAD | User: 69ef5846be1c8d309321135a
+2026-04-27 18:09:40 [INFO]: PlannerAgent starting | model=anthropic/claude-3.5-sonnet | provider=openrouter
+2026-04-27 18:09:40 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-sonnet, messages=4
+2026-04-27 18:09:41 [ERROR]: Pipeline error: OpenRouter API error (404): {"error":{"message":"No endpoints found for anthropic/claude-3.5-sonnet.","code":404},"user_id":"user_3CQHKywiRed3dTGwcvRmi5TvFOe"}
+2026-04-27 18:19:01 [INFO]: Session deleted: 69ef5863be1c8d3093211365
+2026-04-27 18:23:10 [INFO]: Socket disconnected: kerbleqlC6HsuOWNAAAD | Reason: transport close
+2026-04-27 18:23:11 [INFO]: Socket connected: OBPPgCxgTFQpuXLJAAAG | User: 69ef5846be1c8d309321135a
+2026-04-27 18:23:56 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 18:23:58 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-27 18:23:58 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-27 18:23:58 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-27 18:23:58 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-27 18:23:58 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-27 18:23:58 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-27 18:23:58 [INFO]: 📡 Environment: development
+2026-04-27 18:23:58 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-27 18:23:59 [INFO]: Socket connected: rsTqJdy9dXulEht8AAAB | User: 69ef5846be1c8d309321135a
+2026-04-27 18:26:06 [INFO]: Socket disconnected: rsTqJdy9dXulEht8AAAB | Reason: client namespace disconnect
+2026-04-27 18:26:06 [INFO]: Socket connected: hObvemNj59qKOM6uAAAD | User: 69ef5846be1c8d309321135a
+2026-04-27 18:30:08 [INFO]: Socket disconnected: hObvemNj59qKOM6uAAAD | Reason: transport close
+2026-04-27 18:30:08 [INFO]: Socket connected: fBiV5Fqu43tTAOmIAAAF | User: 69ef5846be1c8d309321135a
+2026-04-27 18:30:35 [INFO]: Session created: 69ef5df3a77eb38e12bf662f for user: 69ef5846be1c8d309321135a
+2026-04-27 18:30:35 [INFO]: PlannerAgent starting | model=anthropic/claude-3.7-sonnet | provider=openrouter
+2026-04-27 18:30:35 [INFO]: OpenRouter streaming: model=anthropic/claude-3.7-sonnet, messages=3
+2026-04-27 18:30:36 [ERROR]: Pipeline error: OpenRouter API error (402): {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 2250. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account","code":402,"metadata":{"provider_name":null}},"user_id":"user_3CQHKywiRed3dTGwcvRmi5TvFOe"}
+2026-04-27 18:31:02 [INFO]: Socket disconnected: fBiV5Fqu43tTAOmIAAAF | Reason: transport close
+2026-04-27 18:31:03 [INFO]: Socket connected: 9uuoYBRhn9u0HQdBAAAH | User: 69ef5846be1c8d309321135a
+2026-04-27 18:32:14 [INFO]: Session deleted: 69ef5df3a77eb38e12bf662f
+2026-04-27 18:40:22 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 18:40:24 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 18:40:25 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-27 18:40:25 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-27 18:40:25 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-27 18:40:25 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-27 18:40:25 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-27 18:40:25 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-27 18:40:25 [INFO]: 📡 Environment: development
+2026-04-27 18:40:25 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-27 18:40:26 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 18:40:26 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-27 18:40:26 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-27 18:40:26 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-27 18:40:26 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-27 18:40:26 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-27 18:40:26 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-27 18:40:26 [INFO]: 📡 Environment: development
+2026-04-27 18:40:26 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-27 18:40:28 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 18:40:28 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-27 18:40:28 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-27 18:40:28 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-27 18:40:28 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-27 18:40:28 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-27 18:40:28 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-27 18:40:28 [INFO]: 📡 Environment: development
+2026-04-27 18:40:28 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-27 18:40:30 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-27 18:40:31 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-27 18:40:31 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-27 18:40:31 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-27 18:40:31 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-27 18:40:31 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-27 18:40:31 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-27 18:40:31 [INFO]: 📡 Environment: development
+2026-04-27 18:40:31 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-27 18:40:33 [INFO]: Socket connected: G3xxcCc5G3_WVumPAAAB | User: 69ef5846be1c8d309321135a
+2026-04-27 18:41:35 [INFO]: Session created: 69ef608712718967b218c577 for user: 69ef5846be1c8d309321135a
+2026-04-27 18:41:36 [INFO]: PlannerAgent starting | model=anthropic/claude-3.7-sonnet | provider=openrouter
+2026-04-27 18:41:36 [INFO]: OpenRouter streaming: model=anthropic/claude-3.7-sonnet, messages=3
+2026-04-27 18:41:44 [INFO]: OpenRouter complete: 875 chars
+2026-04-27 18:41:44 [INFO]: PlannerAgent complete: 875 chars
+2026-04-27 18:41:44 [WARN]: [CoderAgent] Provider "openrouter" does not support tools. Falling back to text-only code generation.
+2026-04-27 18:41:44 [INFO]: CoderAgent starting | model=meta-llama/llama-3.3-70b-instruct | provider=openrouter
+2026-04-27 18:41:44 [INFO]: OpenRouter streaming: model=meta-llama/llama-3.3-70b-instruct, messages=3
+2026-04-27 18:41:49 [INFO]: OpenRouter complete: 849 chars
+2026-04-27 18:41:49 [INFO]: CoderAgent complete: 849 chars
+2026-04-27 18:41:49 [INFO]: ReviewerAgent starting | model=anthropic/claude-3.5-haiku | provider=openrouter
+2026-04-27 18:41:49 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-haiku, messages=3
+2026-04-27 18:41:55 [INFO]: OpenRouter complete: 742 chars
+2026-04-27 18:41:55 [INFO]: ReviewerAgent complete: 742 chars
+2026-04-27 18:41:56 [INFO]: DebuggerAgent starting | model=gemini-2.5-flash | provider=gemini
+2026-04-27 18:41:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Pipeline error: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:41:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-27 18:43:59 [INFO]: Socket disconnected: G3xxcCc5G3_WVumPAAAB | Reason: client namespace disconnect
+2026-04-28 18:47:46 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-28 18:47:48 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-28 18:47:48 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-28 18:47:48 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-28 18:47:48 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-28 18:47:48 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-28 18:47:48 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-28 18:47:48 [INFO]: 📡 Environment: development
+2026-04-28 18:47:48 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-28 18:48:30 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-04-28 18:48:44 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-04-28 18:49:10 [INFO]: User registered: viiia (69f0b3cd7a8f62887dbad4cc)
+2026-04-28 18:49:15 [INFO]: Socket connected: h2sKYYQRkJnuZrSEAAAC | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 18:49:32 [INFO]: Session created: 69f0b3e47a8f62887dbad4d7 for user: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 18:49:32 [INFO]: PlannerAgent starting | model=anthropic/claude-3.7-sonnet | provider=openrouter
+2026-04-28 18:49:32 [INFO]: OpenRouter streaming: model=anthropic/claude-3.7-sonnet, messages=3
+2026-04-28 18:49:40 [INFO]: OpenRouter complete: 902 chars
+2026-04-28 18:49:40 [INFO]: PlannerAgent complete: 902 chars
+2026-04-28 18:49:40 [WARN]: [CoderAgent] Provider "openrouter" does not support tools. Falling back to text-only code generation.
+2026-04-28 18:49:40 [INFO]: CoderAgent starting | model=meta-llama/llama-3.3-70b-instruct | provider=openrouter
+2026-04-28 18:49:40 [INFO]: OpenRouter streaming: model=meta-llama/llama-3.3-70b-instruct, messages=3
+2026-04-28 18:49:49 [INFO]: OpenRouter complete: 854 chars
+2026-04-28 18:49:49 [INFO]: CoderAgent complete: 854 chars
+2026-04-28 18:49:49 [INFO]: ReviewerAgent starting | model=anthropic/claude-3.5-haiku | provider=openrouter
+2026-04-28 18:49:49 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-haiku, messages=3
+2026-04-28 18:49:54 [INFO]: OpenRouter complete: 699 chars
+2026-04-28 18:49:54 [INFO]: ReviewerAgent complete: 699 chars
+2026-04-28 18:49:55 [INFO]: DebuggerAgent starting | model=gemini-2.5-flash | provider=gemini
+2026-04-28 18:49:55 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:55 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Pipeline error: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 18:49:56 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:09:52 [INFO]: Socket disconnected: h2sKYYQRkJnuZrSEAAAC | Reason: transport close
+2026-04-28 19:10:21 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-28 19:10:21 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-28 19:10:21 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-28 19:10:21 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-28 19:10:21 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-28 19:10:21 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-28 19:10:21 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-28 19:10:21 [INFO]: 📡 Environment: development
+2026-04-28 19:10:21 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-28 19:10:24 [INFO]: Socket connected: SiFkWlOLjSwM5-xkAAAC | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:10:28 [INFO]: Session deleted: 69f0b3e47a8f62887dbad4d7
+2026-04-28 19:10:46 [INFO]: Session created: 69f0b8deb6beef4181d661cf for user: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:10:46 [INFO]: PlannerAgent starting | model=anthropic/claude-3.7-sonnet | provider=openrouter
+2026-04-28 19:10:46 [INFO]: OpenRouter streaming: model=anthropic/claude-3.7-sonnet, messages=3
+2026-04-28 19:10:52 [INFO]: OpenRouter complete: 900 chars
+2026-04-28 19:10:52 [INFO]: PlannerAgent complete: 900 chars
+2026-04-28 19:10:52 [WARN]: [CoderAgent] Provider "openrouter" does not support tools. Falling back to text-only code generation.
+2026-04-28 19:10:52 [INFO]: CoderAgent starting | model=meta-llama/llama-3.3-70b-instruct | provider=openrouter
+2026-04-28 19:10:52 [INFO]: OpenRouter streaming: model=meta-llama/llama-3.3-70b-instruct, messages=3
+2026-04-28 19:11:01 [INFO]: OpenRouter complete: 926 chars
+2026-04-28 19:11:01 [INFO]: CoderAgent complete: 926 chars
+2026-04-28 19:11:01 [INFO]: ReviewerAgent starting | model=anthropic/claude-3.5-haiku | provider=openrouter
+2026-04-28 19:11:01 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-haiku, messages=3
+2026-04-28 19:11:08 [INFO]: OpenRouter complete: 798 chars
+2026-04-28 19:11:08 [INFO]: ReviewerAgent complete: 798 chars
+2026-04-28 19:11:08 [INFO]: DebuggerAgent starting | model=gemini-2.5-flash | provider=gemini
+2026-04-28 19:11:09 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Pipeline error: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:11:09 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:13:22 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-28 19:13:23 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-28 19:13:23 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-28 19:13:23 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-28 19:13:23 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-28 19:13:23 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-28 19:13:23 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-28 19:13:23 [INFO]: 📡 Environment: development
+2026-04-28 19:13:23 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-28 19:13:24 [INFO]: Socket connected: zP4wbfWoNvBrBoI4AAAB | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:13:25 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-28 19:13:26 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-28 19:13:26 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-28 19:13:26 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-28 19:13:26 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-28 19:13:26 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-28 19:13:26 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-28 19:13:26 [INFO]: 📡 Environment: development
+2026-04-28 19:13:26 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-28 19:13:26 [INFO]: Socket connected: RrHvqpRJ5nbW9WNDAAAB | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:13:28 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-28 19:13:28 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-28 19:13:28 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-28 19:13:28 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-28 19:13:28 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-28 19:13:29 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-28 19:13:29 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-28 19:13:29 [INFO]: 📡 Environment: development
+2026-04-28 19:13:29 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-28 19:13:30 [INFO]: Socket connected: ORUs8dAIxIyaGjN7AAAB | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:13:37 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-28 19:13:38 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-28 19:13:38 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-28 19:13:38 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-28 19:13:38 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-28 19:13:38 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-28 19:13:38 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-28 19:13:38 [INFO]: 📡 Environment: development
+2026-04-28 19:13:38 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-28 19:13:40 [INFO]: Socket connected: 6VhbxKSFD3gVuisEAAAB | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:13:57 [INFO]: Socket disconnected: 6VhbxKSFD3gVuisEAAAB | Reason: transport close
+2026-04-28 19:13:58 [INFO]: Socket connected: Ga3g08hePBj4w8suAAAD | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:14:06 [INFO]: PlannerAgent starting | model=anthropic/claude-3.7-sonnet | provider=openrouter
+2026-04-28 19:14:06 [INFO]: OpenRouter streaming: model=anthropic/claude-3.7-sonnet, messages=7
+2026-04-28 19:14:12 [INFO]: OpenRouter complete: 900 chars
+2026-04-28 19:14:12 [INFO]: PlannerAgent complete: 900 chars
+2026-04-28 19:14:12 [WARN]: [CoderAgent] Provider "openrouter" does not support tools. Falling back to text-only code generation.
+2026-04-28 19:14:12 [INFO]: CoderAgent starting | model=meta-llama/llama-3.3-70b-instruct | provider=openrouter
+2026-04-28 19:14:12 [INFO]: OpenRouter streaming: model=meta-llama/llama-3.3-70b-instruct, messages=7
+2026-04-28 19:14:20 [INFO]: OpenRouter complete: 926 chars
+2026-04-28 19:14:21 [INFO]: CoderAgent complete: 926 chars
+2026-04-28 19:14:21 [INFO]: ReviewerAgent starting | model=anthropic/claude-3.5-haiku | provider=openrouter
+2026-04-28 19:14:21 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-haiku, messages=7
+2026-04-28 19:14:25 [INFO]: OpenRouter complete: 789 chars
+2026-04-28 19:14:25 [INFO]: ReviewerAgent complete: 789 chars
+2026-04-28 19:14:26 [INFO]: DebuggerAgent starting | model=gemini-2.5-flash | provider=gemini
+2026-04-28 19:14:26 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Pipeline error: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:26 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"outputConfig\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:14:52 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-28 19:14:53 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-28 19:14:53 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-28 19:14:53 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-28 19:14:53 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-28 19:14:53 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-28 19:14:53 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-28 19:14:53 [INFO]: 📡 Environment: development
+2026-04-28 19:14:53 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-28 19:14:53 [INFO]: Socket connected: UDR_PgSraB3LD33KAAAB | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:14:54 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-28 19:14:55 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-28 19:14:55 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-28 19:14:55 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-28 19:14:55 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-28 19:14:55 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-28 19:14:55 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-28 19:14:55 [INFO]: 📡 Environment: development
+2026-04-28 19:14:55 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-28 19:14:56 [INFO]: Socket connected: He3nAjbWYmBp23zBAAAB | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:15:02 [INFO]: Socket disconnected: He3nAjbWYmBp23zBAAAB | Reason: transport close
+2026-04-28 19:15:03 [INFO]: Socket connected: cwTeqbuyrVvKF2xCAAAE | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:15:12 [INFO]: PlannerAgent starting | model=anthropic/claude-3.7-sonnet | provider=openrouter
+2026-04-28 19:15:12 [INFO]: OpenRouter streaming: model=anthropic/claude-3.7-sonnet, messages=7
+2026-04-28 19:15:16 [INFO]: OpenRouter complete: 900 chars
+2026-04-28 19:15:16 [INFO]: PlannerAgent complete: 900 chars
+2026-04-28 19:15:16 [WARN]: [CoderAgent] Provider "openrouter" does not support tools. Falling back to text-only code generation.
+2026-04-28 19:15:16 [INFO]: CoderAgent starting | model=meta-llama/llama-3.3-70b-instruct | provider=openrouter
+2026-04-28 19:15:16 [INFO]: OpenRouter streaming: model=meta-llama/llama-3.3-70b-instruct, messages=7
+2026-04-28 19:15:21 [INFO]: OpenRouter complete: 926 chars
+2026-04-28 19:15:21 [INFO]: CoderAgent complete: 926 chars
+2026-04-28 19:15:21 [INFO]: ReviewerAgent starting | model=anthropic/claude-3.5-haiku | provider=openrouter
+2026-04-28 19:15:21 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-haiku, messages=7
+2026-04-28 19:15:26 [INFO]: OpenRouter complete: 735 chars
+2026-04-28 19:15:26 [INFO]: ReviewerAgent complete: 735 chars
+2026-04-28 19:15:26 [INFO]: DebuggerAgent starting | model=gemini-2.5-flash | provider=gemini
+2026-04-28 19:15:27 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Pipeline error: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:15:27 [ERROR]: Embedding generation failed: Google API error (400): {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"config\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"config\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2026-04-28 19:16:00 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-28 19:16:01 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-28 19:16:01 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-28 19:16:01 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-28 19:16:01 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-28 19:16:01 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-28 19:16:01 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-28 19:16:01 [INFO]: 📡 Environment: development
+2026-04-28 19:16:01 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-28 19:16:01 [INFO]: Socket connected: RUHJDIzVsGL5_9W_AAAB | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:16:09 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-28 19:16:10 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-28 19:16:10 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-28 19:16:10 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-28 19:16:10 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-28 19:16:11 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-28 19:16:11 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-28 19:16:11 [INFO]: 📡 Environment: development
+2026-04-28 19:16:11 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-28 19:16:12 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-28 19:16:13 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-28 19:16:13 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-28 19:16:13 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-28 19:16:13 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-28 19:16:13 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-28 19:16:13 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-28 19:16:13 [INFO]: 📡 Environment: development
+2026-04-28 19:16:13 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-28 19:16:17 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-28 19:16:19 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-28 19:16:19 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-28 19:16:19 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-28 19:16:19 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-28 19:16:19 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-28 19:16:19 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-28 19:16:19 [INFO]: 📡 Environment: development
+2026-04-28 19:16:19 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-28 19:16:20 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-28 19:16:21 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-28 19:16:21 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-28 19:16:21 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-28 19:16:21 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-28 19:16:21 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-28 19:16:21 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-28 19:16:21 [INFO]: 📡 Environment: development
+2026-04-28 19:16:21 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-28 19:16:33 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-28 19:16:34 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-28 19:16:34 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-28 19:16:34 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-28 19:16:34 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-28 19:16:34 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-28 19:16:34 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-28 19:16:34 [INFO]: 📡 Environment: development
+2026-04-28 19:16:34 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-28 19:16:35 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-28 19:16:36 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-28 19:16:36 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-28 19:16:36 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-28 19:16:36 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-28 19:16:36 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-28 19:16:36 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-28 19:16:36 [INFO]: 📡 Environment: development
+2026-04-28 19:16:36 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-28 19:16:42 [INFO]: Socket connected: rNkwNNdszPGKnw9bAAAB | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:16:45 [INFO]: Socket disconnected: rNkwNNdszPGKnw9bAAAB | Reason: transport close
+2026-04-28 19:16:46 [INFO]: Socket connected: OSRB7Oi3-M5-rnOcAAAE | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:16:49 [INFO]: Session deleted: 69f0b8deb6beef4181d661cf
+2026-04-28 19:17:09 [INFO]: Session created: 69f0ba5d0bff0e6a6217fb0f for user: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:17:10 [INFO]: PlannerAgent starting | model=anthropic/claude-3.7-sonnet | provider=openrouter
+2026-04-28 19:17:10 [INFO]: OpenRouter streaming: model=anthropic/claude-3.7-sonnet, messages=3
+2026-04-28 19:17:15 [INFO]: OpenRouter complete: 799 chars
+2026-04-28 19:17:15 [INFO]: PlannerAgent complete: 799 chars
+2026-04-28 19:17:15 [WARN]: [CoderAgent] Provider "openrouter" does not support tools. Falling back to text-only code generation.
+2026-04-28 19:17:15 [INFO]: CoderAgent starting | model=meta-llama/llama-3.3-70b-instruct | provider=openrouter
+2026-04-28 19:17:15 [INFO]: OpenRouter streaming: model=meta-llama/llama-3.3-70b-instruct, messages=3
+2026-04-28 19:17:23 [INFO]: OpenRouter complete: 898 chars
+2026-04-28 19:17:23 [INFO]: CoderAgent complete: 898 chars
+2026-04-28 19:17:23 [INFO]: ReviewerAgent starting | model=anthropic/claude-3.5-haiku | provider=openrouter
+2026-04-28 19:17:23 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-haiku, messages=3
+2026-04-28 19:17:28 [INFO]: OpenRouter complete: 775 chars
+2026-04-28 19:17:28 [INFO]: ReviewerAgent complete: 775 chars
+2026-04-28 19:17:30 [INFO]: DebuggerAgent starting | model=gemini-2.5-flash | provider=gemini
+2026-04-28 19:17:31 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Pipeline error: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:17:31 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-embedding-2 is not found for API version v1, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:04 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-28 19:22:05 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-28 19:22:05 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-28 19:22:05 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-28 19:22:05 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-28 19:22:05 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-28 19:22:05 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-28 19:22:05 [INFO]: 📡 Environment: development
+2026-04-28 19:22:05 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-28 19:22:07 [INFO]: Socket connected: g7bayHgTPnp0h_M2AAAB | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:22:11 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-28 19:22:12 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-28 19:22:12 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-28 19:22:12 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-28 19:22:12 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-28 19:22:13 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-28 19:22:13 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-28 19:22:13 [INFO]: 📡 Environment: development
+2026-04-28 19:22:13 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-28 19:22:26 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-28 19:22:27 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-28 19:22:27 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-28 19:22:27 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-28 19:22:27 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-28 19:22:27 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-28 19:22:27 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-28 19:22:27 [INFO]: 📡 Environment: development
+2026-04-28 19:22:27 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-28 19:22:28 [INFO]: Socket connected: T_0f_-QVt8SIX3bXAAAB | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:22:41 [INFO]: Session created: 69f0bba9bd070a44a8b80ef7 for user: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:22:42 [INFO]: PlannerAgent starting | model=anthropic/claude-3.7-sonnet | provider=openrouter
+2026-04-28 19:22:42 [INFO]: OpenRouter streaming: model=anthropic/claude-3.7-sonnet, messages=3
+2026-04-28 19:22:46 [INFO]: OpenRouter complete: 853 chars
+2026-04-28 19:22:46 [INFO]: PlannerAgent complete: 853 chars
+2026-04-28 19:22:46 [WARN]: [CoderAgent] Provider "openrouter" does not support tools. Falling back to text-only code generation.
+2026-04-28 19:22:46 [INFO]: CoderAgent starting | model=meta-llama/llama-3.3-70b-instruct | provider=openrouter
+2026-04-28 19:22:46 [INFO]: OpenRouter streaming: model=meta-llama/llama-3.3-70b-instruct, messages=3
+2026-04-28 19:22:51 [INFO]: OpenRouter complete: 911 chars
+2026-04-28 19:22:51 [INFO]: CoderAgent complete: 911 chars
+2026-04-28 19:22:51 [INFO]: ReviewerAgent starting | model=anthropic/claude-3.5-haiku | provider=openrouter
+2026-04-28 19:22:51 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-haiku, messages=3
+2026-04-28 19:22:57 [INFO]: OpenRouter complete: 698 chars
+2026-04-28 19:22:57 [INFO]: ReviewerAgent complete: 698 chars
+2026-04-28 19:22:57 [INFO]: DebuggerAgent starting | model=gemini-2.5-flash | provider=gemini
+2026-04-28 19:22:57 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Pipeline error: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:22:57 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:23:02 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-28 19:23:03 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-28 19:23:03 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-28 19:23:03 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-28 19:23:03 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-28 19:23:03 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-28 19:23:03 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-28 19:23:03 [INFO]: 📡 Environment: development
+2026-04-28 19:23:03 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-28 19:23:03 [INFO]: Socket connected: oU7TDHl1n3RxRvGhAAAB | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:23:45 [INFO]: Socket disconnected: oU7TDHl1n3RxRvGhAAAB | Reason: transport close
+2026-04-28 19:23:47 [INFO]: Socket connected: 4kkfIz4mOMLGIxiLAAAE | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:23:51 [INFO]: Session deleted: 69f0ba5d0bff0e6a6217fb0f
+2026-04-28 19:23:58 [INFO]: PlannerAgent starting | model=anthropic/claude-3.7-sonnet | provider=openrouter
+2026-04-28 19:23:58 [INFO]: OpenRouter streaming: model=anthropic/claude-3.7-sonnet, messages=7
+2026-04-28 19:24:02 [INFO]: OpenRouter complete: 853 chars
+2026-04-28 19:24:02 [INFO]: PlannerAgent complete: 853 chars
+2026-04-28 19:24:02 [WARN]: [CoderAgent] Provider "openrouter" does not support tools. Falling back to text-only code generation.
+2026-04-28 19:24:02 [INFO]: CoderAgent starting | model=meta-llama/llama-3.3-70b-instruct | provider=openrouter
+2026-04-28 19:24:02 [INFO]: OpenRouter streaming: model=meta-llama/llama-3.3-70b-instruct, messages=7
+2026-04-28 19:24:19 [INFO]: OpenRouter complete: 888 chars
+2026-04-28 19:24:19 [INFO]: CoderAgent complete: 888 chars
+2026-04-28 19:24:19 [INFO]: ReviewerAgent starting | model=anthropic/claude-3.5-haiku | provider=openrouter
+2026-04-28 19:24:19 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-haiku, messages=7
+2026-04-28 19:24:24 [INFO]: OpenRouter complete: 732 chars
+2026-04-28 19:24:24 [INFO]: ReviewerAgent complete: 732 chars
+2026-04-28 19:24:24 [INFO]: DebuggerAgent starting | model=gemini-2.5-flash | provider=gemini
+2026-04-28 19:24:25 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Pipeline error: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:24:25 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:00 [INFO]: Session deleted: 69f0bba9bd070a44a8b80ef7
+2026-04-28 19:36:13 [INFO]: Session created: 69f0bed5f0eb955d680b9a12 for user: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:36:14 [INFO]: PlannerAgent starting | model=anthropic/claude-3.7-sonnet | provider=openrouter
+2026-04-28 19:36:14 [INFO]: OpenRouter streaming: model=anthropic/claude-3.7-sonnet, messages=3
+2026-04-28 19:36:19 [INFO]: OpenRouter complete: 901 chars
+2026-04-28 19:36:19 [INFO]: PlannerAgent complete: 901 chars
+2026-04-28 19:36:19 [WARN]: [CoderAgent] Provider "openrouter" does not support tools. Falling back to text-only code generation.
+2026-04-28 19:36:19 [INFO]: CoderAgent starting | model=meta-llama/llama-3.3-70b-instruct | provider=openrouter
+2026-04-28 19:36:19 [INFO]: OpenRouter streaming: model=meta-llama/llama-3.3-70b-instruct, messages=3
+2026-04-28 19:36:25 [INFO]: OpenRouter complete: 942 chars
+2026-04-28 19:36:25 [INFO]: CoderAgent complete: 942 chars
+2026-04-28 19:36:25 [INFO]: ReviewerAgent starting | model=anthropic/claude-3.5-haiku | provider=openrouter
+2026-04-28 19:36:25 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-haiku, messages=3
+2026-04-28 19:36:31 [INFO]: OpenRouter complete: 753 chars
+2026-04-28 19:36:31 [INFO]: ReviewerAgent complete: 753 chars
+2026-04-28 19:36:31 [INFO]: DebuggerAgent starting | model=gemini-2.5-flash | provider=gemini
+2026-04-28 19:36:31 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:31 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:31 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:31 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:32 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:32 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:32 [ERROR]: Pipeline error: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:32 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:32 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:32 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:32 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:32 [ERROR]: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:36:32 [ERROR]: Embedding generation failed: Google API error (404): {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-04-28 19:37:04 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-28 19:37:05 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-28 19:37:05 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-28 19:37:05 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-28 19:37:05 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-28 19:37:05 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-28 19:37:05 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-28 19:37:05 [INFO]: 📡 Environment: development
+2026-04-28 19:37:05 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-28 19:37:06 [INFO]: Socket connected: S2s7MTUkUXZGfTd0AAAB | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:37:23 [INFO]: Socket disconnected: S2s7MTUkUXZGfTd0AAAB | Reason: transport close
+2026-04-28 19:37:23 [INFO]: Socket connected: m67xDBScfquHurzOAAAD | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:39:48 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-28 19:39:49 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-28 19:39:49 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-28 19:39:49 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-28 19:39:49 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-28 19:39:49 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-28 19:39:49 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-28 19:39:49 [INFO]: 📡 Environment: development
+2026-04-28 19:39:49 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-28 19:39:49 [INFO]: Socket connected: Vr0eBh18TsOw_lwxAAAB | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-28 19:42:36 [INFO]: PlannerAgent starting | model=anthropic/claude-3.7-sonnet | provider=openrouter
+2026-04-28 19:42:36 [INFO]: OpenRouter streaming: model=anthropic/claude-3.7-sonnet, messages=7
+2026-04-28 19:42:40 [INFO]: OpenRouter complete: 899 chars
+2026-04-28 19:42:40 [INFO]: PlannerAgent complete: 899 chars
+2026-04-28 19:42:40 [WARN]: [CoderAgent] Provider "openrouter" does not support tools. Falling back to text-only code generation.
+2026-04-28 19:42:40 [INFO]: CoderAgent starting | model=meta-llama/llama-3.3-70b-instruct | provider=openrouter
+2026-04-28 19:42:40 [INFO]: OpenRouter streaming: model=meta-llama/llama-3.3-70b-instruct, messages=7
+2026-04-28 19:43:08 [INFO]: OpenRouter complete: 942 chars
+2026-04-28 19:43:08 [INFO]: CoderAgent complete: 942 chars
+2026-04-28 19:43:08 [INFO]: ReviewerAgent starting | model=anthropic/claude-3.5-haiku | provider=openrouter
+2026-04-28 19:43:08 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-haiku, messages=7
+2026-04-28 19:43:12 [INFO]: OpenRouter complete: 758 chars
+2026-04-28 19:43:12 [INFO]: ReviewerAgent complete: 758 chars
+2026-04-28 19:43:12 [INFO]: DebuggerAgent starting | model=gemini-2.5-flash | provider=gemini
+2026-04-28 19:43:13 [INFO]: Gemini tools streaming: model=gemini-2.5-flash
+2026-04-28 19:43:19 [INFO]: Pipeline complete for session: 69f0bed5f0eb955d680b9a12
+2026-04-28 19:43:37 [ERROR]: 500 — Zip process failed
+Error: Zip process failed
+    at ChildProcess.<anonymous> (/home/igris0410/multiagent/server/controllers/workspaceController.js:53:14)
+    at ChildProcess.emit (node:events:508:28)
+    at maybeClose (node:internal/child_process:1100:16)
+    at Socket.<anonymous> (node:internal/child_process:457:11)
+    at Socket.emit (node:events:508:28)
+    at Pipe.<anonymous> (node:net:346:12)
+2026-04-28 19:45:42 [INFO]: Socket disconnected: Vr0eBh18TsOw_lwxAAAB | Reason: transport close
+2026-04-29 09:50:37 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-29 09:50:39 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-29 09:50:39 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-29 09:50:39 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-29 09:50:39 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-29 09:50:39 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-29 09:50:39 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-29 09:50:39 [INFO]: 📡 Environment: development
+2026-04-29 09:50:39 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-29 09:50:55 [INFO]: Socket connected: Oq-JsRhiZjDLHWMpAAAC | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-29 09:51:04 [INFO]: PlannerAgent starting | model=anthropic/claude-3.7-sonnet | provider=openrouter
+2026-04-29 09:51:04 [INFO]: OpenRouter streaming: model=anthropic/claude-3.7-sonnet, messages=7
+2026-04-29 09:51:11 [INFO]: OpenRouter complete: 805 chars
+2026-04-29 09:51:11 [INFO]: PlannerAgent complete: 805 chars
+2026-04-29 09:51:11 [ERROR]: Pipeline error: Provider "groq" requires env var GROQ_API_KEY which is not set.
+2026-04-29 09:52:37 [INFO]: Session deleted: 69f0bed5f0eb955d680b9a12
+2026-04-29 09:52:42 [INFO]: Socket disconnected: Oq-JsRhiZjDLHWMpAAAC | Reason: client namespace disconnect
+2026-04-29 09:52:42 [INFO]: Socket connected: NKa1UGth4Q8UpfkhAAAE | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-29 09:52:44 [INFO]: Socket disconnected: NKa1UGth4Q8UpfkhAAAE | Reason: client namespace disconnect
+2026-04-29 09:52:44 [INFO]: Socket connected: 0Ooqhon77SYdsnvSAAAG | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-29 09:52:49 [INFO]: Socket disconnected: 0Ooqhon77SYdsnvSAAAG | Reason: client namespace disconnect
+2026-04-29 09:52:49 [INFO]: Socket connected: SsONJxzgJII7m8BBAAAI | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-29 09:52:54 [INFO]: Socket disconnected: SsONJxzgJII7m8BBAAAI | Reason: client namespace disconnect
+2026-04-29 09:52:54 [INFO]: Socket connected: 3U3F3whTWENuP2UrAAAK | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-29 09:53:00 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-29 09:53:01 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-29 09:53:01 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-29 09:53:01 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-29 09:53:01 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-29 09:53:01 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-29 09:53:01 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-29 09:53:02 [INFO]: 📡 Environment: development
+2026-04-29 09:53:02 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-29 09:53:02 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-29 09:53:03 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-29 09:53:03 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-29 09:53:03 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-29 09:53:03 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-29 09:53:03 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-29 09:53:03 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-29 09:53:03 [INFO]: 📡 Environment: development
+2026-04-29 09:53:03 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-29 09:53:08 [INFO]: Socket connected: VUFDiLibFbxnxRoKAAAB | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-29 09:53:15 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-29 09:53:17 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-29 09:53:17 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-29 09:53:17 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-29 09:53:17 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-29 09:53:17 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-29 09:53:17 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-29 09:53:17 [INFO]: 📡 Environment: development
+2026-04-29 09:53:17 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-29 09:53:18 [INFO]: Socket connected: tx1DHCkhmm4COZf3AAAB | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-29 09:53:24 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-29 09:53:25 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-04-29 09:53:25 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-29 09:53:25 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-29 09:53:25 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-29 09:53:25 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-29 09:53:25 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-29 09:53:25 [INFO]: 📡 Environment: development
+2026-04-29 09:53:25 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-29 09:53:28 [INFO]: Socket connected: Zq972iar9UpTY-2PAAAB | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-29 09:53:29 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-29 09:53:30 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-29 09:53:30 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-29 09:53:30 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-29 09:53:30 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-29 09:53:31 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-29 09:53:31 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-29 09:53:31 [INFO]: 📡 Environment: development
+2026-04-29 09:53:31 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-29 09:53:32 [INFO]: Socket connected: Qd8HCgdDCAgJKaI3AAAB | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-29 09:53:32 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-29 09:53:33 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-01.aibvo2c.mongodb.net
+2026-04-29 09:53:33 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-29 09:53:33 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-29 09:53:33 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-29 09:53:33 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-29 09:53:33 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-29 09:53:33 [INFO]: 📡 Environment: development
+2026-04-29 09:53:33 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-29 09:53:33 [INFO]: Socket connected: VOiYVcOQ-Bmna-UUAAAB | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-29 09:56:19 [INFO]: Session created: 69f1886b2c570045dea429ff for user: 69f0b3cd7a8f62887dbad4cc
+2026-04-29 09:56:20 [INFO]: PlannerAgent starting | model=anthropic/claude-3.7-sonnet | provider=openrouter
+2026-04-29 09:56:20 [INFO]: OpenRouter streaming: model=anthropic/claude-3.7-sonnet, messages=3
+2026-04-29 09:56:26 [INFO]: OpenRouter complete: 851 chars
+2026-04-29 09:56:26 [INFO]: PlannerAgent complete: 851 chars
+2026-04-29 09:56:26 [WARN]: [CoderAgent] Provider "openrouter" does not support tools. Falling back to text-only code generation.
+2026-04-29 09:56:26 [INFO]: CoderAgent starting | model=meta-llama/llama-3.3-70b-instruct | provider=openrouter
+2026-04-29 09:56:26 [INFO]: OpenRouter streaming: model=meta-llama/llama-3.3-70b-instruct, messages=3
+2026-04-29 09:56:31 [INFO]: OpenRouter complete: 879 chars
+2026-04-29 09:56:31 [INFO]: CoderAgent complete: 879 chars
+2026-04-29 09:56:31 [INFO]: ReviewerAgent starting | model=anthropic/claude-3.5-haiku | provider=openrouter
+2026-04-29 09:56:31 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-haiku, messages=3
+2026-04-29 09:56:35 [INFO]: OpenRouter complete: 710 chars
+2026-04-29 09:56:35 [INFO]: ReviewerAgent complete: 710 chars
+2026-04-29 09:56:36 [INFO]: DebuggerAgent starting | model=gemini-2.5-flash | provider=gemini
+2026-04-29 09:56:37 [INFO]: Gemini tools streaming: model=gemini-2.5-flash
+2026-04-29 09:56:43 [INFO]: Pipeline complete for session: 69f1886b2c570045dea429ff
+2026-04-29 09:59:42 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-29 09:59:44 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-29 09:59:44 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-29 09:59:44 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-29 09:59:44 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-29 09:59:44 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-29 09:59:44 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-29 09:59:44 [INFO]: 📡 Environment: development
+2026-04-29 09:59:44 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-29 09:59:46 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-04-29 09:59:46 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-04-29 09:59:46 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-04-29 09:59:46 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-04-29 09:59:46 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-04-29 09:59:46 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-04-29 09:59:46 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-04-29 09:59:46 [INFO]: 📡 Environment: development
+2026-04-29 09:59:46 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-04-29 09:59:46 [INFO]: Socket connected: KXCI1F-vbDwyB1qPAAAB | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-29 10:00:36 [INFO]: PlannerAgent starting | model=anthropic/claude-3.7-sonnet | provider=openrouter
+2026-04-29 10:00:36 [INFO]: OpenRouter streaming: model=anthropic/claude-3.7-sonnet, messages=7
+2026-04-29 10:00:41 [INFO]: OpenRouter complete: 851 chars
+2026-04-29 10:00:41 [INFO]: PlannerAgent complete: 851 chars
+2026-04-29 10:00:41 [INFO]: Gemini tools streaming: model=gemini-2.5-flash
+2026-04-29 10:00:46 [INFO]: ReviewerAgent starting | model=anthropic/claude-3.5-haiku | provider=openrouter
+2026-04-29 10:00:46 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-haiku, messages=7
+2026-04-29 10:00:50 [INFO]: OpenRouter complete: 778 chars
+2026-04-29 10:00:50 [INFO]: ReviewerAgent complete: 778 chars
+2026-04-29 10:00:50 [INFO]: DebuggerAgent starting | model=anthropic/claude-3.5-haiku | provider=openrouter
+2026-04-29 10:00:51 [WARN]: [DebuggerAgent] Provider "openrouter" does not support tools. Running in text-only debug mode. MCP file writes will be skipped.
+2026-04-29 10:00:51 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-haiku, messages=2
+2026-04-29 10:00:55 [INFO]: OpenRouter complete: 770 chars
+2026-04-29 10:00:56 [INFO]: Pipeline complete for session: 69f1886b2c570045dea429ff
+2026-04-29 10:08:58 [INFO]: Socket disconnected: KXCI1F-vbDwyB1qPAAAB | Reason: client namespace disconnect
+2026-04-29 10:10:05 [INFO]: Socket connected: hy96vekubXRf_xMLAAAD | User: 69f0b3cd7a8f62887dbad4cc
+2026-04-29 10:10:41 [INFO]: Socket disconnected: hy96vekubXRf_xMLAAAD | Reason: client namespace disconnect
+2026-05-01 11:06:38 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 11:06:42 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-00.aibvo2c.mongodb.net
+2026-05-01 11:06:42 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 11:06:42 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 11:06:42 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 11:06:42 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 11:06:42 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 11:06:42 [INFO]: 📡 Environment: development
+2026-05-01 11:06:42 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 11:07:12 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-05-01 11:08:18 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-05-01 11:10:29 [ERROR]: 401 — Invalid email or password
+Error: Invalid email or password
+    at login (/home/igris0410/multiagent/server/controllers/authController.js:86:13)
+2026-05-01 11:11:04 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 11:11:04 [INFO]: MongoDB connected: ac-se7c6yi-shard-00-02.aibvo2c.mongodb.net
+2026-05-01 11:11:04 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 11:11:04 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 11:11:04 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 11:11:05 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 11:11:05 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 11:11:05 [INFO]: 📡 Environment: development
+2026-05-01 11:11:05 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 11:16:12 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 11:16:12 [ERROR]: MongoDB connection failed: querySrv ENOTFOUND _mongodb._tcp.cluster0.aibvo2c.mongodb.net
+2026-05-01 11:17:02 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 11:17:02 [ERROR]: MongoDB connection failed: querySrv ENOTFOUND _mongodb._tcp.cluster0.aibvo2c.mongodb.net
+2026-05-01 11:17:54 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 11:17:54 [ERROR]: MongoDB connection failed: querySrv ENOTFOUND _mongodb._tcp.cluster0.aibvo2c.mongodb.net
+2026-05-01 11:20:54 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 11:20:59 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-01.nknjldl.mongodb.net
+2026-05-01 11:20:59 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 11:20:59 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 11:20:59 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 11:20:59 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 11:20:59 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 11:20:59 [INFO]: 📡 Environment: development
+2026-05-01 11:20:59 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 11:21:33 [INFO]: User registered: vaish (69f43f64d0aca2d98f04ec7c)
+2026-05-01 11:21:52 [INFO]: Socket connected: 4X_pkZDuY_22o5MTAAAC | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 11:22:08 [INFO]: Session created: 69f43f85d0aca2d98f04ec87 for user: 69f43f64d0aca2d98f04ec7c
+2026-05-01 11:22:10 [INFO]: Socket disconnected: 4X_pkZDuY_22o5MTAAAC | Reason: transport close
+2026-05-01 11:22:11 [INFO]: Socket connected: tLCaHAFIe3qqJ4LVAAAF | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 11:22:14 [INFO]: PlannerAgent starting | model=qwen3.5:4b | provider=ollama
+2026-05-01 11:22:14 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=3
+2026-05-01 11:24:07 [INFO]: Ollama complete: 381 chars
+2026-05-01 11:24:07 [INFO]: PlannerAgent complete: 381 chars
+2026-05-01 11:24:07 [WARN]: [CoderAgent] Provider "ollama" does not support tools. Falling back to text-only code generation.
+2026-05-01 11:24:07 [INFO]: CoderAgent starting | model=qwen3.5:4b | provider=ollama
+2026-05-01 11:24:07 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=3
+2026-05-01 11:26:10 [INFO]: Ollama complete: 82 chars
+2026-05-01 11:26:10 [INFO]: CoderAgent complete: 82 chars
+2026-05-01 11:26:10 [INFO]: ReviewerAgent starting | model=qwen3.5:4b | provider=ollama
+2026-05-01 11:26:10 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=3
+2026-05-01 11:28:18 [INFO]: Ollama complete: 193 chars
+2026-05-01 11:28:18 [INFO]: ReviewerAgent complete: 193 chars
+2026-05-01 11:28:20 [INFO]: DebuggerAgent starting | model=qwen3.5:4b | provider=ollama
+2026-05-01 11:28:21 [WARN]: [DebuggerAgent] Provider "ollama" does not support tools. Running in text-only debug mode. MCP file writes will be skipped.
+2026-05-01 11:28:21 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=2
+2026-05-01 11:29:54 [INFO]: Ollama complete: 0 chars
+2026-05-01 11:29:55 [INFO]: Pipeline complete for session: 69f43f85d0aca2d98f04ec87
+2026-05-01 11:30:45 [INFO]: Session deleted: 69f43f85d0aca2d98f04ec87
+2026-05-01 11:31:39 [INFO]: Socket disconnected: tLCaHAFIe3qqJ4LVAAAF | Reason: client namespace disconnect
+2026-05-01 11:35:50 [INFO]: Socket connected: WT9XNjlU7MOAmNcmAAAI | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 11:36:22 [INFO]: Session created: 69f442ddd0aca2d98f04ecca for user: 69f43f64d0aca2d98f04ec7c
+2026-05-01 11:36:23 [INFO]: PlannerAgent starting | model=qwen3.5:4b | provider=ollama
+2026-05-01 11:36:23 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=3
+2026-05-01 11:38:22 [INFO]: Ollama complete: 0 chars
+2026-05-01 11:38:22 [INFO]: PlannerAgent complete: 0 chars
+2026-05-01 11:38:22 [WARN]: [CoderAgent] Provider "ollama" does not support tools. Falling back to text-only code generation.
+2026-05-01 11:38:22 [INFO]: CoderAgent starting | model=qwen3.5:4b | provider=ollama
+2026-05-01 11:38:22 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=3
+2026-05-01 11:40:20 [INFO]: Ollama complete: 39 chars
+2026-05-01 11:40:20 [INFO]: CoderAgent complete: 39 chars
+2026-05-01 11:40:20 [INFO]: ReviewerAgent starting | model=qwen3.5:4b | provider=ollama
+2026-05-01 11:40:20 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=3
+2026-05-01 11:42:12 [INFO]: Ollama complete: 196 chars
+2026-05-01 11:42:12 [INFO]: ReviewerAgent complete: 196 chars
+2026-05-01 11:42:14 [INFO]: DebuggerAgent starting | model=qwen3.5:4b | provider=ollama
+2026-05-01 11:42:27 [WARN]: [DebuggerAgent] Provider "ollama" does not support tools. Running in text-only debug mode. MCP file writes will be skipped.
+2026-05-01 11:42:27 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=2
+2026-05-01 11:44:16 [INFO]: Ollama complete: 0 chars
+2026-05-01 11:44:18 [INFO]: Pipeline complete for session: 69f442ddd0aca2d98f04ecca
+2026-05-01 11:45:34 [INFO]: Socket disconnected: WT9XNjlU7MOAmNcmAAAI | Reason: client namespace disconnect
+2026-05-01 11:45:34 [INFO]: Socket connected: hvHj5tSgKl0EuBgxAAAK | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 11:45:40 [INFO]: Socket disconnected: hvHj5tSgKl0EuBgxAAAK | Reason: transport close
+2026-05-01 11:45:42 [INFO]: Socket connected: wYKuMgCy-uBebeGzAAAN | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 11:45:44 [INFO]: Session deleted: 69f442ddd0aca2d98f04ecca
+2026-05-01 11:47:25 [INFO]: Session created: 69f44575d0aca2d98f04ecf8 for user: 69f43f64d0aca2d98f04ec7c
+2026-05-01 11:47:27 [INFO]: PlannerAgent starting | model=qwen3.5:4b | provider=ollama
+2026-05-01 11:47:27 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=3
+2026-05-01 11:49:05 [INFO]: Ollama complete: 38 chars
+2026-05-01 11:49:05 [INFO]: PlannerAgent complete: 38 chars
+2026-05-01 11:49:05 [WARN]: [CoderAgent] Provider "ollama" does not support tools. Falling back to text-only code generation.
+2026-05-01 11:49:05 [INFO]: CoderAgent starting | model=qwen3.5:4b | provider=ollama
+2026-05-01 11:49:05 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=3
+2026-05-01 11:51:04 [INFO]: Ollama complete: 49 chars
+2026-05-01 11:51:04 [INFO]: CoderAgent complete: 49 chars
+2026-05-01 11:51:04 [INFO]: ReviewerAgent starting | model=qwen3.5:4b | provider=ollama
+2026-05-01 11:51:04 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=3
+2026-05-01 11:52:56 [INFO]: Ollama complete: 151 chars
+2026-05-01 11:52:56 [INFO]: ReviewerAgent complete: 151 chars
+2026-05-01 11:52:57 [INFO]: DebuggerAgent starting | model=qwen3.5:4b | provider=ollama
+2026-05-01 11:52:59 [WARN]: [DebuggerAgent] Provider "ollama" does not support tools. Running in text-only debug mode. MCP file writes will be skipped.
+2026-05-01 11:52:59 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=2
+2026-05-01 11:54:53 [INFO]: Ollama complete: 230 chars
+2026-05-01 11:54:54 [INFO]: Pipeline complete for session: 69f44575d0aca2d98f04ecf8
+2026-05-01 11:55:37 [INFO]: Socket disconnected: wYKuMgCy-uBebeGzAAAN | Reason: client namespace disconnect
+2026-05-01 11:55:52 [INFO]: Socket connected: Bk-xoaoac2a9yPrsAAAQ | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 11:55:54 [INFO]: Session deleted: 69f44575d0aca2d98f04ecf8
+2026-05-01 11:55:57 [INFO]: Socket disconnected: Bk-xoaoac2a9yPrsAAAQ | Reason: transport close
+2026-05-01 11:55:58 [INFO]: Socket connected: UppRluw2gi4FVOm1AAAT | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 11:56:02 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 11:56:03 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-02.nknjldl.mongodb.net
+2026-05-01 11:56:03 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 11:56:03 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 11:56:03 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 11:56:03 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 11:56:03 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 11:56:03 [INFO]: 📡 Environment: development
+2026-05-01 11:56:03 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 11:56:04 [INFO]: Socket connected: 1ULSclT1TPH1cEQ-AAAB | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 11:56:18 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 11:56:19 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-01.nknjldl.mongodb.net
+2026-05-01 11:56:19 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 11:56:19 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 11:56:19 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 11:56:19 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 11:56:19 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 11:56:19 [INFO]: 📡 Environment: development
+2026-05-01 11:56:19 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 11:56:20 [INFO]: Socket connected: 7IuBJP5QQxBtZc1-AAAB | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 11:57:15 [INFO]: Session created: 69f447c30d0e9cd639d3dbe3 for user: 69f43f64d0aca2d98f04ec7c
+2026-05-01 11:57:16 [INFO]: PlannerAgent starting | model=qwen3.5:4b | provider=ollama
+2026-05-01 11:57:16 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=3
+2026-05-01 11:58:54 [INFO]: Ollama complete: 27 chars
+2026-05-01 11:58:54 [INFO]: PlannerAgent complete: 27 chars
+2026-05-01 11:58:54 [WARN]: [CoderAgent] Provider "ollama" does not support tools. Falling back to text-only code generation.
+2026-05-01 11:58:54 [INFO]: CoderAgent starting | model=qwen3.5:4b | provider=ollama
+2026-05-01 11:58:54 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=3
+2026-05-01 12:00:27 [INFO]: Ollama complete: 121 chars
+2026-05-01 12:00:27 [INFO]: CoderAgent complete: 121 chars
+2026-05-01 12:00:27 [INFO]: ReviewerAgent starting | model=qwen3.5:4b | provider=ollama
+2026-05-01 12:00:27 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=3
+2026-05-01 12:02:18 [INFO]: Ollama complete: 0 chars
+2026-05-01 12:02:18 [INFO]: ReviewerAgent complete: 0 chars
+2026-05-01 12:02:19 [INFO]: DebuggerAgent starting | model=qwen3.5:4b | provider=ollama
+2026-05-01 12:02:21 [WARN]: [DebuggerAgent] Provider "ollama" does not support tools. Running in text-only debug mode. MCP file writes will be skipped.
+2026-05-01 12:02:21 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=2
+2026-05-01 12:04:13 [INFO]: Ollama complete: 0 chars
+2026-05-01 12:04:14 [INFO]: Pipeline complete for session: 69f447c30d0e9cd639d3dbe3
+2026-05-01 12:05:30 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 12:05:32 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-00.nknjldl.mongodb.net
+2026-05-01 12:05:32 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 12:05:32 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 12:05:32 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 12:05:32 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 12:05:32 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 12:05:32 [INFO]: 📡 Environment: development
+2026-05-01 12:05:32 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 12:05:34 [INFO]: Socket connected: uX-itmYeH30pPo5kAAAB | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 12:05:37 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 12:05:39 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-01.nknjldl.mongodb.net
+2026-05-01 12:05:39 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 12:05:39 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 12:05:39 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 12:05:39 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 12:05:39 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 12:05:39 [INFO]: 📡 Environment: development
+2026-05-01 12:05:39 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 12:05:41 [INFO]: Socket connected: 9jqoqyZVjiY8AJDGAAAB | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 12:05:44 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 12:05:48 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-00.nknjldl.mongodb.net
+2026-05-01 12:05:48 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 12:05:48 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 12:05:48 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 12:05:48 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 12:05:48 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 12:05:48 [INFO]: 📡 Environment: development
+2026-05-01 12:05:48 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 12:05:51 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 12:05:51 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-01.nknjldl.mongodb.net
+2026-05-01 12:05:51 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 12:05:51 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 12:05:51 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 12:05:51 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 12:05:51 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 12:05:51 [INFO]: 📡 Environment: development
+2026-05-01 12:05:51 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 12:05:55 [INFO]: Socket connected: -98Q8MwVJfCSlHNYAAAB | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 12:08:20 [INFO]: Socket disconnected: -98Q8MwVJfCSlHNYAAAB | Reason: transport close
+2026-05-01 12:08:21 [INFO]: Socket connected: 2a4M921Qj3xd3vbOAAAD | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 12:08:23 [INFO]: Session deleted: 69f447c30d0e9cd639d3dbe3
+2026-05-01 12:08:26 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 12:08:28 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-02.nknjldl.mongodb.net
+2026-05-01 12:08:28 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 12:08:28 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 12:08:28 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 12:08:28 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 12:08:28 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 12:08:28 [INFO]: 📡 Environment: development
+2026-05-01 12:08:28 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 12:08:30 [INFO]: Socket connected: r1qzFCuJzWmT2Ow8AAAB | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 12:08:38 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 12:08:43 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-02.nknjldl.mongodb.net
+2026-05-01 12:08:43 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 12:08:43 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 12:08:43 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 12:08:43 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 12:08:43 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 12:08:43 [INFO]: 📡 Environment: development
+2026-05-01 12:08:43 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 12:08:46 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 12:08:52 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-02.nknjldl.mongodb.net
+2026-05-01 12:08:52 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 12:08:52 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 12:08:52 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 12:08:52 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 12:08:52 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 12:08:52 [INFO]: 📡 Environment: development
+2026-05-01 12:08:52 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 12:08:53 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 12:08:54 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-01.nknjldl.mongodb.net
+2026-05-01 12:08:54 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 12:08:54 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 12:08:54 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 12:08:54 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 12:08:54 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 12:08:54 [INFO]: 📡 Environment: development
+2026-05-01 12:08:54 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 12:08:56 [INFO]: Socket connected: re7QKs5kZKqH_2IMAAAB | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 12:09:04 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 12:09:12 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-01.nknjldl.mongodb.net
+2026-05-01 12:09:12 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 12:09:12 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 12:09:12 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 12:09:12 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 12:09:12 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 12:09:12 [INFO]: 📡 Environment: development
+2026-05-01 12:09:12 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 12:09:17 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 12:09:18 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-01.nknjldl.mongodb.net
+2026-05-01 12:09:18 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 12:09:18 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 12:09:18 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 12:09:19 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 12:09:19 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 12:09:19 [INFO]: 📡 Environment: development
+2026-05-01 12:09:19 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 12:09:21 [INFO]: Socket connected: icLE-DVerKCMTyKgAAAB | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 12:09:28 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 12:09:30 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-02.nknjldl.mongodb.net
+2026-05-01 12:09:30 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 12:09:30 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 12:09:30 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 12:09:30 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 12:09:30 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 12:09:30 [INFO]: 📡 Environment: development
+2026-05-01 12:09:30 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 12:09:30 [INFO]: Socket connected: C6z8iav2uB-VfwAAAAAB | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 12:10:06 [INFO]: Session created: 69f44ac6b6572f2abd895ca9 for user: 69f43f64d0aca2d98f04ec7c
+2026-05-01 12:10:07 [INFO]: PlannerAgent starting | model=qwen3.5:4b | provider=ollama | maxTokens=1500
+2026-05-01 12:10:07 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=3
+2026-05-01 12:10:20 [INFO]: Socket disconnected: C6z8iav2uB-VfwAAAAAB | Reason: client namespace disconnect
+2026-05-01 12:10:26 [INFO]: Socket connected: OARoKR6ErbU6mtLjAAAE | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 12:13:45 [INFO]: Socket disconnected: OARoKR6ErbU6mtLjAAAE | Reason: transport close
+2026-05-01 12:13:46 [INFO]: Socket connected: 2Ra5Gu1GELOaFeIGAAAH | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 12:14:13 [INFO]: PlannerAgent starting | model=qwen3.5:4b | provider=ollama | maxTokens=1500
+2026-05-01 12:14:13 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=4
+2026-05-01 12:19:13 [ERROR]: Pipeline error: fetch failed
+2026-05-01 12:19:39 [INFO]: Ollama complete: 5337 chars
+2026-05-01 12:19:39 [INFO]: PlannerAgent complete: 5337 chars
+2026-05-01 12:19:39 [WARN]: [CoderAgent] Provider "ollama" does not support tools. Falling back to text-only code generation.
+2026-05-01 12:19:39 [INFO]: CoderAgent starting | model=qwen3.5:4b | provider=ollama | maxTokens=4000
+2026-05-01 12:19:39 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=3
+2026-05-01 12:22:09 [INFO]: Socket disconnected: 2Ra5Gu1GELOaFeIGAAAH | Reason: transport close
+2026-05-01 12:22:10 [INFO]: Socket connected: -5x6OdnA5kDtlgdaAAAK | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 12:23:22 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 12:23:24 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-01.nknjldl.mongodb.net
+2026-05-01 12:23:24 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 12:23:24 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 12:23:24 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 12:23:24 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 12:23:24 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 12:23:24 [INFO]: 📡 Environment: development
+2026-05-01 12:23:24 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 12:23:25 [INFO]: Socket connected: vbKUK5ImJC2y3pyPAAAB | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 12:23:41 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 12:23:52 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-01.nknjldl.mongodb.net
+2026-05-01 12:23:52 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 12:23:52 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 12:23:52 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 12:23:52 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 12:23:52 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 12:23:52 [INFO]: 📡 Environment: development
+2026-05-01 12:23:52 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 12:23:52 [INFO]: Socket connected: F42pIkClpnK9tNmmAAAB | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 12:23:54 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 12:24:06 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-00.nknjldl.mongodb.net
+2026-05-01 12:24:06 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 12:24:06 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 12:24:06 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 12:24:06 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 12:24:06 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 12:24:06 [INFO]: 📡 Environment: development
+2026-05-01 12:24:06 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 12:24:07 [INFO]: Socket connected: FEyv1yZojPqNN1e3AAAB | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 12:24:35 [INFO]: PlannerAgent starting | model=qwen3.5:4b | provider=ollama | maxTokens=1500
+2026-05-01 12:24:35 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=5
+2026-05-01 12:33:50 [INFO]: Ollama complete: 0 chars
+2026-05-01 12:33:50 [INFO]: PlannerAgent complete: 0 chars
+2026-05-01 12:33:52 [WARN]: [CoderAgent] Provider "ollama" does not support tools. Falling back to text-only code generation.
+2026-05-01 12:33:52 [INFO]: CoderAgent starting | model=qwen3.5:4b | provider=ollama | maxTokens=4000
+2026-05-01 12:33:52 [INFO]: Ollama streaming: model=qwen3.5:4b, messages=5
+2026-05-01 12:40:21 [INFO]: Socket disconnected: FEyv1yZojPqNN1e3AAAB | Reason: client namespace disconnect
+2026-05-01 12:40:24 [INFO]: Socket connected: syrCnENYmG6F8Xs9AAAE | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 12:40:41 [INFO]: Socket disconnected: syrCnENYmG6F8Xs9AAAE | Reason: transport close
+2026-05-01 12:40:42 [INFO]: Socket connected: W8Zyz8a6vieUMKTLAAAH | User: 69f43f64d0aca2d98f04ec7c
+2026-05-01 12:40:45 [INFO]: Session deleted: 69f44ac6b6572f2abd895ca9
+2026-05-01 12:42:07 [INFO]: Socket disconnected: W8Zyz8a6vieUMKTLAAAH | Reason: client namespace disconnect
+2026-05-01 12:42:20 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 12:42:21 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-01.nknjldl.mongodb.net
+2026-05-01 12:42:21 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 12:42:21 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 12:42:21 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 12:42:21 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 12:42:21 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 12:42:21 [INFO]: 📡 Environment: development
+2026-05-01 12:42:21 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 12:42:32 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 12:42:33 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-00.nknjldl.mongodb.net
+2026-05-01 12:42:33 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 12:42:33 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 12:42:33 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 12:42:33 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 12:42:33 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 12:42:33 [INFO]: 📡 Environment: development
+2026-05-01 12:42:33 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 12:42:53 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 12:42:54 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-01.nknjldl.mongodb.net
+2026-05-01 12:42:54 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 12:42:54 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 12:42:54 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 12:42:54 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 12:42:54 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 12:42:54 [INFO]: 📡 Environment: development
+2026-05-01 12:42:54 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-01 12:43:12 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-01 12:43:13 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-00.nknjldl.mongodb.net
+2026-05-01 12:43:13 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-01 12:43:13 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-01 12:43:13 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-01 12:43:13 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-01 12:43:13 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-01 12:43:13 [INFO]: 📡 Environment: development
+2026-05-01 12:43:13 [INFO]: 🔗 Client URL: http://localhost:5173

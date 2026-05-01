@@ -1,6 +1,6 @@
 import { useState, useRef, useCallback } from 'react';
 import { motion as Motion } from 'framer-motion';
-import { Send, Paperclip, X, FileText, Image, Code, Loader2 } from 'lucide-react';
+import { Send, Paperclip, X, FileText, Image, Code, Loader2, Square } from 'lucide-react';
 import { ACCEPTED_FILE_TYPES, MAX_FILE_SIZE, getAllAcceptedExtensions } from '../utils/agentConfig';
 
 const getFileIcon = (filename) => {
@@ -10,7 +10,7 @@ const getFileIcon = (filename) => {
   return <FileText size={14} className="text-violet-400" />;
 };
 
-const PromptInput = ({ onSubmit, onFileUpload, isLoading }) => {
+const PromptInput = ({ onSubmit, onFileUpload, isLoading, onStop }) => {
   const [prompt, setPrompt] = useState('');
   const [file, setFile] = useState(null);
   const [dragOver, setDragOver] = useState(false);
@@ -137,24 +137,39 @@ const PromptInput = ({ onSubmit, onFileUpload, isLoading }) => {
             id="prompt-input"
           />
 
-          {/* Submit button */}
-          <Motion.button
-            type="submit"
-            disabled={isLoading || (!prompt.trim() && !file)}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className={`flex-shrink-0 p-2 rounded-xl transition-all cursor-pointer ${
-              isLoading || (!prompt.trim() && !file)
-                ? 'bg-white/5 text-gray-600'
-                : 'bg-gradient-to-r from-violet-600 to-cyan-600 text-white shadow-lg shadow-violet-500/20'
-            }`}
-          >
-            {isLoading ? (
-              <Loader2 size={18} className="animate-spin" />
-            ) : (
-              <Send size={18} />
+          {/* Submit/Stop button */}
+          <div className="flex items-center gap-2">
+            {isLoading && (
+              <Motion.button
+                type="button"
+                onClick={onStop}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex-shrink-0 p-2 rounded-xl bg-gradient-to-r from-red-600 to-orange-600 text-white shadow-lg shadow-red-500/20 cursor-pointer"
+                title="Stop conversation"
+              >
+                <Square size={18} fill="currentColor" />
+              </Motion.button>
             )}
-          </Motion.button>
+
+            <Motion.button
+              type="submit"
+              disabled={isLoading || (!prompt.trim() && !file)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className={`flex-shrink-0 p-2 rounded-xl transition-all cursor-pointer ${
+                isLoading || (!prompt.trim() && !file)
+                  ? 'bg-white/5 text-gray-600'
+                  : 'bg-gradient-to-r from-violet-600 to-cyan-600 text-white shadow-lg shadow-violet-500/20'
+              }`}
+            >
+              {isLoading ? (
+                <Loader2 size={18} className="animate-spin" />
+              ) : (
+                <Send size={18} />
+              )}
+            </Motion.button>
+          </div>
         </div>
       </form>
     </div>

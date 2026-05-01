@@ -29,11 +29,11 @@ Your role is to analyze the user's request and create a detailed, actionable imp
  * @param {Function} options.onChunk - Streaming callback
  * @returns {Promise<string>} Full plan text
  */
-const run = async ({ prompt, context = [], model, onChunk }) => {
+const run = async ({ prompt, context = [], model, onChunk, maxTokens = 1500 }) => {
   const providerName = inferProviderFromModel(model);
   const provider = getProvider(providerName);
 
-  logger.info(`PlannerAgent starting | model=${model} | provider=${providerName}`);
+  logger.info(`PlannerAgent starting | model=${model} | provider=${providerName} | maxTokens=${maxTokens}`);
 
   const messages = [
     { role: 'system', content: SYSTEM_PROMPT },
@@ -49,7 +49,7 @@ const run = async ({ prompt, context = [], model, onChunk }) => {
     messages,
     onChunk,
     temperature: 0.7,
-    maxTokens: 4096,
+    maxTokens: maxTokens,
   });
 
   logger.info(`PlannerAgent complete: ${result.length} chars`);

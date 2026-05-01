@@ -5,10 +5,10 @@ const logger = require('./logger');
  * Maps agent name to list of valid model IDs
  */
 const VALID_MODELS = {
-  planner: ['anthropic/claude-3-sonnet', 'anthropic/claude-3-opus', 'openai/gpt-4-turbo', 'meta-llama/llama-2-70b-chat'],
-  coder: ['meta-llama/llama-2-70b-chat', 'anthropic/claude-3-sonnet', 'anthropic/claude-3-opus', 'openai/gpt-4-turbo'],
-  reviewer: ['anthropic/claude-3-haiku', 'anthropic/claude-3-sonnet', 'openai/gpt-4-turbo', 'meta-llama/llama-2-70b-chat'],
-  debugger: ['gemini-2.5-flash', 'gemini-2.5-pro', 'gemini-1.5-flash'],
+  planner: ['anthropic/claude-3.7-sonnet', 'anthropic/claude-opus-4', 'openai/gpt-4-turbo', 'meta-llama/llama-3.3-70b-instruct'],
+  coder: ['gemini-2.5-flash', 'gemini-2.5-pro', 'gemini-1.5-flash', 'meta-llama/llama-3.3-70b-instruct', 'anthropic/claude-3.7-sonnet'],
+  reviewer: ['anthropic/claude-3.5-haiku', 'anthropic/claude-3.7-sonnet', 'openai/gpt-4-turbo', 'meta-llama/llama-3.3-70b-instruct'],
+  debugger: ['anthropic/claude-3.5-haiku', 'anthropic/claude-3.7-sonnet', 'openai/gpt-4-turbo', 'meta-llama/llama-3.3-70b-instruct', 'gemini-2.5-flash', 'gemini-2.5-pro'],
   multimodal: ['gemini-2.5-flash', 'gemini-2.5-pro', 'gemini-1.5-flash'],
 };
 
@@ -16,10 +16,10 @@ const VALID_MODELS = {
  * Default models per agent (fallback if user doesn't have preference set)
  */
 const DEFAULT_MODELS = {
-  planner: 'anthropic/claude-3-sonnet',
-  coder: 'meta-llama/llama-2-70b-chat',
-  reviewer: 'anthropic/claude-3-haiku',
-  debugger: 'gemini-2.5-flash',
+  planner: 'anthropic/claude-3.7-sonnet',
+  coder: 'gemini-2.5-flash',
+  reviewer: 'anthropic/claude-3.5-haiku',
+  debugger: 'anthropic/claude-3.5-haiku',
   multimodal: 'gemini-2.5-flash',
 };
 

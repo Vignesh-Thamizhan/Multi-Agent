@@ -13,13 +13,21 @@ Return JSON with:
 
 const SYSTEM_PROMPT_TEXT_ONLY = `You are the Debugger agent running in text-only mode (local model — no file tools available).
 Analyze planner/coder/reviewer outputs with retrieved RAG context.
+
 Since you cannot use file tools, provide your analysis as structured text.
-Return JSON with:
+Always wrap your final JSON response in a markdown code block labeled as json.
+
+### Debug Report
+Provide a human-readable summary of your findings first.
+
+### Structured Data
+\`\`\`json
 {
   "issues": [{"title":"", "severity":"critical|major|minor", "details":"", "fix":"", "file":""}],
   "actions": [{"type":"none", "reason":"text-only mode"}],
   "summary":""
-}`;
+}
+\`\`\``;
 
 const run = async ({
   userId,
@@ -33,11 +41,12 @@ const run = async ({
   onRagContext,
   onToolCall,
   model = 'gemini-2.5-flash',
+  maxTokens = 3000,
 }) => {
   const providerName = inferProviderFromModel(model);
   const provider = getProvider(providerName);
 
-  logger.info(`DebuggerAgent starting | model=${model} | provider=${providerName}`);
+  logger.info(`DebuggerAgent starting | model=${model} | provider=${providerName} | maxTokens=${maxTokens}`);
 
   // RAG retrieval — provider-agnostic
   const { queries, contextChunks } = await retrieveDebugContext({
@@ -77,7 +86,7 @@ const run = async ({
       messages,
       onChunk,
       temperature: 0.3,
-      maxTokens: 4096,
+      maxTokens: maxTokens,
     });
 
     return { content, toolTrace: [], rag: { queries, contextChunks } };
@@ -90,6 +99,7 @@ const run = async ({
     executeTool,
     onToolCall,
     onChunk,
+    maxTokens: maxTokens,
   });
 
   return { ...result, rag: { queries, contextChunks } };

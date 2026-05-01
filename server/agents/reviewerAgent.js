@@ -55,11 +55,11 @@ Ordered by priority, with specific code changes where helpful.
  * @param {Function} options.onChunk - Streaming callback
  * @returns {Promise<string>} Full review text
  */
-const run = async ({ prompt, plan, code, context = [], model, onChunk }) => {
+const run = async ({ prompt, plan, code, context = [], model, onChunk, maxTokens = 2000 }) => {
   const providerName = inferProviderFromModel(model);
   const provider = getProvider(providerName);
 
-  logger.info(`ReviewerAgent starting | model=${model} | provider=${providerName}`);
+  logger.info(`ReviewerAgent starting | model=${model} | provider=${providerName} | maxTokens=${maxTokens}`);
 
   const messages = [
     { role: 'system', content: SYSTEM_PROMPT },
@@ -78,7 +78,7 @@ const run = async ({ prompt, plan, code, context = [], model, onChunk }) => {
     messages,
     onChunk,
     temperature: 0.5,
-    maxTokens: 4096,
+    maxTokens: maxTokens,
   });
 
   logger.info(`ReviewerAgent complete: ${result.length} chars`);

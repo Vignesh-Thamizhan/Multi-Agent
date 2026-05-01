@@ -42,6 +42,16 @@ const initializeSocket = (httpServer) => {
     socket.join(`user:${userId}`);
     logger.info(`Socket connected: ${socket.id} | User: ${userId}`);
 
+    socket.on('pipeline:stop', ({ sessionId }) => {
+      try {
+        // Lazy require to avoid circular dependency
+        const { stopPipeline } = require('../services/agentOrchestrator');
+        stopPipeline(sessionId);
+      } catch (err) {
+        logger.error(`Error stopping pipeline: ${err.message}`);
+      }
+    });
+
     socket.on('disconnect', (reason) => {
       logger.info(`Socket disconnected: ${socket.id} | Reason: ${reason}`);
     });

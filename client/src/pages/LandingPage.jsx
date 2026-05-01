@@ -139,12 +139,6 @@ const LandingPage = () => {
                     Get started
                     <ArrowRight size={16} />
                   </Link>
-                  <Link
-                    to="/auth?mode=login"
-                    className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-medium text-sm bg-white/5 hover:bg-white/10 border border-white/10 text-gray-200 transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40"
-                  >
-                    Sign in
-                  </Link>
                 </Motion.div>
 
                 <div className="mt-8 flex flex-wrap items-center gap-2 text-xs">

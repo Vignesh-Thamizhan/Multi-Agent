@@ -19,6 +19,16 @@ const useSocket = () => {
   const setToolCall = useWorkspaceStore((s) => s.setToolCall);
   const setRagContext = useWorkspaceStore((s) => s.setRagContext);
 
+  const stopPipelineInStore = usePipelineStore((s) => s.stopPipeline);
+  const currentSessionId = usePipelineStore((s) => s.currentSessionId);
+
+  const stopPipeline = useCallback(() => {
+    if (socketRef.current && currentSessionId) {
+      socketRef.current.emit('pipeline:stop', { sessionId: currentSessionId });
+      stopPipelineInStore();
+    }
+  }, [currentSessionId, stopPipelineInStore]);
+
   const connect = useCallback(() => {
     if (!isAuthenticated || socketRef.current?.connected) return;
 
@@ -103,6 +113,7 @@ const useSocket = () => {
 
   return {
     isConnected,
+    stopPipeline,
   };
 };
 

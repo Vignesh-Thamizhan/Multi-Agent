@@ -16,7 +16,7 @@ import { sanitizeModelConfig } from '../utils/modelValidator';
 import toast from 'react-hot-toast';
 
 const ChatPage = () => {
-  const { isConnected } = useSocket();
+  const { isConnected, stopPipeline } = useSocket();
   const [currentSessionId, setCurrentSessionId] = useState(null);
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const sidebarPanelRef = useRef(null);
@@ -175,7 +175,7 @@ const ChatPage = () => {
             {ragContexts.length > 0 && <RagContextBadge count={ragContexts[ragContexts.length - 1].count} />}
           </div>
           <TimelineFeed />
-          {currentSessionId && (
+          {currentSessionId && pipelineMode !== 'local' && (
             <div className="px-4 pb-3">
               <div className="max-w-4xl mx-auto">
                 <FileExplorer sessionId={currentSessionId} />
@@ -186,6 +186,7 @@ const ChatPage = () => {
             onSubmit={handleSubmit}
             onFileUpload={handleFileUpload}
             isLoading={isRunning()}
+            onStop={stopPipeline}
           />
         </main>
       </div>
