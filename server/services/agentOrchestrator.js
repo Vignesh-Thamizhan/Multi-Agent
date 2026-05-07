@@ -52,17 +52,32 @@ const runPipeline = async ({ userId, sessionId, prompt, models, pipelineMode = '
 
   const executeTool = async (toolName, args = {}) => {
     if (isCancelled(sessionId)) throw new Error('Pipeline stopped by user');
-    switch (toolName) {
-      case 'create_file':
-        return createFile({ userId, sessionId, filePath: args.filePath, content: args.content, agent: 'debugger' });
-      case 'read_file':
-        return readFile({ userId, sessionId, filePath: args.filePath, agent: 'debugger' });
-      case 'write_file':
-        return writeFile({ userId, sessionId, filePath: args.filePath, content: args.content, agent: 'debugger' });
-      case 'list_files':
-        return listFiles({ userId, sessionId });
-      default:
-        throw new Error(`Unknown MCP tool: ${toolName}`);
+    logger.info(`[orchestrator] executeTool called: ${toolName}`, args);
+    try {
+      let result;
+      switch (toolName) {
+        case 'create_file':
+          result = await createFile({ userId, sessionId, filePath: args.filePath, content: args.content, agent: 'debugger' });
+          logger.info(`[orchestrator] create_file success:`, result);
+          return result;
+        case 'read_file':
+          result = await readFile({ userId, sessionId, filePath: args.filePath, agent: 'debugger' });
+          logger.info(`[orchestrator] read_file success:`, { path: result.path, contentLength: result.content?.length });
+          return result;
+        case 'write_file':
+          result = await writeFile({ userId, sessionId, filePath: args.filePath, content: args.content, agent: 'debugger' });
+          logger.info(`[orchestrator] write_file success:`, result);
+          return result;
+        case 'list_files':
+          result = await listFiles({ userId, sessionId });
+          logger.info(`[orchestrator] list_files success: found ${result.files?.length} files`);
+          return result;
+        default:
+          throw new Error(`Unknown MCP tool: ${toolName}`);
+      }
+    } catch (error) {
+      logger.error(`[orchestrator] executeTool error for ${toolName}:`, error.message);
+      throw error;
     }
   };
 

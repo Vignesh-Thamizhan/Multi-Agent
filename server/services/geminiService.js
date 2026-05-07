@@ -140,6 +140,7 @@ const streamGeminiWithTools = async ({
 
   for (let i = 0; i < maxIterations; i += 1) {
     try {
+      logger.debug(`[Gemini] Iteration ${i}: Sending message to model`);
       const response = await chat.sendMessageStream(currentMessage);
       
       let textContent = '';
@@ -157,13 +158,16 @@ const streamGeminiWithTools = async ({
         const calls = chunk.functionCalls();
         if (calls && calls.length > 0) {
           hasToolCall = true;
+          logger.debug(`[Gemini] Iteration ${i}: Found ${calls.length} tool call(s)`);
           const functionResponses = [];
           
           for (const call of calls) {
             const toolName = call.name;
             const args = call.args;
+            logger.info(`[Gemini] Executing tool: ${toolName} with args:`, args);
             onToolCall?.({ toolName, args });
             const result = await executeTool(toolName, args);
+            logger.info(`[Gemini] Tool ${toolName} result:`, result);
             toolTrace.push({ toolName, args, result });
             
             functionResponses.push({
@@ -179,7 +183,12 @@ const streamGeminiWithTools = async ({
       }
       
       finalContent += textContent;
-      if (!hasToolCall) break;
+      logger.debug(`[Gemini] Iteration ${i}: Generated ${textContent.length} chars, hasToolCall=${hasToolCall}`);
+      
+      if (!hasToolCall) {
+        logger.info(`[Gemini] No more tool calls. Conversation complete after ${i + 1} iteration(s)`);
+        break;
+      }
       
     } catch (error) {
       logger.error(`Error in streamGeminiWithTools iteration ${i}: ${error.message}`);
@@ -187,6 +196,7 @@ const streamGeminiWithTools = async ({
     }
   }
 
+  logger.info(`Gemini tools complete: ${finalContent.length} chars, ${toolTrace.length} tool calls`);
   return { content: finalContent, toolTrace };
 };
 
