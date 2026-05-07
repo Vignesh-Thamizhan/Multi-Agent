@@ -3190,3 +3190,204 @@ Error: Invalid email or password
 2026-05-01 12:43:13 [INFO]: 🚀 NeuralForge server running on port 5000
 2026-05-01 12:43:13 [INFO]: 📡 Environment: development
 2026-05-01 12:43:13 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-02 09:50:46 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-02 09:50:48 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-00.nknjldl.mongodb.net
+2026-05-02 09:50:48 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-02 09:50:48 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-02 09:50:48 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-02 09:50:48 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-02 09:50:48 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-02 09:50:48 [INFO]: 📡 Environment: development
+2026-05-02 09:50:48 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-02 09:51:15 [INFO]: Socket connected: vr3YqS2-dsPJfr0DAAAC | User: 69f43f64d0aca2d98f04ec7c
+2026-05-02 09:51:35 [INFO]: Session created: 69f57bcee0c134b816dcfad5 for user: 69f43f64d0aca2d98f04ec7c
+2026-05-02 09:51:35 [INFO]: PlannerAgent starting | model=anthropic/claude-3.7-sonnet | provider=openrouter | maxTokens=200
+2026-05-02 09:51:35 [INFO]: OpenRouter streaming: model=anthropic/claude-3.7-sonnet, messages=3
+2026-05-02 09:51:46 [INFO]: OpenRouter complete: 906 chars
+2026-05-02 09:51:46 [INFO]: PlannerAgent complete: 906 chars
+2026-05-02 09:51:46 [INFO]: Gemini tools streaming: model=gemini-2.5-flash
+2026-05-02 09:51:54 [INFO]: ReviewerAgent starting | model=anthropic/claude-3.5-haiku | provider=openrouter | maxTokens=200
+2026-05-02 09:51:54 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-haiku, messages=3
+2026-05-02 09:51:59 [INFO]: OpenRouter complete: 782 chars
+2026-05-02 09:51:59 [INFO]: ReviewerAgent complete: 782 chars
+2026-05-02 09:52:00 [INFO]: DebuggerAgent starting | model=anthropic/claude-3.5-haiku | provider=openrouter | maxTokens=200
+2026-05-02 09:52:02 [WARN]: [DebuggerAgent] Provider "openrouter" does not support tools. Running in text-only debug mode. MCP file writes will be skipped.
+2026-05-02 09:52:02 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-haiku, messages=2
+2026-05-02 09:52:07 [INFO]: OpenRouter complete: 846 chars
+2026-05-02 09:52:08 [INFO]: Pipeline complete for session: 69f57bcee0c134b816dcfad5
+2026-05-02 09:58:12 [INFO]: Socket disconnected: vr3YqS2-dsPJfr0DAAAC | Reason: transport close
+2026-05-07 10:32:25 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-07 10:32:27 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-00.nknjldl.mongodb.net
+2026-05-07 10:32:27 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-07 10:32:27 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-07 10:32:27 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-07 10:32:27 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-07 10:32:27 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-07 10:32:27 [INFO]: 📡 Environment: development
+2026-05-07 10:32:27 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-07 10:32:51 [INFO]: Socket connected: 4NfJXrZmSAMtn8-EAAAC | User: 69f43f64d0aca2d98f04ec7c
+2026-05-07 10:43:32 [INFO]: Session created: 69fc1f7b01cfaf1b895b791d for user: 69f43f64d0aca2d98f04ec7c
+2026-05-07 10:43:32 [INFO]: PlannerAgent starting | model=anthropic/claude-3.7-sonnet | provider=openrouter | maxTokens=200
+2026-05-07 10:43:32 [INFO]: OpenRouter streaming: model=anthropic/claude-3.7-sonnet, messages=3
+2026-05-07 10:43:38 [INFO]: OpenRouter complete: 916 chars
+2026-05-07 10:43:38 [INFO]: PlannerAgent complete: 916 chars
+2026-05-07 10:43:38 [INFO]: Gemini tools streaming: model=gemini-2.5-flash
+2026-05-07 10:43:44 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-07 10:43:46 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-00.nknjldl.mongodb.net
+2026-05-07 10:43:46 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-07 10:43:46 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-07 10:43:46 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-07 10:43:46 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-07 10:43:46 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-07 10:43:46 [INFO]: 📡 Environment: development
+2026-05-07 10:43:46 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-07 10:43:48 [INFO]: Socket connected: 8BOgTfnIrBX9HlSgAAAB | User: 69f43f64d0aca2d98f04ec7c
+2026-05-07 10:50:29 [INFO]: [Orchestrator] Pipeline stop requested for session: 69fc1f7b01cfaf1b895b791d
+2026-05-07 10:50:38 [INFO]: Socket disconnected: 8BOgTfnIrBX9HlSgAAAB | Reason: transport close
+2026-05-07 10:50:39 [INFO]: Socket connected: WZeG_-E959HI0Ox_AAAE | User: 69f43f64d0aca2d98f04ec7c
+2026-05-07 10:50:43 [INFO]: Session deleted: 69fc1f7b01cfaf1b895b791d
+2026-05-07 10:50:44 [ERROR]: 500 — Session not found
+Error: Session not found
+    at Object.deleteSession (/home/igris0410/multiagent/server/utils/sessionManager.js:78:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async deleteSession (/home/igris0410/multiagent/server/controllers/generateController.js:108:5)
+2026-05-07 10:51:20 [INFO]: Session created: 69fc214f056727390407b856 for user: 69f43f64d0aca2d98f04ec7c
+2026-05-07 10:51:20 [INFO]: PlannerAgent starting | model=anthropic/claude-3.7-sonnet | provider=openrouter | maxTokens=200
+2026-05-07 10:51:20 [INFO]: OpenRouter streaming: model=anthropic/claude-3.7-sonnet, messages=3
+2026-05-07 10:51:26 [INFO]: OpenRouter complete: 979 chars
+2026-05-07 10:51:26 [INFO]: PlannerAgent complete: 979 chars
+2026-05-07 10:51:26 [INFO]: Gemini tools streaming: model=gemini-2.5-flash
+2026-05-07 10:51:33 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-07 10:51:35 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-00.nknjldl.mongodb.net
+2026-05-07 10:51:35 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-07 10:51:35 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-07 10:51:35 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-07 10:51:35 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-07 10:51:35 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-07 10:51:35 [INFO]: 📡 Environment: development
+2026-05-07 10:51:35 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-07 10:51:36 [INFO]: Socket connected: vjrJjKJha-lfKyG8AAAB | User: 69f43f64d0aca2d98f04ec7c
+2026-05-07 10:52:50 [INFO]: [Orchestrator] Pipeline stop requested for session: 69fc214f056727390407b856
+2026-05-07 10:52:59 [INFO]: Socket disconnected: vjrJjKJha-lfKyG8AAAB | Reason: transport close
+2026-05-07 10:53:00 [INFO]: Socket connected: QwgBaorV3WaXXkT3AAAE | User: 69f43f64d0aca2d98f04ec7c
+2026-05-07 10:53:06 [INFO]: PlannerAgent starting | model=anthropic/claude-3.7-sonnet | provider=openrouter | maxTokens=200
+2026-05-07 10:53:06 [INFO]: OpenRouter streaming: model=anthropic/claude-3.7-sonnet, messages=4
+2026-05-07 10:53:13 [INFO]: OpenRouter complete: 957 chars
+2026-05-07 10:53:13 [INFO]: PlannerAgent complete: 957 chars
+2026-05-07 10:53:13 [INFO]: Gemini tools streaming: model=gemini-2.5-pro
+2026-05-07 10:53:13 [ERROR]: Error in streamGeminiWithTools iteration 0: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:streamGenerateContent?alt=sse: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+Please retry in 46.205605768s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-pro"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-pro"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-pro"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerDay-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-pro"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"46s"}]
+2026-05-07 10:53:13 [ERROR]: Pipeline error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:streamGenerateContent?alt=sse: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+Please retry in 46.205605768s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-pro"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-pro"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-pro"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerDay-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-pro"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"46s"}]
+2026-05-07 10:54:22 [INFO]: Socket disconnected: QwgBaorV3WaXXkT3AAAE | Reason: transport close
+2026-05-07 10:54:24 [INFO]: Socket connected: d7WNrPVsjbZ-tTLiAAAH | User: 69f43f64d0aca2d98f04ec7c
+2026-05-07 10:54:31 [INFO]: Session deleted: 69fc214f056727390407b856
+2026-05-07 10:56:13 [INFO]: Session deleted: 69f57bcee0c134b816dcfad5
+2026-05-07 10:56:26 [INFO]: Session created: 69fc2282395d38af976ff729 for user: 69f43f64d0aca2d98f04ec7c
+2026-05-07 10:56:27 [INFO]: PlannerAgent starting | model=anthropic/claude-3.7-sonnet | provider=openrouter | maxTokens=200
+2026-05-07 10:56:27 [INFO]: OpenRouter streaming: model=anthropic/claude-3.7-sonnet, messages=3
+2026-05-07 10:56:34 [INFO]: OpenRouter complete: 926 chars
+2026-05-07 10:56:34 [INFO]: PlannerAgent complete: 926 chars
+2026-05-07 10:56:34 [INFO]: Gemini tools streaming: model=gemini-2.5-pro
+2026-05-07 10:56:35 [ERROR]: Error in streamGeminiWithTools iteration 0: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:streamGenerateContent?alt=sse: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+Please retry in 24.870706743s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerDay-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-pro"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"model":"gemini-2.5-pro","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.5-pro","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.5-pro","location":"global"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"24s"}]
+2026-05-07 10:56:35 [ERROR]: Pipeline error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:streamGenerateContent?alt=sse: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+Please retry in 24.870706743s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerDay-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-pro"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"model":"gemini-2.5-pro","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.5-pro","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.5-pro","location":"global"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"24s"}]
+2026-05-07 10:57:28 [INFO]: Socket disconnected: d7WNrPVsjbZ-tTLiAAAH | Reason: transport close
+2026-05-07 10:57:29 [INFO]: Socket connected: IDaorZnH6XSPlTX3AAAJ | User: 69f43f64d0aca2d98f04ec7c
+2026-05-07 10:57:37 [INFO]: PlannerAgent starting | model=anthropic/claude-3.7-sonnet | provider=openrouter | maxTokens=200
+2026-05-07 10:57:37 [INFO]: OpenRouter streaming: model=anthropic/claude-3.7-sonnet, messages=4
+2026-05-07 10:57:43 [INFO]: OpenRouter complete: 877 chars
+2026-05-07 10:57:43 [INFO]: PlannerAgent complete: 877 chars
+2026-05-07 10:57:43 [INFO]: Gemini tools streaming: model=gemini-2.5-flash
+2026-05-07 10:57:47 [INFO]: ReviewerAgent starting | model=anthropic/claude-3.5-haiku | provider=openrouter | maxTokens=200
+2026-05-07 10:57:47 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-haiku, messages=4
+2026-05-07 10:57:52 [INFO]: OpenRouter complete: 796 chars
+2026-05-07 10:57:52 [INFO]: ReviewerAgent complete: 796 chars
+2026-05-07 10:57:52 [INFO]: DebuggerAgent starting | model=anthropic/claude-3.5-haiku | provider=openrouter | maxTokens=200
+2026-05-07 10:57:53 [WARN]: [DebuggerAgent] Provider "openrouter" does not support tools. Running in text-only debug mode. MCP file writes will be skipped.
+2026-05-07 10:57:53 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-haiku, messages=2
+2026-05-07 10:57:58 [INFO]: OpenRouter complete: 891 chars
+2026-05-07 10:57:58 [INFO]: Pipeline complete for session: 69fc2282395d38af976ff729
+2026-05-07 10:58:05 [ERROR]: 500 — Zip process failed
+Error: Zip process failed
+    at ChildProcess.<anonymous> (/home/igris0410/multiagent/server/controllers/workspaceController.js:53:14)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1124:16)
+    at Socket.<anonymous> (node:internal/child_process:481:11)
+    at Socket.emit (node:events:509:28)
+    at Pipe.<anonymous> (node:net:350:12)
+2026-05-07 11:03:37 [INFO]: Socket disconnected: IDaorZnH6XSPlTX3AAAJ | Reason: client namespace disconnect
+2026-05-07 11:03:37 [INFO]: Socket connected: Xw4oZcKpPkg19EwdAAAL | User: 69f43f64d0aca2d98f04ec7c
+2026-05-07 11:03:50 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-07 11:03:51 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-00.nknjldl.mongodb.net
+2026-05-07 11:03:51 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-07 11:03:51 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-07 11:03:51 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-07 11:03:52 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-07 11:03:52 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-07 11:03:52 [INFO]: 📡 Environment: development
+2026-05-07 11:03:52 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-07 11:03:52 [INFO]: Socket connected: keNJdX0A3brSAqsIAAAB | User: 69f43f64d0aca2d98f04ec7c
+2026-05-07 11:03:59 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-07 11:04:02 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-00.nknjldl.mongodb.net
+2026-05-07 11:04:02 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-07 11:04:02 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-07 11:04:02 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-07 11:04:02 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-07 11:04:02 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-07 11:04:02 [INFO]: 📡 Environment: development
+2026-05-07 11:04:02 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-07 11:04:04 [INFO]: Socket connected: kwVbO9zfFcnImsI0AAAB | User: 69f43f64d0aca2d98f04ec7c
+2026-05-07 11:04:45 [INFO]: Socket.io initialized with cookie-based JWT auth middleware
+2026-05-07 11:04:46 [INFO]: MongoDB connected: ac-nvlbqn8-shard-00-02.nknjldl.mongodb.net
+2026-05-07 11:04:46 [WARN]: [Providers] Groq ✗ — GROQ_API_KEY not set
+2026-05-07 11:04:46 [INFO]: [Providers] OpenRouter ✓ (API key set)
+2026-05-07 11:04:46 [INFO]: [Providers] Gemini ✓ (API key set)
+2026-05-07 11:04:46 [INFO]: [Providers] Ollama ✓ | Available models: qwen3.5:4b
+2026-05-07 11:04:46 [INFO]: 🚀 NeuralForge server running on port 5000
+2026-05-07 11:04:46 [INFO]: 📡 Environment: development
+2026-05-07 11:04:46 [INFO]: 🔗 Client URL: http://localhost:5173
+2026-05-07 11:04:49 [INFO]: Socket connected: SCuFaEC7kk9pKsBqAAAB | User: 69f43f64d0aca2d98f04ec7c
+2026-05-07 11:05:32 [INFO]: Session created: 69fc24a47d5b614468964b13 for user: 69f43f64d0aca2d98f04ec7c
+2026-05-07 11:05:32 [INFO]: PlannerAgent starting | model=anthropic/claude-3.7-sonnet | provider=openrouter | maxTokens=200
+2026-05-07 11:05:32 [INFO]: OpenRouter streaming: model=anthropic/claude-3.7-sonnet, messages=3
+2026-05-07 11:05:42 [INFO]: OpenRouter complete: 886 chars
+2026-05-07 11:05:42 [INFO]: PlannerAgent complete: 886 chars
+2026-05-07 11:05:42 [INFO]: Gemini tools streaming: model=gemini-2.5-flash
+2026-05-07 11:05:46 [INFO]: [Gemini] Executing tool: create_file with args:
+2026-05-07 11:05:46 [INFO]: [orchestrator] executeTool called: create_file
+2026-05-07 11:05:46 [INFO]: [orchestrator] create_file success:
+2026-05-07 11:05:46 [INFO]: [Gemini] Tool create_file result:
+2026-05-07 11:05:52 [INFO]: [Gemini] Executing tool: create_file with args:
+2026-05-07 11:05:52 [INFO]: [orchestrator] executeTool called: create_file
+2026-05-07 11:05:52 [INFO]: [orchestrator] create_file success:
+2026-05-07 11:05:52 [INFO]: [Gemini] Tool create_file result:
+2026-05-07 11:05:56 [INFO]: [Gemini] No more tool calls. Conversation complete after 3 iteration(s)
+2026-05-07 11:05:56 [INFO]: Gemini tools complete: 1113 chars, 2 tool calls
+2026-05-07 11:05:56 [INFO]: ReviewerAgent starting | model=anthropic/claude-3.5-haiku | provider=openrouter | maxTokens=200
+2026-05-07 11:05:56 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-haiku, messages=3
+2026-05-07 11:06:01 [INFO]: OpenRouter complete: 729 chars
+2026-05-07 11:06:01 [INFO]: ReviewerAgent complete: 729 chars
+2026-05-07 11:06:01 [INFO]: DebuggerAgent starting | model=anthropic/claude-3.5-haiku | provider=openrouter | maxTokens=200
+2026-05-07 11:06:03 [WARN]: [DebuggerAgent] Provider "openrouter" does not support tools. Running in text-only debug mode. MCP file writes will be skipped.
+2026-05-07 11:06:03 [INFO]: OpenRouter streaming: model=anthropic/claude-3.5-haiku, messages=2
+2026-05-07 11:06:05 [INFO]: Session deleted: 69fc2282395d38af976ff729
+2026-05-07 11:06:09 [INFO]: OpenRouter complete: 1001 chars
+2026-05-07 11:06:09 [INFO]: Pipeline complete for session: 69fc24a47d5b614468964b13
