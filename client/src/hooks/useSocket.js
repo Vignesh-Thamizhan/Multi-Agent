@@ -39,6 +39,9 @@ const useSocket = () => {
       reconnectionDelay: 1000,
       reconnectionDelayMax: 5000,
       withCredentials: true,
+      pingInterval: 30000,      // Match server config
+      pingTimeout: 120000,      // Match server config - 120s for slow responses
+      upgradeTimeout: 10000,
     });
 
     socket.on('connect', () => {

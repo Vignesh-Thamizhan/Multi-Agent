@@ -38,24 +38,39 @@ const streamCompletion = async ({
   let response;
   const maxRetries = 2;
   let attempt = 0;
+  const fetchTimeout = 180000; // 3 minute timeout for streaming
 
   while (attempt < maxRetries) {
     try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), fetchTimeout);
+
       response = await fetch(`${OLLAMA_BASE_URL}/v1/chat/completions`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
-        // Signal can be added here if we want a timeout
+        signal: controller.signal,
       });
+
+      clearTimeout(timeoutId);
       break; // Success
     } catch (err) {
       attempt++;
-      logger.error(`[OllamaService] Fetch attempt ${attempt} failed: ${err.message}`);
+      const errorMsg = err.name === 'AbortError' 
+        ? `timeout (${fetchTimeout}ms)` 
+        : err.message;
+      
+      logger.error(`[OllamaService] Fetch attempt ${attempt} failed: ${errorMsg}`);
       
       if (attempt >= maxRetries) {
         if (err.code === 'ECONNREFUSED' || err.cause?.code === 'ECONNREFUSED') {
           throw new OllamaConnectionError(
             `Ollama is not running at ${OLLAMA_BASE_URL}. Run: ollama serve`
+          );
+        }
+        if (err.name === 'AbortError') {
+          throw new Error(
+            `Ollama request timed out after ${fetchTimeout / 1000}s. Model may be stuck or server overloaded.`
           );
         }
         throw err;
@@ -75,37 +90,65 @@ const streamCompletion = async ({
   const decoder = new TextDecoder('utf-8');
   let fullContent = '';
   let buffer = '';
+  const chunkTimeout = 30000; // 30s timeout between chunks
 
   while (true) {
-    const { done, value } = await reader.read();
-    if (done) break;
+    try {
+      // Add timeout for reading chunks
+      const readPromise = reader.read();
+      const timeoutPromise = new Promise((_, reject) => 
+        setTimeout(() => reject(new Error('Stream chunk timeout - no data for 30s')), chunkTimeout)
+      );
+      
+      const { done, value } = await Promise.race([readPromise, timeoutPromise]);
+      
+      if (done) break;
 
-    buffer += decoder.decode(value, { stream: true });
+      buffer += decoder.decode(value, { stream: true });
 
-    // SSE lines: each line is "data: <json>\n" or "data: [DONE]\n"
-    const lines = buffer.split('\n');
-    buffer = lines.pop() || ''; // Keep incomplete last line in buffer
+      // SSE lines: each line is "data: <json>\n" or "data: [DONE]\n" or raw JSON
+      const lines = buffer.split('\n');
+      buffer = lines.pop() || ''; // Keep incomplete last line in buffer
 
-    for (const line of lines) {
-      const trimmed = line.trim();
-      if (!trimmed || !trimmed.startsWith('data: ')) continue;
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (!trimmed) continue;
 
-      const data = trimmed.slice(6);
-      if (data === '[DONE]') continue;
+        let data = trimmed;
+        
+        // Handle SSE format (data: prefix)
+        if (trimmed.startsWith('data: ')) {
+          data = trimmed.slice(6);
+        }
+        // Handle raw JSON format (no data: prefix)
+        else if (!trimmed.startsWith('{')) {
+          continue;
+        }
 
-      try {
-        const parsed = JSON.parse(data);
-        const delta = parsed.choices?.[0]?.delta?.content || '';
-        if (delta) {
-          fullContent += delta;
-          if (onChunk) {
-            onChunk(delta);
+        if (data === '[DONE]') continue;
+
+        try {
+          const parsed = JSON.parse(data);
+          const delta = parsed.choices?.[0]?.delta?.content || '';
+          if (delta) {
+            fullContent += delta;
+            if (onChunk) {
+              onChunk(delta);
+            }
+          }
+        } catch (err) {
+          // Skip malformed JSON chunks - log only once per 100 chunks to avoid spam
+          if (Math.random() < 0.01) {
+            logger.warn(`[OllamaService] Unparseable chunk: ${data.slice(0, 100)}`);
           }
         }
-      } catch {
-        // Skip malformed JSON chunks
-        logger.warn(`[OllamaService] Unparseable SSE chunk: ${data.slice(0, 100)}`);
       }
+    } catch (err) {
+      if (err.message.includes('Stream chunk timeout')) {
+        logger.error(`[OllamaService] Stream stalled: ${err.message}`);
+        throw err;
+      }
+      throw err;
     }
   }
 
@@ -123,11 +166,17 @@ const callOllama = async ({ model, messages, systemPrompt }) => {
 
   let response;
   try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 60000); // 60s timeout
+
     response = await fetch(`${OLLAMA_BASE_URL}/v1/chat/completions`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ model, messages: fullMessages, stream: false }),
+      signal: controller.signal,
     });
+
+    clearTimeout(timeoutId);
   } catch (err) {
     if (err.code === 'ECONNREFUSED' || err.cause?.code === 'ECONNREFUSED') {
       throw new OllamaConnectionError(
