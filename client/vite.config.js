@@ -9,11 +9,13 @@ export default defineConfig({
       '/api': {
         target: 'http://localhost:5000',
         changeOrigin: true,
+        timeout: 120000, // 120s timeout for slow responses
       },
       '/socket.io': {
         target: 'http://localhost:5000',
         ws: true,
         changeOrigin: true,
+        timeout: 120000,
       },
     },
   },

@@ -12,8 +12,10 @@ const initializeSocket = (httpServer) => {
       methods: ['GET', 'POST'],
       credentials: true,
     },
-    pingTimeout: 60000,
-    pingInterval: 25000,
+    pingTimeout: 120000, // Increased from 60s to 120s for slow Ollama responses
+    pingInterval: 30000,  // Increased from 25s to 30s
+    upgradeTimeout: 10000,
+    maxHttpBufferSize: 100000, // Allow larger payloads
   });
 
   // JWT auth middleware for Socket.io handshake using httpOnly cookie
